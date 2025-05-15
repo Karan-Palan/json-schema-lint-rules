@@ -10,11 +10,8 @@ package-lock.json
 .vscode/
 *.swp
 
-docs/
 coverage/
 dist/
 *.tsbuildinfo
-
-Thumbs.db
 *.log
 .env*
