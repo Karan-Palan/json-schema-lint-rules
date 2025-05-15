@@ -1,0 +1,13 @@
+{
+    "name": "jsonschema-lint-rules",
+    "version": "0.1.0",
+    "type": "module",
+    "license": "MIT",
+    "scripts": {
+        "validate:rules": "jsonschema validate rule.schema.json \"rules/**/*.json\"",
+        "build": "node generate.mjs"
+    },
+    "devDependencies": {
+        "@sourcemeta/jsonschema": "^9.3.1"
+    }
+}
