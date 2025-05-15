@@ -4,11 +4,10 @@
   "title": "JSON-Schema lint rule metadata",
   "type": "object",
   "required": [
-    "code",
     "title",
     "description",
-    "dialects",
-    "severity",
+    "message",
+    "vocabularies",
     "invalid",
     "valid"
   ],
@@ -19,30 +18,19 @@
     "description": {
       "type": "string"
     },
-    "code": {
-      "type": "string",
-      "pattern": "^[A-Z0-9_]+$"
-    },
-    "dialects": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [ "draft4", "draft6", "draft7", "2019-09", "2020-12" ]
-      }
-    },
     "invalid": {
       "type": "array",
       "items": {
         "type": "object",
         "required": [ "schema" ],
         "properties": {
-          "message": {
-            "type": "string"
-          },
           "schema": {}
         },
         "additionalProperties": false
       }
+    },
+    "message": {
+      "type": "string"
     },
     "references": {
       "type": "array",
@@ -50,10 +38,6 @@
         "type": "string",
         "format": "uri"
       }
-    },
-    "severity": {
-      "type": "string",
-      "enum": [ "info", "warning", "error" ]
     },
     "valid": {
       "type": "array",
@@ -64,6 +48,13 @@
           "schema": {}
         },
         "additionalProperties": false
+      }
+    },
+    "vocabularies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^https://json-schema\\.org/draft/(4|6|7|2019-09|2020-12)/vocab/[a-z-]+$"
       }
     }
   },

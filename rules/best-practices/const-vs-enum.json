@@ -1,25 +1,28 @@
 {
   "title": "Use const instead of single-value enum",
   "description": "Promote semantic clarity by replacing a one-item enum with const.",
-  "code": "CONST_INSTEAD_OF_ENUM",
-  "dialects": [ "draft4", "draft6", "draft7", "2019-09", "2020-12" ],
   "invalid": [
     {
-      "message": "Single-value enum; use const instead.",
       "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
         "enum": [ "foo" ]
       }
     }
   ],
+  "message": "Single-value enum detected - replace with const.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/const"
   ],
-  "severity": "warning",
   "valid": [
     {
       "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
         "const": "foo"
       }
     }
+  ],
+  "vocabularies": [
+    "https://json-schema.org/draft/2019-09/vocab/validation",
+    "https://json-schema.org/draft/2020-12/vocab/validation"
   ]
 }
