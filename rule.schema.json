@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/rule.schema.json",
+  "title": "JSON-Schema lint rule metadata",
+  "type": "object",
+  "required": [
+    "code",
+    "title",
+    "description",
+    "dialects",
+    "severity",
+    "invalid",
+    "valid"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string",
+      "pattern": "^[A-Z0-9_]+$"
+    },
+    "dialects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [ "draft4", "draft6", "draft7", "2019-09", "2020-12" ]
+      }
+    },
+    "invalid": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "schema" ],
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "schema": {}
+        },
+        "additionalProperties": false
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "severity": {
+      "type": "string",
+      "enum": [ "info", "warning", "error" ]
+    },
+    "valid": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "schema" ],
+        "properties": {
+          "schema": {}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
