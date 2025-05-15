@@ -7,7 +7,7 @@
   "name": "jsonschema-lint-rules",
   "scripts": {
     "build": "node generate.mjs",
-    "validate:rules": "jsonschema validate rule.schema.json \"rules/**/*.json\""
+    "validate:rules": "jsonschema validate rule.schema.json rules/**/*.json"
   },
   "version": "0.1.0"
 }
