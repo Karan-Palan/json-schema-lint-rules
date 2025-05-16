@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/rule.schema.json",
+  "title": "JSON-Schema lint rule metadata",
+  "type": "object",
+  "required": [
+    "title",
+    "description",
+    "message",
+    "vocabularies",
+    "invalid",
+    "valid"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "invalid": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "schema" ],
+        "properties": {
+          "schema": {}
+        },
+        "additionalProperties": false
+      }
+    },
+    "message": {
+      "type": "string"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "valid": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "schema" ],
+        "properties": {
+          "schema": {}
+        },
+        "additionalProperties": false
+      }
+    },
+    "vocabularies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^https://json-schema\\.org/draft/(4|6|7|2019-09|2020-12)/vocab/[a-z-]+$"
+      }
+    }
+  },
+  "additionalProperties": false
+}
