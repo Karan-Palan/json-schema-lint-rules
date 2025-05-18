@@ -1,15 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.com/rule.schema.json",
-  "title": "JSON-Schema lint rule metadata",
+  "title": "JSON-Schema linter rule metadata",
   "type": "object",
   "required": [
     "title",
     "description",
     "message",
-    "vocabularies",
-    "invalid",
-    "valid"
+    "categories",
+    "dialects",
+    "examples"
   ],
   "properties": {
     "title": {
@@ -18,15 +18,53 @@
     "description": {
       "type": "string"
     },
-    "invalid": {
+    "examples": {
       "type": "array",
+      "minItems": 1,
       "items": {
         "type": "object",
-        "required": [ "schema" ],
+        "required": [ "before" ],
         "properties": {
-          "schema": {}
+          "after": {
+            "type": "object"
+          },
+          "before": {
+            "type": "object"
+          },
+          "doc": {
+            "type": "boolean"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
         },
         "additionalProperties": false
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-_]+$"
+      }
+    },
+    "dialects": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "enum": [ "draft4", "draft6", "draft7", "2019-09", "2020-12" ]
+      },
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-_]+$"
+        }
       }
     },
     "message": {
@@ -37,24 +75,6 @@
       "items": {
         "type": "string",
         "format": "uri"
-      }
-    },
-    "valid": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [ "schema" ],
-        "properties": {
-          "schema": {}
-        },
-        "additionalProperties": false
-      }
-    },
-    "vocabularies": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "pattern": "^https://json-schema\\.org/draft/(4|6|7|2019-09|2020-12)/vocab/[a-z-]+$"
       }
     }
   },
