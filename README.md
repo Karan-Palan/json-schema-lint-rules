@@ -14,12 +14,14 @@ A collection of lint rules for [JSON Schema](https://json-schema.org/) with meta
 ```
 json-schema-lint-rules/
 ├── docs/                # Generated Markdown documentation for rules
-├── rules/               # Rule definitions organized by category
-│   └── best-practices/
-│       └── const-vs-enum.json
-├── rule.schema.json     # JSON Schema for rule metadata
-├── generate.mjs         # Script to validate rules and generate docs
+├── rules/               # Rule definitions organized 
+├── .dockerignore
+├── Dockerfile
+├── LICENSE
+├── rule.schema.json    # JSON Schema for rule metadata
+├── generate.mjs        # Script to validate rules and generate docs
 ├── package.json
+├── package-lock.json
 └── .gitignore
 ```
 
@@ -31,6 +33,16 @@ json-schema-lint-rules/
 npm install
 ```
 
+### 2. Generate Documentation
+
+Run the documentation generator and validate json files:
+
+```sh
+node generate.mjs
+```
+
+This will validate all rules against `rule.schema.json` and generate Markdown documentation in the `docs/` directory.
+
 ### 2. Validate Rules
 
 Validate all rule files against the schema:
@@ -39,9 +51,7 @@ Validate all rule files against the schema:
 npm run validate:rules
 ```
 
----
-
-## Docker Usage
+### Docker Usage
 
 You can use Docker to build and run this project without installing Node.js locally.
 
@@ -78,7 +88,7 @@ The generated docs will appear in the `docs/` directory, organized by category.
 
 ## Example Rule
 
-See [`rules/best-practices/const-vs-enum.json`](rules/best-practices/const-vs-enum.json):
+See [`rules/singular-const-to-enum.json`](rules/singular-const-to-enum.json):
 
 - Promotes using `const` instead of a single-value `enum`.
 - Includes valid and invalid schema examples.
@@ -88,5 +98,5 @@ See [`rules/best-practices/const-vs-enum.json`](rules/best-practices/const-vs-en
 
 1. Create a new JSON file in the appropriate category under `rules/`.
 2. Follow the structure defined in [`rule.schema.json`](rule.schema.json).
-3. Add valid and invalid examples.
+3. Add before and after examples.
 4. Run validation and documentation generation scripts.
