@@ -9,70 +9,76 @@ const RULE_SCHEMA = path.join(__dirname, "rule.schema.json");
 const RULES_DIR = path.join(__dirname, "rules");
 const DOCS_DIR = path.join(__dirname, "docs");
 
+function jsonschemaBin() {
+  const bin = path.join(
+    __dirname,
+    "node_modules",
+    ".bin",
+    process.platform === "win32" ? "jsonschema.cmd" : "jsonschema"
+  );
+  return bin;
+}
+
 // helpers
-const mdEscape = (str) => str.replace(/`/g, "\\`");
+const mdEscape = (s) => s.replace(/`/g, "\\`");
 
-function render(rule, code) {
-  const firstCat = rule.categories[0];
+function renderMarkdown(rule, code) {
   const dialects = Object.keys(rule.dialects).join(", ");
-  const autofixable = rule.examples.some((ex) => "after" in ex);
+  const autofix = rule.examples.some((e) => "after" in e);
 
-  const out = [];
+  const lines = [];
+  lines.push("---");
+  lines.push(`title: ${mdEscape(rule.title)}`);
+  lines.push(`code: ${code}`);
+  lines.push(`categories: ${rule.categories.join(", ")}`);
+  lines.push(`dialects: ${dialects}`);
+  lines.push(`autofixable: ${autofix}`);
+  lines.push("---\n");
 
-  // YAML front-matter
-  out.push("---");
-  out.push(`title: ${mdEscape(rule.title)}`);
-  out.push(`code: ${code}`);
-  out.push(`categories: ${rule.categories.join(", ")}`);
-  out.push(`dialects: ${dialects}`);
-  out.push(`autofixable: ${autofixable}`);
-  out.push("---\n");
+  lines.push("## Description");
+  lines.push(rule.description + "\n");
 
-  out.push("## Description");
-  out.push(rule.description + "\n");
-
-  out.push("> **Message shown to user:**");
-  out.push(`> ${rule.message}\n`);
+  lines.push("> **Message shown to user:**");
+  lines.push(`> ${rule.message}\n`);
 
   const docExamples = rule.examples.filter((e) => e.doc) || [rule.examples[0]];
 
-  docExamples.forEach(({ before, after }, idx) => {
-    out.push(`### Example ${idx + 1}`);
-    out.push("<details><summary>Before</summary>");
-    out.push("");
-    out.push("```json");
-    out.push(JSON.stringify(before, null, 2));
-    out.push("```");
-    out.push("</details>\n");
+  docExamples.forEach(({ before, after }, i) => {
+    lines.push(`### Example ${i + 1}`);
+    lines.push("<details><summary>Before</summary>\n");
+    lines.push("```json");
+    lines.push(JSON.stringify(before, null, 2));
+    lines.push("```");
+    lines.push("</details>\n");
 
     if (after) {
-      out.push("<details><summary>After</summary>");
-      out.push("");
-      out.push("```json");
-      out.push(JSON.stringify(after, null, 2));
-      out.push("```");
-      out.push("</details>\n");
+      lines.push("<details><summary>After</summary>\n");
+      lines.push("```json");
+      lines.push(JSON.stringify(after, null, 2));
+      lines.push("```");
+      lines.push("</details>\n");
     }
   });
 
   if (rule.references?.length) {
-    out.push("## References");
-    rule.references.forEach((u) => out.push(`* <${u}>`));
-    out.push("");
+    lines.push("## References");
+    rule.references.forEach((u) => lines.push(`* <${u}>`));
+    lines.push("");
   }
 
-  return { md: out.join("\n") };
+  return lines.join("\n");
 }
 
-(async function main() {
-  const files = await fs.readdir(RULES_DIR);
-  for (const file of files) {
+(async () => {
+  await fs.mkdir(DOCS_DIR, { recursive: true });
+
+  for (const file of await fs.readdir(RULES_DIR)) {
     if (!file.endsWith(".json")) continue;
     const rulePath = path.join(RULES_DIR, file);
 
     // schema-validate the rule file
     const { status } = spawnSync(
-      "jsonschema",
+      jsonschemaBin(),
       ["validate", RULE_SCHEMA, rulePath],
       { stdio: "inherit" }
     );
@@ -81,14 +87,12 @@ function render(rule, code) {
     // render Markdown
     const rule = JSON.parse(await fs.readFile(rulePath, "utf8"));
     const code = path.basename(file, ".json");
-    const { md } = render(rule, code);
-
-    await fs.mkdir(DOCS_DIR, { recursive: true });
-    await fs.writeFile(path.join(DOCS_DIR, `${code}.md`), md);
+    const markdown = renderMarkdown(rule, code);
+    await fs.writeFile(path.join(DOCS_DIR, `${code}.md`), markdown);
 
     console.log(`✓ docs/${code}.md`);
   }
-})().catch((e) => {
-  console.error(e);
+})().catch((err) => {
+  console.error(err);
   process.exit(1);
 });
