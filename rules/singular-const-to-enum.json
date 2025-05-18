@@ -1,0 +1,33 @@
+{
+  "title": "Replace single-value enum with const",
+  "description": "An enum with exactly one element can be expressed more clearly with const.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "const": "foo"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "enum": [ "foo" ]
+      },
+      "doc": true,
+      "tags": [ "basic" ]
+    },
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "enum": [ 42 ]
+      }
+    }
+  ],
+  "categories": [ "best-practices", "readability" ],
+  "dialects": {
+    "2019-09": [ "enum", "const" ],
+    "2020-12": [ "enum", "const" ]
+  },
+  "message": "Single-value enum detected – replace with const.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/const"
+  ]
+}
