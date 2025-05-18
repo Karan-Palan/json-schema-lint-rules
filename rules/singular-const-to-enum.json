@@ -21,7 +21,7 @@
       }
     }
   ],
-  "categories": [ "best-practices", "readability" ],
+  "categories": [ "modernize", "readability" ],
   "dialects": {
     "2019-09": [ "enum", "const" ],
     "2020-12": [ "enum", "const" ]
