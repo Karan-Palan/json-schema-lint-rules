@@ -61,7 +61,7 @@ function render(rule, code) {
     out.push("");
   }
 
-  return { md: out.join("\n"), dir: firstCat };
+  return { md: out.join("\n") };
 }
 
 (async function main() {
@@ -81,13 +81,12 @@ function render(rule, code) {
     // render Markdown
     const rule = JSON.parse(await fs.readFile(rulePath, "utf8"));
     const code = path.basename(file, ".json");
-    const { md, dir } = render(rule, code);
+    const { md } = render(rule, code);
 
-    const outDir = path.join(DOCS_DIR, dir);
-    await fs.mkdir(outDir, { recursive: true });
-    await fs.writeFile(path.join(outDir, `${code}.md`), md);
+    await fs.mkdir(DOCS_DIR, { recursive: true });
+    await fs.writeFile(path.join(DOCS_DIR, `${code}.md`), md);
 
-    console.log(`✓ docs/${dir}/${code}.md`);
+    console.log(`✓ docs/${code}.md`);
   }
 })().catch((e) => {
   console.error(e);
