@@ -5,82 +5,91 @@ import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
 const RULE_SCHEMA = path.join(__dirname, "rule.schema.json");
 const RULES_DIR = path.join(__dirname, "rules");
 const DOCS_DIR = path.join(__dirname, "docs");
 
-function renderMarkdown(rule, code, category) {
-  const block = [];
+// helpers
+const mdEscape = (str) => str.replace(/`/g, "\\`");
 
-  block.push("---");
-  block.push(`title: ${rule.title}`);
-  block.push(`code: ${code}`);
-  block.push(`category: ${category}`);
-  block.push(`vocabularies: ${rule.vocabularies.join(", ")}`);
-  block.push("---\n");
+function render(rule, code) {
+  const firstCat = rule.categories[0];
+  const dialects = Object.keys(rule.dialects).join(", ");
+  const autofixable = rule.examples.some((ex) => "after" in ex);
 
-  block.push("## Description");
-  block.push(rule.description + "\n");
+  const out = [];
 
-  block.push("> **Message shown to user:**");
-  block.push(`> ${rule.message}\n`);
+  // YAML front-matter
+  out.push("---");
+  out.push(`title: ${mdEscape(rule.title)}`);
+  out.push(`code: ${code}`);
+  out.push(`categories: ${rule.categories.join(", ")}`);
+  out.push(`dialects: ${dialects}`);
+  out.push(`autofixable: ${autofixable}`);
+  out.push("---\n");
 
-  if (rule.invalid?.length) {
-    block.push("## Invalid example");
-    block.push("```json");
-    block.push(JSON.stringify(rule.invalid[0].schema, null, 2));
-    block.push("```\n");
-  }
+  out.push("## Description");
+  out.push(rule.description + "\n");
 
-  if (rule.valid?.length) {
-    block.push("## Valid example");
-    block.push("```json");
-    block.push(JSON.stringify(rule.valid[0].schema, null, 2));
-    block.push("```\n");
-  }
+  out.push("> **Message shown to user:**");
+  out.push(`> ${rule.message}\n`);
+
+  const docExamples = rule.examples.filter((e) => e.doc) || [rule.examples[0]];
+
+  docExamples.forEach(({ before, after }, idx) => {
+    out.push(`### Example ${idx + 1}`);
+    out.push("<details><summary>Before</summary>");
+    out.push("");
+    out.push("```json");
+    out.push(JSON.stringify(before, null, 2));
+    out.push("```");
+    out.push("</details>\n");
+
+    if (after) {
+      out.push("<details><summary>After</summary>");
+      out.push("");
+      out.push("```json");
+      out.push(JSON.stringify(after, null, 2));
+      out.push("```");
+      out.push("</details>\n");
+    }
+  });
 
   if (rule.references?.length) {
-    block.push("## References");
-    rule.references.forEach((u) => block.push(`* <${u}>`));
-    block.push(""); // trailing newline
+    out.push("## References");
+    rule.references.forEach((u) => out.push(`* <${u}>`));
+    out.push("");
   }
 
-  return block.join("\n");
+  return { md: out.join("\n"), dir: firstCat };
 }
 
 (async function main() {
-  await fs.mkdir(DOCS_DIR, { recursive: true });
+  const files = await fs.readdir(RULES_DIR);
+  for (const file of files) {
+    if (!file.endsWith(".json")) continue;
+    const rulePath = path.join(RULES_DIR, file);
 
-  for (const catDir of await fs.readdir(RULES_DIR, { withFileTypes: true })) {
-    if (!catDir.isDirectory()) continue;
-    const category = catDir.name;
-    const srcCat = path.join(RULES_DIR, category);
-    const outCat = path.join(DOCS_DIR, category);
-    await fs.mkdir(outCat, { recursive: true });
+    // schema-validate the rule file
+    const { status } = spawnSync(
+      "jsonschema",
+      ["validate", RULE_SCHEMA, rulePath],
+      { stdio: "inherit" }
+    );
+    if (status !== 0) process.exit(status);
 
-    for (const file of await fs.readdir(srcCat)) {
-      if (!file.endsWith(".json")) continue;
-      const rulePath = path.join(srcCat, file);
+    // render Markdown
+    const rule = JSON.parse(await fs.readFile(rulePath, "utf8"));
+    const code = path.basename(file, ".json");
+    const { md, dir } = render(rule, code);
 
-      // schema-validate the rule file
-      const { status } = spawnSync(
-        "jsonschema",
-        ["validate", RULE_SCHEMA, rulePath],
-        { stdio: "inherit" }
-      );
-      if (status !== 0) process.exit(status);
+    const outDir = path.join(DOCS_DIR, dir);
+    await fs.mkdir(outDir, { recursive: true });
+    await fs.writeFile(path.join(outDir, `${code}.md`), md);
 
-      // render Markdown
-      const rule = JSON.parse(await fs.readFile(rulePath, "utf8"));
-      const code = path.basename(file, ".json"); // filename = rule code
-      const md = renderMarkdown(rule, code, category);
-      await fs.writeFile(path.join(outCat, `${code}.md`), md);
-
-      console.log(`✓ ${category}/${code}.md`);
-    }
+    console.log(`✓ docs/${dir}/${code}.md`);
   }
-})().catch((err) => {
-  console.error(err);
+})().catch((e) => {
+  console.error(e);
   process.exit(1);
 });
