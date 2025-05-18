@@ -39,6 +39,33 @@ Validate all rule files against the schema:
 npm run validate:rules
 ```
 
+---
+
+## Docker Usage
+
+You can use Docker to build and run this project without installing Node.js locally.
+
+### 1. Build the Docker Image
+
+```sh
+docker build -t jsonschema-lint-rules .
+```
+
+### 2. Run the Generator
+
+```sh
+docker run --rm -v $(pwd):/app jsonschema-lint-rules
+```
+
+This will execute the documentation generator inside a container. The output will appear in the `docs/` directory of your local project.
+
+### Notes
+- The Dockerfile and .dockerignore are provided for convenience.
+- You can override the default command if needed, e.g.:
+  ```sh
+  docker run --rm -v $(pwd):/app jsonschema-lint-rules npm run validate:rules
+  ```
+
 ### 3. Generate Documentation
 
 Generate Markdown documentation for each rule:
