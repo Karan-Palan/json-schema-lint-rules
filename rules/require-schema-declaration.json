@@ -1,0 +1,46 @@
+{
+  "title": "Require $schema at the document root",
+  "description": "Every JSON Schema should declare its dialect with a top-level `$schema` keyword to avoid ambiguous interpretation.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "$id": "https://example.com/thing",
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  ],
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "$schema" ],
+    "2020-12": [ "$schema" ],
+    "draft4": [ "$schema" ],
+    "draft6": [ "$schema" ],
+    "draft7": [ "$schema" ]
+  },
+  "message": "Add a `$schema` property pointing to the draft URL.",
+  "references": [ "https://json-schema.org/specification" ]
+}
