@@ -1,0 +1,36 @@
+{
+  "title": "Arrays should declare `items`",
+  "description": "An `array` without `items` leaves element validation undefined. Provide an explicit `items` schema, even if it’s `{}`.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array",
+        "items": {}
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array"
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "type": "array",
+        "minItems": 1
+      }
+    }
+  ],
+  "categories": [ "readability", "correctness" ],
+  "dialects": {
+    "2019-09": [ "items" ],
+    "2020-12": [ "items" ],
+    "draft4": [ "items" ],
+    "draft6": [ "items" ],
+    "draft7": [ "items" ]
+  },
+  "message": "Add an `items` schema for array elements.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/array.html#items"
+  ]
+}
