@@ -42,4 +42,4 @@ autofixable: true
 </details>
 
 ## References
-* <https://github.com/orgs/json-schema-orgs/discussions/323#discussioncomment-4898765>
+* <https://github.com/orgs/json-schema-org/discussions/323#discussioncomment-4898765>
