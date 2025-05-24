@@ -49,7 +49,16 @@
       "minItems": 1,
       "items": {
         "type": "string",
-        "pattern": "^[a-z][a-z0-9-_]+$"
+        "enum": [
+          "modernize",
+          "readability",
+          "correctness",
+          "performance",
+          "safety",
+          "style",
+          "opinionated",
+          "non-opinionated"
+        ]
       }
     },
     "dialects": {
