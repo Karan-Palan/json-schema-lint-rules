@@ -43,11 +43,11 @@
   ],
   "categories": [ "readability", "style", "opinionated" ],
   "dialects": {
-    "2019-09": [ "additionalProperties" ],
-    "2020-12": [ "additionalProperties" ],
-    "draft4": [ "additionalProperties" ],
-    "draft6": [ "additionalProperties" ],
-    "draft7": [ "additionalProperties" ]
+    "2019-09": [ "additionalproperties" ],
+    "2020-12": [ "additionalproperties" ],
+    "draft4": [ "additionalproperties" ],
+    "draft6": [ "additionalproperties" ],
+    "draft7": [ "additionalproperties" ]
   },
   "message": "Add an explicit `additionalProperties` declaration.",
   "references": [
