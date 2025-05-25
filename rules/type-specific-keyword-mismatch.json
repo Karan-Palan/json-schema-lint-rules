@@ -1,0 +1,33 @@
+{
+  "title": "Disallow type-specific keywords on incompatible types",
+  "description": "Keywords like `minimum` apply only to numbers; `minLength` only to strings, etc. Mixing them is always invalid.",
+  "examples": [
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string",
+        "minimum": 1
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "type": [ "integer", "string" ],
+        "exclusiveMaximum": 10,
+        "maxLength": 5
+      }
+    }
+  ],
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "minimum", "maxlength", "multipleof" ],
+    "2020-12": [ "minimum", "maxlength", "multipleof" ],
+    "draft4": [ "minimum", "maxlength", "multipleof" ],
+    "draft6": [ "minimum", "maxlength", "multipleof" ],
+    "draft7": [ "minimum", "maxlength", "multipleof" ]
+  },
+  "message": "Remove keyword(s) that do not apply to the declared type.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#section-6"
+  ]
+}
