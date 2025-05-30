@@ -41,6 +41,6 @@
     "draft6": [ "$schema" ],
     "draft7": [ "$schema" ]
   },
-  "message": "Add a `$schema` property pointing to the draft URL.",
+  "message": "Add a `$schema` property pointing to the draft URI.",
   "references": [ "https://json-schema.org/specification" ]
 }
