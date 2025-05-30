@@ -1,7 +1,7 @@
 ---
 title: Replace single-value enum with const
 code: singular-const-to-enum
-categories: modernize, readability
+categories: correctness, readability
 dialects: 2019-09, 2020-12
 autofixable: true
 ---
