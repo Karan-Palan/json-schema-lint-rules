@@ -1,5 +1,5 @@
 ---
-title: Require \`title\` and \`description\` metadata
+title: Provide top-level \`title\` and \`description\`
 code: require-description-title
 categories: readability, style
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-Every schema should provide human-readable `title` and `description` fields so downstream tooling and documentation stay meaningful.
+The root schema should include human-readable `title` and `description` so tooling can generate meaningful documentation. Sub-schemas are exempt.
 
 > **Message shown to user:**
-> Add `title` and `description` to the schema.
+> Add `title` and `description` at the document root.
 
 ### Example 1
 <details><summary>Before</summary>
