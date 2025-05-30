@@ -13,10 +13,13 @@
         "enum": [ "one", "two" ],
         "minLength": 3
       },
-      "doc": true,
-      "tags": [ "basic" ]
+      "doc": true
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "enum": [ 1, 2, 3 ]
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "enum": [ 1, 2, 3 ],
@@ -24,10 +27,14 @@
       }
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "enum": [ 10, 5 ]
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "integer",
-        "enum": [ 10 ],
+        "enum": [ 10, 5 ],
         "maximum": 100,
         "multipleOf": 2
       }
@@ -35,11 +42,102 @@
   ],
   "categories": [ "correctness", "readability" ],
   "dialects": {
-    "2019-09": [ "enum" ],
-    "2020-12": [ "enum" ],
-    "draft4": [ "enum" ],
-    "draft6": [ "enum" ],
-    "draft7": [ "enum" ]
+    "2019-09": [
+      "enum",
+      "type",
+      "minimum",
+      "maximum",
+      "exclusiveMinimum",
+      "exclusiveMaximum",
+      "multipleOf",
+      "minLength",
+      "maxLength",
+      "pattern",
+      "format",
+      "minItems",
+      "maxItems",
+      "uniqueItems",
+      "contains",
+      "minProperties",
+      "maxProperties",
+      "required"
+    ],
+    "2020-12": [
+      "enum",
+      "type",
+      "minimum",
+      "maximum",
+      "exclusiveMinimum",
+      "exclusiveMaximum",
+      "multipleOf",
+      "minLength",
+      "maxLength",
+      "pattern",
+      "format",
+      "minItems",
+      "maxItems",
+      "uniqueItems",
+      "contains",
+      "minProperties",
+      "maxProperties",
+      "required"
+    ],
+    "draft4": [
+      "enum",
+      "type",
+      "minimum",
+      "maximum",
+      "exclusiveMinimum",
+      "exclusiveMaximum",
+      "multipleOf",
+      "minLength",
+      "maxLength",
+      "pattern",
+      "minItems",
+      "maxItems",
+      "uniqueItems",
+      "minProperties",
+      "maxProperties",
+      "required"
+    ],
+    "draft6": [
+      "enum",
+      "type",
+      "minimum",
+      "maximum",
+      "exclusiveMinimum",
+      "exclusiveMaximum",
+      "multipleOf",
+      "minLength",
+      "maxLength",
+      "pattern",
+      "format",
+      "minItems",
+      "maxItems",
+      "uniqueItems",
+      "minProperties",
+      "maxProperties",
+      "required"
+    ],
+    "draft7": [
+      "enum",
+      "type",
+      "minimum",
+      "maximum",
+      "exclusiveMinimum",
+      "exclusiveMaximum",
+      "multipleOf",
+      "minLength",
+      "maxLength",
+      "pattern",
+      "format",
+      "minItems",
+      "maxItems",
+      "uniqueItems",
+      "minProperties",
+      "maxProperties",
+      "required"
+    ]
   },
   "message": "Remove complementary validation keywords when an enum is present.",
   "references": [
