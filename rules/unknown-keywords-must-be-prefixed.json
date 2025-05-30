@@ -24,11 +24,11 @@
   ],
   "categories": [ "correctness", "readability" ],
   "dialects": {
-    "2019-09": [ "«unknown»" ],
-    "2020-12": [ "«unknown»" ],
-    "draft4": [ "«unknown»" ],
-    "draft6": [ "«unknown»" ],
-    "draft7": [ "«unknown»" ]
+    "2019-09": [],
+    "2020-12": [],
+    "draft4": [],
+    "draft6": [],
+    "draft7": []
   },
   "message": "Prefix unknown keyword(s) with \"x-\".",
   "references": [

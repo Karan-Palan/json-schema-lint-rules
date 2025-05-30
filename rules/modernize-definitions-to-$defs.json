@@ -1,0 +1,48 @@
+{
+  "title": "Use $defs over definitions in 2019-09 + drafts",
+  "description": "`definitions` is superseded by `$defs` starting in draft-2019-09. Migrate to `$defs` for forward compatibility.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/uuid"
+          }
+        },
+        "$defs": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/uuid"
+          }
+        },
+        "definitions": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness", "readability" ],
+  "dialects": {
+    "2019-09": [ "definitions", "$defs" ],
+    "2020-12": [ "definitions", "$defs" ]
+  },
+  "message": "Move schemas from `definitions` to `$defs`.",
+  "references": [
+    "https://json-schema.org/draft/2019-09/release-notes#definitions"
+  ]
+}
