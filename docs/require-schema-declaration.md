@@ -10,7 +10,7 @@ autofixable: true
 Every JSON Schema should declare its dialect with a top-level `$schema` keyword to avoid ambiguous interpretation.
 
 > **Message shown to user:**
-> Add a `$schema` property pointing to the draft URL.
+> Add a `$schema` property pointing to the draft URI.
 
 ### Example 1
 <details><summary>Before</summary>
