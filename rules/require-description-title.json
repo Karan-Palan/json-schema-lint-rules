@@ -1,6 +1,6 @@
 {
-  "title": "Require `title` and `description` metadata",
-  "description": "Every schema should provide human-readable `title` and `description` fields so downstream tooling and documentation stay meaningful.",
+  "title": "Provide top-level `title` and `description`",
+  "description": "The root schema should include human-readable `title` and `description` so tooling can generate meaningful documentation. Sub-schemas are exempt.",
   "examples": [
     {
       "after": {
@@ -26,12 +26,6 @@
         }
       },
       "doc": true
-    },
-    {
-      "before": {
-        "type": "string",
-        "pattern": "^[A-Z]{3}-[0-9]{4}$"
-      }
     }
   ],
   "categories": [ "readability", "style" ],
@@ -42,7 +36,7 @@
     "draft6": [ "title", "description" ],
     "draft7": [ "title", "description" ]
   },
-  "message": "Add `title` and `description` to the schema.",
+  "message": "Add `title` and `description` at the document root.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/generic.html#annotations"
   ]
