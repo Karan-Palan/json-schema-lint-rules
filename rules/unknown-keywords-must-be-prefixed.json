@@ -1,0 +1,37 @@
+{
+  "title": "Prefix unknown keywords with x-",
+  "description": "Any keyword not defined in the active dialect must be vendor-prefixed (e.g. `x-foo`). This avoids accidental clashes with future spec keywords.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "x-fooBar": true
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "fooBar": true
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "type": "string",
+        "baz": 123
+      }
+    }
+  ],
+  "categories": [ "correctness", "readability" ],
+  "dialects": {
+    "2019-09": [],
+    "2020-12": [],
+    "draft4": [],
+    "draft6": [],
+    "draft7": []
+  },
+  "message": "Prefix unknown keyword(s) with \"x-\".",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-core.html#rfc.section.4.4.4"
+  ]
+}
