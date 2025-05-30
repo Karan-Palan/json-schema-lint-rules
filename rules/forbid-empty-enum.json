@@ -1,0 +1,25 @@
+{
+  "title": "Disallow empty `enum` arrays",
+  "description": "`enum` must contain at least one element. An empty array always fails validation and is likely a mistake.",
+  "examples": [
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "enum": []
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "enum" ],
+    "2020-12": [ "enum" ],
+    "draft4": [ "enum" ],
+    "draft6": [ "enum" ],
+    "draft7": [ "enum" ]
+  },
+  "message": "Remove empty enum or add allowed values.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/generic.html#enumerated-values"
+  ]
+}

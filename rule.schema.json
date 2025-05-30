@@ -50,7 +50,6 @@
       "items": {
         "type": "string",
         "enum": [
-          "modernize",
           "readability",
           "correctness",
           "performance",
@@ -68,7 +67,7 @@
       },
       "additionalProperties": {
         "type": "array",
-        "minItems": 1,
+        "minItems": 0,
         "items": {
           "type": "string",
           "pattern": "^\\$?[A-Za-z][A-Za-z0-9-_]*$"
