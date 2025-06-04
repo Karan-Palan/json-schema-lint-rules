@@ -1,0 +1,34 @@
+{
+  "title": "Collapse single-item `type` arrays",
+  "description": "`type` may be an array to express a union, but if it contains exactly one element it should be written as a scalar for clarity and easier downstream processing.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": [ "string" ]
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "type": [ "integer" ]
+      }
+    }
+  ],
+  "categories": [ "style", "readability" ],
+  "dialects": {
+    "2019-09": [ "type" ],
+    "2020-12": [ "type" ],
+    "draft4": [ "type" ],
+    "draft6": [ "type" ],
+    "draft7": [ "type" ]
+  },
+  "message": "Replace the array with its single type value.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/type.html#simple-type"
+  ]
+}
