@@ -10,7 +10,7 @@ autofixable: false
 $schema must be one of the recognised draft URLs (draft-04, draft-06, draft-07, 2019-09, 2020-12). Relative or unrecognised URIs are disallowed.
 
 > **Message shown to user:**
-> Set $schema to a canonical draft URI.
+> Set $schema to a absolute draft URI.
 
 ### Example 1
 <details><summary>Before</summary>
