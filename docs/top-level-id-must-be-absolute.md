@@ -3,7 +3,7 @@ title: Top-level $id must be an absolute URI
 code: top-level-id-must-be-absolute
 categories: correctness, readability
 dialects: 2019-09, 2020-12, draft6, draft7
-autofixable: true
+autofixable: false
 ---
 
 ## Description
@@ -19,17 +19,6 @@ Relative identifiers at the document root lead to ambiguous references. Use an a
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/user",
-  "type": "object"
-}
-```
-</details>
-
-<details><summary>After</summary>
-
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/user",
   "type": "object"
 }
 ```
