@@ -1,0 +1,50 @@
+{
+  "title": "Do not set both `readOnly` and `writeOnly`",
+  "description": "`readOnly:true` means a value is *output-only*; `writeOnly:true` means it is *input-only*. Setting both to `true` simultaneously is contradictory.",
+  "examples": [
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "password": {
+            "readOnly": true,
+            "writeOnly": true,
+            "type": "string"
+          }
+        }
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "readOnly": true,
+        "writeOnly": true,
+        "type": "string"
+      }
+    }
+  ],
+  "categories": [
+    "correctness",
+    "readability"
+  ],
+  "dialects": {
+    "2019-09": [
+      "readOnly",
+      "writeOnly"
+    ],
+    "2020-12": [
+      "readOnly",
+      "writeOnly"
+    ],
+    "draft7": [
+      "readOnly",
+      "writeOnly"
+    ]
+  },
+  "message": "Remove either `readOnly` or `writeOnly` (or both).",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-readonly",
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-writeonly"
+  ]
+}

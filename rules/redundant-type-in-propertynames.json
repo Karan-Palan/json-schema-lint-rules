@@ -1,0 +1,59 @@
+{
+  "title": "Avoid redundant `type:\"string\"` inside `propertyNames`",
+  "description": "`propertyNames` always validates **object property keys**, which are strings by definition; adding `type:\"string\"` is unnecessary noise.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "propertyNames": {
+          "pattern": "^S_"
+        }
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "propertyNames": {
+          "type": "string",
+          "pattern": "^S_"
+        }
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "propertyNames": {
+          "type": [
+            "string"
+          ]
+        }
+      }
+    }
+  ],
+  "categories": [
+    "style",
+    "readability"
+  ],
+  "dialects": {
+    "2019-09": [
+      "propertyNames",
+      "type"
+    ],
+    "2020-12": [
+      "propertyNames",
+      "type"
+    ],
+    "draft6": [
+      "propertyNames",
+      "type"
+    ],
+    "draft7": [
+      "propertyNames",
+      "type"
+    ]
+  },
+  "message": "Remove the redundant `type:\"string\"` inside `propertyNames`.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/object.html#property-names"
+  ]
+}
