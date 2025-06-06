@@ -1,0 +1,40 @@
+{
+  "title": "Disallow duplicate values in enum",
+  "description": "All elements in `enum` must be unique; duplicates add no meaning and may hide mistakes.",
+  "examples": [
+    {
+      "before": {
+        "enum": [
+          "a",
+          "b",
+          "a"
+        ]
+      },
+      "doc": true
+    }
+  ],
+  "categories": [
+    "correctness"
+  ],
+  "dialects": {
+    "2019-09": [
+      "enum"
+    ],
+    "2020-12": [
+      "enum"
+    ],
+    "draft4": [
+      "enum"
+    ],
+    "draft6": [
+      "enum"
+    ],
+    "draft7": [
+      "enum"
+    ]
+  },
+  "message": "Remove duplicate values from enum array.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/generic.html#enumerated-values"
+  ]
+}

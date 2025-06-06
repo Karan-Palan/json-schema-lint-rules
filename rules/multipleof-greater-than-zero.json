@@ -1,0 +1,37 @@
+{
+  "title": "`multipleOf` must be > 0",
+  "description": "The value of `multipleOf` has to be a strictly positive number; zero or negative values are invalid.",
+  "examples": [
+    {
+      "before": {
+        "type": "integer",
+        "multipleOf": 0
+      },
+      "doc": true
+    }
+  ],
+  "categories": [
+    "correctness"
+  ],
+  "dialects": {
+    "2019-09": [
+      "multipleOf"
+    ],
+    "2020-12": [
+      "multipleOf"
+    ],
+    "draft4": [
+      "multipleOf"
+    ],
+    "draft6": [
+      "multipleOf"
+    ],
+    "draft7": [
+      "multipleOf"
+    ]
+  },
+  "message": "Set `multipleOf` to a number greater than zero.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/numeric.html#multiple-of"
+  ]
+}

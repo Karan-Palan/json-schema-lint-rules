@@ -1,0 +1,41 @@
+{
+  "title": "`const` and `enum` are mutually exclusive",
+  "description": "`const` defines one exact value. Adding an `enum` is redundant or contradictory.",
+  "examples": [
+    {
+      "before": {
+        "const": 5,
+        "enum": [
+          5,
+          6
+        ]
+      },
+      "doc": true
+    }
+  ],
+  "categories": [
+    "correctness"
+  ],
+  "dialects": {
+    "2019-09": [
+      "const",
+      "enum"
+    ],
+    "2020-12": [
+      "const",
+      "enum"
+    ],
+    "draft6": [
+      "const",
+      "enum"
+    ],
+    "draft7": [
+      "const",
+      "enum"
+    ]
+  },
+  "message": "Remove `enum` when `const` is present, or vice-versa.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-const"
+  ]
+}

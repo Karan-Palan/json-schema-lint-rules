@@ -1,0 +1,41 @@
+{
+  "title": "`oneOf` must contain at least two schemas",
+  "description": "A single-branch `oneOf` is meaningless; use the schema directly instead.",
+  "examples": [
+    {
+      "before": {
+        "oneOf": [
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "doc": true
+    }
+  ],
+  "categories": [
+    "correctness",
+    "readability"
+  ],
+  "dialects": {
+    "2019-09": [
+      "oneOf"
+    ],
+    "2020-12": [
+      "oneOf"
+    ],
+    "draft4": [
+      "oneOf"
+    ],
+    "draft6": [
+      "oneOf"
+    ],
+    "draft7": [
+      "oneOf"
+    ]
+  },
+  "message": "Add a second branch or remove `oneOf` wrapper.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-core.html#rfc.section.10.2.1"
+  ]
+}

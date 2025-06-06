@@ -1,0 +1,36 @@
+{
+  "title": "When `contains` is present, `minItems` must be ≥ 1",
+  "description": "In draft-2019-09 and newer, a schema with `contains` but no `minContains` implies at least one matching element; `minItems:0` contradicts that.",
+  "examples": [
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array",
+        "minItems": 0,
+        "contains": {
+          "type": "string"
+        }
+      },
+      "doc": true
+    }
+  ],
+  "categories": [
+    "correctness"
+  ],
+  "dialects": {
+    "2019-09": [
+      "contains",
+      "minItems",
+      "minContains"
+    ],
+    "2020-12": [
+      "contains",
+      "minItems",
+      "minContains"
+    ]
+  },
+  "message": "Remove `minItems:0` or add `minContains`.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-contains"
+  ]
+}
