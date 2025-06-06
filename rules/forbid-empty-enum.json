@@ -10,13 +10,25 @@
       "doc": true
     }
   ],
-  "categories": [ "correctness" ],
+  "categories": [
+    "correctness"
+  ],
   "dialects": {
-    "2019-09": [ "enum" ],
-    "2020-12": [ "enum" ],
-    "draft4": [ "enum" ],
-    "draft6": [ "enum" ],
-    "draft7": [ "enum" ]
+    "2019-09": [
+      "enum"
+    ],
+    "2020-12": [
+      "enum"
+    ],
+    "draft4": [
+      "enum"
+    ],
+    "draft6": [
+      "enum"
+    ],
+    "draft7": [
+      "enum"
+    ]
   },
   "message": "Remove empty enum or add allowed values.",
   "references": [

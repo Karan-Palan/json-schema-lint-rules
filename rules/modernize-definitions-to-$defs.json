@@ -36,10 +36,19 @@
       "doc": true
     }
   ],
-  "categories": [ "correctness", "readability" ],
+  "categories": [
+    "correctness",
+    "readability"
+  ],
   "dialects": {
-    "2019-09": [ "definitions", "$defs" ],
-    "2020-12": [ "definitions", "$defs" ]
+    "2019-09": [
+      "definitions",
+      "$defs"
+    ],
+    "2020-12": [
+      "definitions",
+      "$defs"
+    ]
   },
   "message": "Move schemas from `definitions` to `$defs`.",
   "references": [
