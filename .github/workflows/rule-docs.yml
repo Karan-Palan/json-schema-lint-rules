@@ -28,7 +28,7 @@ jobs:
 
       - name: Format JSON files
         run: |
-          npx jsonschema fmt ./ --ignore ./.github
+          npx jsonschema fmt 'rules/**/*.json' 'rule.schema.json'
 
       - name: Generate Markdown docs
         run: |
