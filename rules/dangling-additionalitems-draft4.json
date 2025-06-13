@@ -1,0 +1,35 @@
+{
+  "title": "`additionalItems` ignored when `items` is an object (draft-04)",
+  "description": "In draft-04 only, `additionalItems` has no effect unless `items` is an array. Flag this redundant combination.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "items": {
+          "type": "number"
+        }
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "items": {
+          "type": "number"
+        },
+        "additionalItems": false
+      },
+      "doc": true
+    }
+  ],
+  "categories": [
+    "correctness"
+  ],
+  "dialects": {
+    "draft4": [
+      "items",
+      "additionalItems"
+    ]
+  },
+  "message": "Remove `additionalItems` or convert `items` into an array.",
+  "references": [
+    "https://json-schema.org/draft-04/json-schema-validation.html#anchor66"
+  ]
+}
