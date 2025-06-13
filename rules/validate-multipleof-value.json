@@ -1,0 +1,56 @@
+{
+  "title": "Validate `multipleOf` value",
+  "description": "`multipleOf` has two sanity checks:\n1. **Correctness** – the value MUST be strictly greater than 0 (spec requirement).\n2. **Style** – the value SHOULD NOT be 1, because that accepts every number and adds no constraint.",
+  "examples": [
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "integer",
+        "multipleOf": 0
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "type": "number",
+        "multipleOf": -5
+      }
+    },
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "integer"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "integer",
+        "multipleOf": 1
+      }
+    }
+  ],
+  "categories": [
+    "correctness",
+    "style"
+  ],
+  "dialects": {
+    "2019-09": [
+      "multipleOf"
+    ],
+    "2020-12": [
+      "multipleOf"
+    ],
+    "draft4": [
+      "multipleOf"
+    ],
+    "draft6": [
+      "multipleOf"
+    ],
+    "draft7": [
+      "multipleOf"
+    ]
+  },
+  "message": "Use a `multipleOf` greater than 0 and different from 1.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/numeric.html#multiple-of"
+  ]
+}
