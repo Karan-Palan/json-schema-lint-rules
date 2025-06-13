@@ -1,5 +1,5 @@
 {
-  "title": "`required` entries must exist in `properties` / `patternProperties`",
+  "title": "`required` entries must exist in `properties`",
   "description": "List only property names that are actually declared. Regex patterns in `patternProperties` are ignored unless they exactly match the required name.",
   "examples": [
     {
@@ -17,19 +17,6 @@
         }
       },
       "doc": true
-    },
-    {
-      "before": {
-        "type": "object",
-        "required": [
-          "S_user"
-        ],
-        "patternProperties": {
-          "^S_": {
-            "type": "string"
-          }
-        }
-      }
     }
   ],
   "categories": [
