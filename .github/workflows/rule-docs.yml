@@ -28,7 +28,7 @@ jobs:
 
       - name: Format JSON files
         run: |
-          npx jsonschema fmt 'rules/**/*.json' 'rule.schema.json'
+          npx jsonschema fmt ./rules rule.schema.json
 
       - name: Generate Markdown docs
         run: |
