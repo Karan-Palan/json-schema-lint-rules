@@ -14,7 +14,6 @@ $schema must be one of the recognised draft URLs (draft-04, draft-06, draft-07, 
 
 ### Example 1
 <details><summary>Before</summary>
-
 ```json
 {
   "$schema": "./schema",

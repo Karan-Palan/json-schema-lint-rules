@@ -1,20 +1,19 @@
 ---
-title: Numeric limits must be coherent
-code: incoherent-numeric-limits
+title: \`minimum\` must not exceed \`maximum\`
+code: incoherent-inclusive-limits
 categories: correctness
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
 autofixable: false
 ---
 
 ## Description
-`minimum` cannot exceed `maximum`; same for the exclusive forms.
+Inclusive bounds are contradictory when minimum > maximum.
 
 > **Message shown to user:**
-> Adjust numeric limits so minimum ≤ maximum.
+> Adjust numeric limits or swap their values.
 
 ### Example 1
 <details><summary>Before</summary>
-
 ```json
 {
   "type": "number",
@@ -25,4 +24,4 @@ autofixable: false
 </details>
 
 ## References
-* <https://json-schema.org/understanding-json-schema/reference/numeric.html>
+* <https://json-schema.org/understanding-json-schema/reference/numeric.html#range>

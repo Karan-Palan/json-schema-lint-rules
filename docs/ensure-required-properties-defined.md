@@ -1,5 +1,5 @@
 ---
-title: \`required\` entries must exist in \`properties\` / \`patternProperties\`
+title: \`required\` entries must exist in \`properties\`
 code: ensure-required-properties-defined
 categories: correctness
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
@@ -14,7 +14,6 @@ List only property names that are actually declared. Regex patterns in `patternP
 
 ### Example 1
 <details><summary>Before</summary>
-
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

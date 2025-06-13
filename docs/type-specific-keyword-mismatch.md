@@ -14,7 +14,6 @@ Keywords like `minimum` apply only to numbers; `minLength` only to strings, etc.
 
 ### Example 1
 <details><summary>Before</summary>
-
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

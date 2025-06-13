@@ -14,7 +14,6 @@ A single-branch `oneOf` is meaningless; use the schema directly instead.
 
 ### Example 1
 <details><summary>Before</summary>
-
 ```json
 {
   "oneOf": [

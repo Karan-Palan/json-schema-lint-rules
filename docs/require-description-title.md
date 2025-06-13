@@ -14,7 +14,6 @@ The root schema should include human-readable `title` and `description` so tooli
 
 ### Example 1
 <details><summary>Before</summary>
-
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -30,7 +29,6 @@ The root schema should include human-readable `title` and `description` so tooli
 </details>
 
 <details><summary>After</summary>
-
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

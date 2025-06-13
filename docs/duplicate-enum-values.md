@@ -3,7 +3,7 @@ title: Disallow duplicate values in enum
 code: duplicate-enum-values
 categories: correctness
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -14,13 +14,23 @@ All elements in `enum` must be unique; duplicates add no meaning and may hide mi
 
 ### Example 1
 <details><summary>Before</summary>
-
 ```json
 {
   "enum": [
     "a",
     "b",
     "a"
+  ]
+}
+```
+</details>
+
+<details><summary>After</summary>
+```json
+{
+  "enum": [
+    "a",
+    "b"
   ]
 }
 ```
