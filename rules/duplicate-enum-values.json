@@ -3,6 +3,12 @@
   "description": "All elements in `enum` must be unique; duplicates add no meaning and may hide mistakes.",
   "examples": [
     {
+      "after": {
+        "enum": [
+          "a",
+          "b"
+        ]
+      },
       "before": {
         "enum": [
           "a",

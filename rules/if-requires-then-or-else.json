@@ -1,0 +1,56 @@
+{
+  "title": "`if` without `then` or `else` is ineffective",
+  "description": "A lone `if` keyword has no impact on validation; at least one of `then` or `else` must accompany it.",
+  "examples": [
+    {
+      "after": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "flag"
+          ]
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        }
+      },
+      "doc": true
+    }
+  ],
+  "categories": [
+    "correctness"
+  ],
+  "dialects": {
+    "2019-09": [
+      "if",
+      "then",
+      "else"
+    ],
+    "2020-12": [
+      "if",
+      "then",
+      "else"
+    ],
+    "draft7": [
+      "if",
+      "then",
+      "else"
+    ]
+  },
+  "message": "Add `then`, `else`, or remove `if`.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-core.html#name-conditionals"
+  ]
+}
