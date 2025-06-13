@@ -1,24 +1,13 @@
 {
   "type": "module",
   "devDependencies": {
-    "@sourcemeta/jsonschema": "^9.3.1",
-    "husky": "^9.1.0",
-    "lint-staged": "^15.2.2"
+    "@sourcemeta/jsonschema": "^9.3.1"
   },
   "license": "MIT",
   "name": "jsonschema-lint-rules",
   "scripts": {
     "build": "node generate.mjs",
     "validate:rules": "bash -c 'jsonschema validate rule.schema.json $(find rules -name \"*.json\")'",
-    "prepare": "husky install"
-  },
-  "version": "0.1.0",
-  "lint-staged": {
-    "rule.schema.json": [
-      "jsonschema fmt"
-    ],
-    "rules/**/*.json": [
-      "jsonschema fmt"
-    ]
+    "format:rules": "jsonschema fmt ./rules rule.schema.json" 
   }
 }
