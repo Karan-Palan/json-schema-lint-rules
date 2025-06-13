@@ -33,9 +33,9 @@ json-schema-lint-rules/
 npm install
 ```
 
-### 2. Generate Documentation
+### 2. Generate Documentation & Validate Rules
 
-Run the documentation generator and validate json files:
+Run the documentation generator and validate JSON files:
 
 ```sh
 node generate.mjs
@@ -43,13 +43,35 @@ node generate.mjs
 
 This will validate all rules against `rule.schema.json` and generate Markdown documentation in the `docs/` directory.
 
-### 2. Validate Rules
-
-Validate all rule files against the schema:
+You can also validate rules separately:
 
 ```sh
 npm run validate:rules
 ```
+
+### 3. Development Setup
+
+The project includes a pre-commit hook that automatically formats JSON schema files using `jsonschema fmt`. This runs automatically when you make a commit that includes changes to:
+- `rule.schema.json`
+- Any files in the `rules/` directory
+
+To set up the pre-commit hook (already configured in the project):
+
+```sh
+npm install
+```
+
+The hook will automatically run when you make commits that include changes to JSON schema files.
+
+### 4. Generate Documentation
+
+Generate Markdown documentation for each rule:
+
+```sh
+npm run build
+```
+
+The generated docs will appear in the `docs/` directory, organized by category.
 
 ### Docker Usage
 
@@ -85,14 +107,6 @@ npm run build
 ```
 
 The generated docs will appear in the `docs/` directory, organized by category.
-
-## Example Rule
-
-See [`rules/singular-const-to-enum.json`](rules/singular-const-to-enum.json):
-
-- Promotes using `const` instead of a single-value `enum`.
-- Includes valid and invalid schema examples.
-- Provides a user-facing message and references.
 
 ## Adding New Rules
 
