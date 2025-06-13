@@ -1,0 +1,74 @@
+{
+  "title": "`then` or `else` is always-false schema",
+  "description": "`then` or `else` set to `false` always fails validation, which may be unintended.",
+  "examples": [
+    {
+      "after": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "then": false
+      },
+      "doc": true
+    },
+    {
+      "after": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "else": false
+      },
+      "doc": true
+    }
+  ],
+  "categories": [
+    "correctness"
+  ],
+  "dialects": {
+    "2019-09": [
+      "if",
+      "then",
+      "else"
+    ],
+    "2020-12": [
+      "if",
+      "then",
+      "else"
+    ],
+    "draft7": [
+      "if",
+      "then",
+      "else"
+    ]
+  },
+  "message": "Avoid always-false `then`/`else` schemas unless intentional.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-core.html#name-conditionals"
+  ]
+}
