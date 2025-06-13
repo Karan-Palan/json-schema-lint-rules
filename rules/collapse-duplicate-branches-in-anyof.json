@@ -31,13 +31,26 @@
       "doc": true
     }
   ],
-  "categories": [ "readability", "style" ],
+  "categories": [
+    "readability",
+    "style"
+  ],
   "dialects": {
-    "2019-09": [ "anyOf" ],
-    "2020-12": [ "anyOf" ],
-    "draft4": [ "anyOf" ],
-    "draft6": [ "anyOf" ],
-    "draft7": [ "anyOf" ]
+    "2019-09": [
+      "anyOf"
+    ],
+    "2020-12": [
+      "anyOf"
+    ],
+    "draft4": [
+      "anyOf"
+    ],
+    "draft6": [
+      "anyOf"
+    ],
+    "draft7": [
+      "anyOf"
+    ]
   },
   "message": "Remove duplicate schemas; keep one representative branch.",
   "references": [
