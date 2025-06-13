@@ -1,0 +1,46 @@
+{
+  "title": "`format` must match declared `type`",
+  "description": "`format` applies only to string instances. Using it with another `type` is invalid.",
+  "examples": [
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "integer",
+        "format": "uuid"
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": [
+          "integer",
+          "boolean"
+        ],
+        "format": "email"
+      },
+      "doc": true
+    }
+  ],
+  "categories": [
+    "correctness"
+  ],
+  "dialects": {
+    "2019-09": [
+      "type",
+      "format"
+    ],
+    "2020-12": [
+      "type",
+      "format"
+    ],
+    "draft7": [
+      "type",
+      "format"
+    ]
+  },
+  "message": "Remove `format` or set `type` to `\"string\"`.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-format"
+  ]
+}
