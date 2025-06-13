@@ -1,0 +1,26 @@
+{
+  "title": "`minimum` must not exceed `maximum`",
+  "description": "Inclusive bounds are contradictory when minimum > maximum.",
+  "examples": [
+    {
+      "before": {
+        "type": "number",
+        "maximum": 5,
+        "minimum": 10
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "minimum", "maximum" ],
+    "2020-12": [ "minimum", "maximum" ],
+    "draft4": [ "minimum", "maximum" ],
+    "draft6": [ "minimum", "maximum" ],
+    "draft7": [ "minimum", "maximum" ]
+  },
+  "message": "Adjust numeric limits or swap their values.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/numeric.html#range"
+  ]
+}
