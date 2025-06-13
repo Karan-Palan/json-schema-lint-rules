@@ -1,0 +1,47 @@
+{
+  "title": "Values in `examples` must validate against the schema",
+  "description": "Each entry in an `examples` array should be a valid instance of the schema it annotates; misleading examples hinder tooling and docs.",
+  "examples": [
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "examples": [
+          "not-an-integer"
+        ],
+        "type": "integer"
+      },
+      "doc": true
+    },
+    {
+      "before": {
+        "examples": [
+          "user@example.com"
+        ],
+        "type": "string",
+        "format": "email"
+      }
+    }
+  ],
+  "categories": [
+    "correctness",
+    "readability"
+  ],
+  "dialects": {
+    "2019-09": [
+      "examples"
+    ],
+    "2020-12": [
+      "examples"
+    ],
+    "draft6": [
+      "examples"
+    ],
+    "draft7": [
+      "examples"
+    ]
+  },
+  "message": "Remove or fix invalid example values.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-examples"
+  ]
+}
