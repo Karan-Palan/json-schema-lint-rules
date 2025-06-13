@@ -1,0 +1,46 @@
+{
+  "title": "Collapse duplicate schemas in `anyOf`",
+  "description": "Redundant branches inside `anyOf` add noise without changing validation results.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "readability", "style" ],
+  "dialects": {
+    "2019-09": [ "anyOf" ],
+    "2020-12": [ "anyOf" ],
+    "draft4": [ "anyOf" ],
+    "draft6": [ "anyOf" ],
+    "draft7": [ "anyOf" ]
+  },
+  "message": "Remove duplicate schemas; keep one representative branch.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-core.html#name-anyof"
+  ]
+}
