@@ -41,22 +41,17 @@ function renderMarkdown(rule, code) {
   lines.push("> **Message shown to user:**");
   lines.push(`> ${rule.message}\n`);
 
-  const docExamples = rule.examples.filter((e) => e.doc) || [rule.examples[0]];
-
-  docExamples.forEach(({ before, after }, i) => {
+  const docEx = rule.examples.filter((e) => e.doc) || [rule.examples[0]];
+  docEx.forEach(({ before, after }, i) => {
     lines.push(`### Example ${i + 1}`);
-    lines.push("<details><summary>Before</summary>\n");
-    lines.push("```json");
+    lines.push("<details><summary>Before</summary>\n```json");
     lines.push(JSON.stringify(before, null, 2));
-    lines.push("```");
-    lines.push("</details>\n");
+    lines.push("```\n</details>\n");
 
     if (after) {
-      lines.push("<details><summary>After</summary>\n");
-      lines.push("```json");
+      lines.push("<details><summary>After</summary>\n```json");
       lines.push(JSON.stringify(after, null, 2));
-      lines.push("```");
-      lines.push("</details>\n");
+      lines.push("```\n</details>\n");
     }
   });
 
@@ -65,15 +60,31 @@ function renderMarkdown(rule, code) {
     rule.references.forEach((u) => lines.push(`* <${u}>`));
     lines.push("");
   }
-
   return lines.join("\n");
 }
 
+// main script
 (async () => {
   await fs.mkdir(DOCS_DIR, { recursive: true });
 
-  for (const file of await fs.readdir(RULES_DIR)) {
-    if (!file.endsWith(".json")) continue;
+  // build a set of valid rule codes from rule filenames
+  const ruleFiles = (await fs.readdir(RULES_DIR)).filter((f) =>
+    f.endsWith(".json")
+  );
+  const ruleCodes = new Set(ruleFiles.map((f) => path.basename(f, ".json")));
+
+  // cleanup phase: delete orphan markdown
+  for (const file of await fs.readdir(DOCS_DIR)) {
+    if (!file.endsWith(".md")) continue;
+    const code = path.basename(file, ".md");
+    if (!ruleCodes.has(code)) {
+      await fs.unlink(path.join(DOCS_DIR, file));
+      console.log(`✗ removed orphan docs/${file}`);
+    }
+  }
+
+  // generate / update markdown for each rule
+  for (const file of ruleFiles) {
     const rulePath = path.join(RULES_DIR, file);
 
     // schema-validate the rule file
