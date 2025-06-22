@@ -12,44 +12,19 @@
     },
     {
       "before": {
-        "type": [
-          "integer",
-          "string"
-        ],
+        "type": [ "integer", "string" ],
         "exclusiveMaximum": 10,
         "maxLength": 5
       }
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "minimum",
-      "maxlength",
-      "multipleof"
-    ],
-    "2020-12": [
-      "minimum",
-      "maxlength",
-      "multipleof"
-    ],
-    "draft4": [
-      "minimum",
-      "maxlength",
-      "multipleof"
-    ],
-    "draft6": [
-      "minimum",
-      "maxlength",
-      "multipleof"
-    ],
-    "draft7": [
-      "minimum",
-      "maxlength",
-      "multipleof"
-    ]
+    "2019-09": [ "minimum", "maxlength", "multipleof" ],
+    "2020-12": [ "minimum", "maxlength", "multipleof" ],
+    "draft4": [ "minimum", "maxlength", "multipleof" ],
+    "draft6": [ "minimum", "maxlength", "multipleof" ],
+    "draft7": [ "minimum", "maxlength", "multipleof" ]
   },
   "message": "Remove keyword(s) that do not apply to the declared type.",
   "references": [

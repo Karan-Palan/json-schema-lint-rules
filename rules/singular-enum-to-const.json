@@ -9,37 +9,22 @@
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "enum": [
-          "foo"
-        ]
+        "enum": [ "foo" ]
       },
       "doc": true,
-      "tags": [
-        "basic"
-      ]
+      "tags": [ "basic" ]
     },
     {
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "enum": [
-          42
-        ]
+        "enum": [ 42 ]
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "readability"
-  ],
+  "categories": [ "correctness", "readability" ],
   "dialects": {
-    "2019-09": [
-      "enum",
-      "const"
-    ],
-    "2020-12": [
-      "enum",
-      "const"
-    ]
+    "2019-09": [ "enum", "const" ],
+    "2020-12": [ "enum", "const" ]
   },
   "message": "Single-value enum detected – replace with const.",
   "references": [

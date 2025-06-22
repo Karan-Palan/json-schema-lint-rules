@@ -24,23 +24,11 @@
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "readability"
-  ],
+  "categories": [ "correctness", "readability" ],
   "dialects": {
-    "2019-09": [
-      "readOnly",
-      "writeOnly"
-    ],
-    "2020-12": [
-      "readOnly",
-      "writeOnly"
-    ],
-    "draft7": [
-      "readOnly",
-      "writeOnly"
-    ]
+    "2019-09": [ "readOnly", "writeOnly" ],
+    "2020-12": [ "readOnly", "writeOnly" ],
+    "draft7": [ "readOnly", "writeOnly" ]
   },
   "message": "Remove either `readOnly` or `writeOnly` (or both).",
   "references": [

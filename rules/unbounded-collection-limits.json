@@ -19,36 +19,13 @@
       }
     }
   ],
-  "categories": [
-    "safety",
-    "style"
-  ],
+  "categories": [ "safety", "style" ],
   "dialects": {
-    "2019-09": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ],
-    "2020-12": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ],
-    "draft4": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ],
-    "draft6": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ],
-    "draft7": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ]
+    "2019-09": [ "maxItems", "maxLength", "type" ],
+    "2020-12": [ "maxItems", "maxLength", "type" ],
+    "draft4": [ "maxItems", "maxLength", "type" ],
+    "draft6": [ "maxItems", "maxLength", "type" ],
+    "draft7": [ "maxItems", "maxLength", "type" ]
   },
   "message": "Add `maxItems` or `maxLength` to cap collection size.",
   "references": [

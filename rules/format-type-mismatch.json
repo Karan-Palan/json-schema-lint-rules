@@ -13,31 +13,17 @@
     {
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": [
-          "integer",
-          "boolean"
-        ],
+        "type": [ "integer", "boolean" ],
         "format": "email"
       },
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "type",
-      "format"
-    ],
-    "2020-12": [
-      "type",
-      "format"
-    ],
-    "draft7": [
-      "type",
-      "format"
-    ]
+    "2019-09": [ "type", "format" ],
+    "2020-12": [ "type", "format" ],
+    "draft7": [ "type", "format" ]
   },
   "message": "Remove `format` or set `type` to `\"string\"`.",
   "references": [

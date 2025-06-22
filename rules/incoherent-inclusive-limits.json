@@ -11,30 +11,13 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "minimum",
-      "maximum"
-    ],
-    "2020-12": [
-      "minimum",
-      "maximum"
-    ],
-    "draft4": [
-      "minimum",
-      "maximum"
-    ],
-    "draft6": [
-      "minimum",
-      "maximum"
-    ],
-    "draft7": [
-      "minimum",
-      "maximum"
-    ]
+    "2019-09": [ "minimum", "maximum" ],
+    "2020-12": [ "minimum", "maximum" ],
+    "draft4": [ "minimum", "maximum" ],
+    "draft6": [ "minimum", "maximum" ],
+    "draft7": [ "minimum", "maximum" ]
   },
   "message": "Adjust numeric limits or swap their values.",
   "references": [

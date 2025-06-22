@@ -11,23 +11,12 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness",
-    "readability"
-  ],
+  "categories": [ "correctness", "readability" ],
   "dialects": {
-    "2019-09": [
-      "$id"
-    ],
-    "2020-12": [
-      "$id"
-    ],
-    "draft6": [
-      "$id"
-    ],
-    "draft7": [
-      "$id"
-    ]
+    "2019-09": [ "$id" ],
+    "2020-12": [ "$id" ],
+    "draft6": [ "$id" ],
+    "draft7": [ "$id" ]
   },
   "message": "Convert top-level $id to an absolute URI.",
   "references": [

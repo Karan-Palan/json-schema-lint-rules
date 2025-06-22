@@ -6,10 +6,7 @@
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
-        "required": [
-          "name",
-          "age"
-        ],
+        "required": [ "name", "age" ],
         "properties": {
           "name": {
             "type": "string"
@@ -19,35 +16,13 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "required",
-      "properties",
-      "patternProperties"
-    ],
-    "2020-12": [
-      "required",
-      "properties",
-      "patternProperties"
-    ],
-    "draft4": [
-      "required",
-      "properties",
-      "patternProperties"
-    ],
-    "draft6": [
-      "required",
-      "properties",
-      "patternProperties"
-    ],
-    "draft7": [
-      "required",
-      "properties",
-      "patternProperties"
-    ]
+    "2019-09": [ "required", "properties", "patternProperties" ],
+    "2020-12": [ "required", "properties", "patternProperties" ],
+    "draft4": [ "required", "properties", "patternProperties" ],
+    "draft6": [ "required", "properties", "patternProperties" ],
+    "draft7": [ "required", "properties", "patternProperties" ]
   },
   "message": "Remove or rename entries in `required` that have no schema definition.",
   "references": [
