@@ -1,0 +1,35 @@
+{
+  "title": "`minContains: 0` without `maxContains` never fails",
+  "description": "When `minContains` is 0 and `maxContains` is absent, the schema accepts any number of matching elements. Specify `maxContains` to make the constraint meaningful.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array",
+        "maxContains": 1,
+        "minContains": 0,
+        "contains": {
+          "type": "number"
+        }
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array",
+        "minContains": 0,
+        "contains": {
+          "type": "number"
+        }
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "style", "readability" ],
+  "dialects": {
+    "2019-09": [ "contains", "minContains" ],
+    "2020-12": [ "contains", "minContains" ]
+  },
+  "message": "Add an upper bound with `maxContains` or remove `minContains: 0`.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-mincontains"
+  ]
+}

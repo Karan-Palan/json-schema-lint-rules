@@ -1,0 +1,30 @@
+{
+  "title": "Omit `additionalProperties:true` (it’s the default)",
+  "description": "`additionalProperties` defaults to `true`. Setting it explicitly adds noise without changing validation behaviour.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "additionalProperties": true
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "redundant", "style" ],
+  "dialects": {
+    "2019-09": [ "additionalProperties" ],
+    "2020-12": [ "additionalProperties" ],
+    "draft4": [ "additionalProperties" ],
+    "draft6": [ "additionalProperties" ],
+    "draft7": [ "additionalProperties" ]
+  },
+  "message": "Remove `\"additionalProperties\": true`.",
+  "references": [
+    "https://www.learnjsonschema.com/2020-12/structuring/#additionalproperties"
+  ]
+}

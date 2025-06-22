@@ -1,0 +1,28 @@
+{
+  "title": "Remove `type` when `enum` is present",
+  "description": "`enum` already restricts the allowed primitive types. A separate `type` is redundant or can even contradict the enumeration.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "enum": [ "foo", "bar" ]
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string",
+        "enum": [ "foo", "bar" ]
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "redundant", "readability" ],
+  "dialects": {
+    "2019-09": [ "enum", "type" ],
+    "2020-12": [ "enum", "type" ],
+    "draft4": [ "enum", "type" ],
+    "draft6": [ "enum", "type" ],
+    "draft7": [ "enum", "type" ]
+  },
+  "message": "Delete the redundant `type` keyword (or drop `enum`).",
+  "references": [ "https://www.learnjsonschema.com/2020-12/validation/enum/" ]
+}
