@@ -15,7 +15,7 @@
       "doc": true
     }
   ],
-  "categories": [ "redundant", "readability" ],
+  "categories": [ "readability" ],
   "dialects": {
     "2019-09": [ "enum", "type" ],
     "2020-12": [ "enum", "type" ],

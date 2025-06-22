@@ -15,7 +15,7 @@
       "doc": true
     }
   ],
-  "categories": [ "redundant", "style" ],
+  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "additionalProperties" ],
     "2020-12": [ "additionalProperties" ],
