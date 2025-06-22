@@ -21,26 +21,13 @@
       }
     }
   ],
-  "categories": [
-    "readability",
-    "correctness"
-  ],
+  "categories": [ "readability", "correctness" ],
   "dialects": {
-    "2019-09": [
-      "items"
-    ],
-    "2020-12": [
-      "items"
-    ],
-    "draft4": [
-      "items"
-    ],
-    "draft6": [
-      "items"
-    ],
-    "draft7": [
-      "items"
-    ]
+    "2019-09": [ "items" ],
+    "2020-12": [ "items" ],
+    "draft4": [ "items" ],
+    "draft6": [ "items" ],
+    "draft7": [ "items" ]
   },
   "message": "Add an `items` schema for array elements.",
   "references": [

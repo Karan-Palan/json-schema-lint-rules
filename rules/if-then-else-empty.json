@@ -47,25 +47,11 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "if",
-      "then",
-      "else"
-    ],
-    "2020-12": [
-      "if",
-      "then",
-      "else"
-    ],
-    "draft7": [
-      "if",
-      "then",
-      "else"
-    ]
+    "2019-09": [ "if", "then", "else" ],
+    "2020-12": [ "if", "then", "else" ],
+    "draft7": [ "if", "then", "else" ]
   },
   "message": "Remove empty `then`/`else` or add restrictions.",
   "references": [

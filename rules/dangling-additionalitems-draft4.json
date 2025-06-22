@@ -19,14 +19,9 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "categories": [ "correctness" ],
   "dialects": {
-    "draft4": [
-      "items",
-      "additionalItems"
-    ]
+    "draft4": [ "items", "additionalItems" ]
   },
   "message": "Remove `additionalItems` or convert `items` into an array.",
   "references": [

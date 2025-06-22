@@ -9,40 +9,23 @@
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": [
-          "string"
-        ]
+        "type": [ "string" ]
       },
       "doc": true
     },
     {
       "before": {
-        "type": [
-          "integer"
-        ]
+        "type": [ "integer" ]
       }
     }
   ],
-  "categories": [
-    "style",
-    "readability"
-  ],
+  "categories": [ "style", "readability" ],
   "dialects": {
-    "2019-09": [
-      "type"
-    ],
-    "2020-12": [
-      "type"
-    ],
-    "draft4": [
-      "type"
-    ],
-    "draft6": [
-      "type"
-    ],
-    "draft7": [
-      "type"
-    ]
+    "2019-09": [ "type" ],
+    "2020-12": [ "type" ],
+    "draft4": [ "type" ],
+    "draft6": [ "type" ],
+    "draft7": [ "type" ]
   },
   "message": "Replace the array with its single type value.",
   "references": [

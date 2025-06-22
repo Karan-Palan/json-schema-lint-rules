@@ -12,26 +12,12 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "exclusiveMinimum",
-      "exclusiveMaximum"
-    ],
-    "2020-12": [
-      "exclusiveMinimum",
-      "exclusiveMaximum"
-    ],
-    "draft6": [
-      "exclusiveMinimum",
-      "exclusiveMaximum"
-    ],
-    "draft7": [
-      "exclusiveMinimum",
-      "exclusiveMaximum"
-    ]
+    "2019-09": [ "exclusiveMinimum", "exclusiveMaximum" ],
+    "2020-12": [ "exclusiveMinimum", "exclusiveMaximum" ],
+    "draft6": [ "exclusiveMinimum", "exclusiveMaximum" ],
+    "draft7": [ "exclusiveMinimum", "exclusiveMaximum" ]
   },
   "message": "Ensure exclusiveMinimum is lower than exclusiveMaximum.",
   "references": [

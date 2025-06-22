@@ -5,18 +5,12 @@
     {
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "enum": [
-          "one",
-          "two"
-        ]
+        "enum": [ "one", "two" ]
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "string",
-        "enum": [
-          "one",
-          "two"
-        ],
+        "enum": [ "one", "two" ],
         "minLength": 3
       },
       "doc": true
@@ -24,46 +18,29 @@
     {
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "enum": [
-          1,
-          2,
-          3
-        ]
+        "enum": [ 1, 2, 3 ]
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "enum": [
-          1,
-          2,
-          3
-        ],
+        "enum": [ 1, 2, 3 ],
         "minimum": 0
       }
     },
     {
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "enum": [
-          10,
-          5
-        ]
+        "enum": [ 10, 5 ]
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "integer",
-        "enum": [
-          10,
-          5
-        ],
+        "enum": [ 10, 5 ],
         "maximum": 100,
         "multipleOf": 2
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "readability"
-  ],
+  "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [
       "enum",

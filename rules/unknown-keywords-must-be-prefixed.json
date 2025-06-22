@@ -22,10 +22,7 @@
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "readability"
-  ],
+  "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [],
     "2020-12": [],

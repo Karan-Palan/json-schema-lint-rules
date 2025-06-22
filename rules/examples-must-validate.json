@@ -5,40 +5,25 @@
     {
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "examples": [
-          "not-an-integer"
-        ],
+        "examples": [ "not-an-integer" ],
         "type": "integer"
       },
       "doc": true
     },
     {
       "before": {
-        "examples": [
-          "user@example.com"
-        ],
+        "examples": [ "user@example.com" ],
         "type": "string",
         "format": "email"
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "readability"
-  ],
+  "categories": [ "correctness", "readability" ],
   "dialects": {
-    "2019-09": [
-      "examples"
-    ],
-    "2020-12": [
-      "examples"
-    ],
-    "draft6": [
-      "examples"
-    ],
-    "draft7": [
-      "examples"
-    ]
+    "2019-09": [ "examples" ],
+    "2020-12": [ "examples" ],
+    "draft6": [ "examples" ],
+    "draft7": [ "examples" ]
   },
   "message": "Remove or fix invalid example values.",
   "references": [

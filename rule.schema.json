@@ -23,9 +23,7 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": [
-          "before"
-        ],
+        "required": [ "before" ],
         "properties": {
           "after": {
             "type": "object"
@@ -50,7 +48,6 @@
       "type": "array",
       "minItems": 1,
       "items": {
-        "type": "string",
         "enum": [
           "readability",
           "correctness",
@@ -65,13 +62,7 @@
       "type": "object",
       "minProperties": 1,
       "propertyNames": {
-        "enum": [
-          "draft4",
-          "draft6",
-          "draft7",
-          "2019-09",
-          "2020-12"
-        ]
+        "enum": [ "draft4", "draft6", "draft7", "2019-09", "2020-12" ]
       },
       "additionalProperties": {
         "type": "array",

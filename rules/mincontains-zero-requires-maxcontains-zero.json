@@ -41,21 +41,10 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness",
-    "readability"
-  ],
+  "categories": [ "correctness", "readability" ],
   "dialects": {
-    "2019-09": [
-      "contains",
-      "minContains",
-      "maxContains"
-    ],
-    "2020-12": [
-      "contains",
-      "minContains",
-      "maxContains"
-    ]
+    "2019-09": [ "contains", "minContains", "maxContains" ],
+    "2020-12": [ "contains", "minContains", "maxContains" ]
   },
   "message": "Add `maxContains: 0` when `minContains` is 0 (or raise `minContains`).",
   "references": [

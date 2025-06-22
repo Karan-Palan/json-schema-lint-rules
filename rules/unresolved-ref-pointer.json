@@ -27,26 +27,13 @@
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "safety"
-  ],
+  "categories": [ "correctness", "safety" ],
   "dialects": {
-    "2019-09": [
-      "$ref"
-    ],
-    "2020-12": [
-      "$ref"
-    ],
-    "draft4": [
-      "$ref"
-    ],
-    "draft6": [
-      "$ref"
-    ],
-    "draft7": [
-      "$ref"
-    ]
+    "2019-09": [ "$ref" ],
+    "2020-12": [ "$ref" ],
+    "draft4": [ "$ref" ],
+    "draft6": [ "$ref" ],
+    "draft7": [ "$ref" ]
   },
   "message": "Ensure `$ref` resolves to an existing subschema or to a valid JSON Schema resource.",
   "references": [
