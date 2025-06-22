@@ -1,14 +1,22 @@
 {
-  "title": "`required` entries must exist in `properties`",
-  "description": "List only property names that are actually declared. Regex patterns in `patternProperties` are ignored unless they exactly match the required name.",
+  "title": "`required` names must be declared or matched by a pattern",
+  "description": "Every entry in `required` must correspond to a key in `properties` or match at least one regex in `patternProperties`.",
   "examples": [
     {
-      "before": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "after": {
         "type": "object",
-        "required": [ "name", "age" ],
-        "properties": {
-          "name": {
+        "required": [ "a", "b" ],
+        "patternProperties": {
+          "^a|b$": {
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "required": [ "a", "b", "c" ],
+        "patternProperties": {
+          "^a|b$": {
             "type": "string"
           }
         }
@@ -24,8 +32,9 @@
     "draft6": [ "required", "properties", "patternProperties" ],
     "draft7": [ "required", "properties", "patternProperties" ]
   },
-  "message": "Remove or rename entries in `required` that have no schema definition.",
+  "message": "Remove unknown names, declare them, or add a matching pattern.",
   "references": [
-    "https://json-schema.org/understanding-json-schema/reference/object.html#required-properties"
+    "https://json-schema.org/understanding-json-schema/reference/object.html#required-properties",
+    "https://json-schema.org/understanding-json-schema/reference/object.html#pattern-properties"
   ]
 }
