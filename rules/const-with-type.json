@@ -1,0 +1,27 @@
+{
+  "title": "Remove `type` when `const` is present",
+  "description": "`const` fixes the instance to a single value, which already determines its primitive type.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "const": 42
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "integer",
+        "const": 42
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "redundant", "readability" ],
+  "dialects": {
+    "2019-09": [ "const", "type" ],
+    "2020-12": [ "const", "type" ],
+    "draft6": [ "const", "type" ],
+    "draft7": [ "const", "type" ]
+  },
+  "message": "Delete the redundant `type` keyword (or drop `const`).",
+  "references": [ "https://www.learnjsonschema.com/2020-12/validation/const/" ]
+}
