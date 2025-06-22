@@ -1,16 +1,16 @@
 {
-  "title": "`additionalItems` ignored when `items` is an object (draft-04)",
-  "description": "In draft-04 only, `additionalItems` has no effect unless `items` is an array. Flag this redundant combination.",
+  "title": "`additionalItems` ignored when `items` is an object",
+  "description": "Up to draft-2019-09, `additionalItems` is ignored unless `items` is an array. (The keyword was removed in draft-2020-12.)",
   "examples": [
     {
       "after": {
-        "$schema": "http://json-schema.org/draft-04/schema#",
+        "$schema": "http://json-schema.org/draft-07/schema#",
         "items": {
           "type": "number"
         }
       },
       "before": {
-        "$schema": "http://json-schema.org/draft-04/schema#",
+        "$schema": "http://json-schema.org/draft-07/schema#",
         "items": {
           "type": "number"
         },
@@ -21,10 +21,14 @@
   ],
   "categories": [ "correctness" ],
   "dialects": {
-    "draft4": [ "items", "additionalItems" ]
+    "2019-09": [ "items", "additionalItems" ],
+    "draft4": [ "items", "additionalItems" ],
+    "draft6": [ "items", "additionalItems" ],
+    "draft7": [ "items", "additionalItems" ]
   },
   "message": "Remove `additionalItems` or convert `items` into an array.",
   "references": [
-    "https://json-schema.org/draft-04/json-schema-validation.html#anchor66"
+    "https://json-schema.org/draft-04/json-schema-validation.html#anchor66",
+    "https://json-schema.org/draft/2019-09/release-notes#unevaluateditems"
   ]
 }
