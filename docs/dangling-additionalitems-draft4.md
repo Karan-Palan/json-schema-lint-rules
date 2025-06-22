@@ -1,13 +1,13 @@
 ---
-title: \`additionalItems\` ignored when \`items\` is an object (draft-04)
+title: \`additionalItems\` ignored when \`items\` is an object
 code: dangling-additionalitems-draft4
 categories: correctness
-dialects: draft4
+dialects: 2019-09, draft4, draft6, draft7
 autofixable: true
 ---
 
 ## Description
-In draft-04 only, `additionalItems` has no effect unless `items` is an array. Flag this redundant combination.
+Up to draft-2019-09, `additionalItems` is ignored unless `items` is an array. (The keyword was removed in draft-2020-12.)
 
 > **Message shown to user:**
 > Remove `additionalItems` or convert `items` into an array.
@@ -16,7 +16,7 @@ In draft-04 only, `additionalItems` has no effect unless `items` is an array. Fl
 <details><summary>Before</summary>
 ```json
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "items": {
     "type": "number"
   },
@@ -28,7 +28,7 @@ In draft-04 only, `additionalItems` has no effect unless `items` is an array. Fl
 <details><summary>After</summary>
 ```json
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "items": {
     "type": "number"
   }
@@ -38,3 +38,4 @@ In draft-04 only, `additionalItems` has no effect unless `items` is an array. Fl
 
 ## References
 * <https://json-schema.org/draft-04/json-schema-validation.html#anchor66>
+* <https://json-schema.org/draft/2019-09/release-notes#unevaluateditems>
