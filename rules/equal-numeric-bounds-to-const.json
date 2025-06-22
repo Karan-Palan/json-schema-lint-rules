@@ -1,0 +1,30 @@
+{
+  "title": "Equal numeric bounds can be expressed with `const`",
+  "description": "`minimum` == `maximum` forces one exact value; use `const` for clarity.",
+  "examples": [
+    {
+      "after": {
+        "type": "number",
+        "const": 5
+      },
+      "before": {
+        "type": "number",
+        "maximum": 5,
+        "minimum": 5
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "style", "readability" ],
+  "dialects": {
+    "2019-09": [ "minimum", "maximum", "const" ],
+    "2020-12": [ "minimum", "maximum", "const" ],
+    "draft4": [ "minimum", "maximum", "const" ],
+    "draft6": [ "minimum", "maximum", "const" ],
+    "draft7": [ "minimum", "maximum", "const" ]
+  },
+  "message": "Replace equal numeric bounds with `const`.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/numeric.html#range"
+  ]
+}
