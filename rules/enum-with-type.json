@@ -5,14 +5,31 @@
     {
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "enum": [ "foo", "bar" ]
+        "enum": [ 1, 2, 3 ]
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "string",
-        "enum": [ "foo", "bar" ]
+        "type": "integer",
+        "enum": [ 1, 2, 3 ]
+      }
+    },
+    {
+      "after": {
+        "enum": [ "none", "some", null ]
       },
-      "doc": true
+      "before": {
+        "type": [ "string", "null" ],
+        "enum": [ "none", "some", null ]
+      }
+    },
+    {
+      "after": {
+        "enum": [ true, false ]
+      },
+      "before": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      }
     }
   ],
   "categories": [ "readability" ],

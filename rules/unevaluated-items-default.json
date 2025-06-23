@@ -4,13 +4,37 @@
   "examples": [
     {
       "after": {
-        "type": "array"
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
       },
       "before": {
         "type": "array",
-        "unevaluatedItems": true
+        "items": {
+          "type": "integer"
+        },
+        "unevaluatedItems": {}
+      }
+    },
+    {
+      "after": {
+        "type": "object",
+        "properties": {
+          "numbers": {
+            "type": "array"
+          }
+        }
       },
-      "doc": true
+      "before": {
+        "type": "object",
+        "properties": {
+          "numbers": {
+            "type": "array",
+            "unevaluatedItems": true
+          }
+        }
+      }
     }
   ],
   "categories": [ "style" ],

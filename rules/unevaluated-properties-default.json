@@ -8,9 +8,27 @@
       },
       "before": {
         "type": "object",
-        "unevaluatedProperties": {}
+        "unevaluatedProperties": true
+      }
+    },
+    {
+      "after": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "object"
+          }
+        ]
       },
-      "doc": true
+      "before": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "object",
+            "unevaluatedProperties": {}
+          }
+        ]
+      }
     }
   ],
   "categories": [ "style" ],
