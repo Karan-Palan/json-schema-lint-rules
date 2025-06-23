@@ -5,14 +5,31 @@
     {
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "const": 42
+        "const": "ready"
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "integer",
-        "const": 42
+        "type": "string",
+        "const": "ready"
+      }
+    },
+    {
+      "after": {
+        "const": 3.14
       },
-      "doc": true
+      "before": {
+        "type": [ "number", "integer" ],
+        "const": 3.14
+      }
+    },
+    {
+      "after": {
+        "const": false
+      },
+      "before": {
+        "type": "boolean",
+        "const": false
+      }
     }
   ],
   "categories": [ "readability" ],
