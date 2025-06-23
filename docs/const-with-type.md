@@ -12,25 +12,5 @@ autofixable: true
 > **Message shown to user:**
 > Delete the redundant `type` keyword (or drop `const`).
 
-### Example 1
-<details><summary>Before</summary>
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "integer",
-  "const": 42
-}
-```
-</details>
-
-<details><summary>After</summary>
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "const": 42
-}
-```
-</details>
-
 ## References
 * <https://www.learnjsonschema.com/2020-12/validation/const/>

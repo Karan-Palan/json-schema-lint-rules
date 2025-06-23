@@ -31,8 +31,6 @@ When `minContains` is 0 and `maxContains` is absent, the schema accepts any numb
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "array",
-  "maxContains": 1,
-  "minContains": 0,
   "contains": {
     "type": "number"
   }

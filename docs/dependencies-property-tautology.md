@@ -25,9 +25,7 @@ A `dependencies` entry with an empty array never changes validation; it is redun
 
 <details><summary>After</summary>
 ```json
-{
-  "{}": {}
-}
+{}
 ```
 </details>
 
