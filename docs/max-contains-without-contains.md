@@ -14,6 +14,7 @@ autofixable: true
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
@@ -24,6 +25,7 @@ autofixable: true
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",

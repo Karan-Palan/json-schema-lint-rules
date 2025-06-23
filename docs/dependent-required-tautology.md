@@ -14,6 +14,7 @@ An empty `dependentRequired` list has no effect and clutters the schema.
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "dependentRequired": {
@@ -24,6 +25,7 @@ An empty `dependentRequired` list has no effect and clutters the schema.
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {}
 ```

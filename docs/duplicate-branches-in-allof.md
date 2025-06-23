@@ -14,6 +14,7 @@ autofixable: true
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "allOf": [
@@ -29,6 +30,7 @@ autofixable: true
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "allOf": [

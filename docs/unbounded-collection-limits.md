@@ -14,6 +14,7 @@ Omitting `maxItems` for arrays or `maxLength` for strings can lead to unbounded 
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

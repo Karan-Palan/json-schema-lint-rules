@@ -14,6 +14,7 @@ When both `maximum` and numeric `exclusiveMaximum` are present, one of them is r
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "number",
@@ -24,6 +25,7 @@ When both `maximum` and numeric `exclusiveMaximum` are present, one of them is r
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "type": "number",

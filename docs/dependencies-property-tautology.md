@@ -14,6 +14,7 @@ A `dependencies` entry with an empty array never changes validation; it is redun
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "dependencies": {
@@ -24,6 +25,7 @@ A `dependencies` entry with an empty array never changes validation; it is redun
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {}
 ```

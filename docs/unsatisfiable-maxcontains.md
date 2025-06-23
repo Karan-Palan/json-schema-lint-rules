@@ -14,6 +14,7 @@ If `maxContains` is present it must be ≥ `minContains` (or ≥ 1 if `minContai
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "array",

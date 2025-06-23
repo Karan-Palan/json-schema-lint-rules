@@ -14,6 +14,7 @@ If both keywords are present, `minContains` must be ≤ `maxContains`; otherwise
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",

@@ -14,6 +14,7 @@ All elements in `enum` must be unique; duplicates add no meaning and may hide mi
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "enum": [
@@ -26,6 +27,7 @@ All elements in `enum` must be unique; duplicates add no meaning and may hide mi
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "enum": [

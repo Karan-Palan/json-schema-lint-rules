@@ -14,6 +14,7 @@ Every relative JSON Pointer in `$ref` must resolve to a subschema within the sam
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

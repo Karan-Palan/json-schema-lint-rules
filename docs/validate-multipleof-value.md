@@ -14,6 +14,7 @@ A divisor of 1 accepts every number that already matches the parent `type`; drop
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "integer",
@@ -23,6 +24,7 @@ A divisor of 1 accepts every number that already matches the parent `type`; drop
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "type": "integer"

@@ -14,6 +14,7 @@ Languages that use IEEE-754 doubles (e.g. JavaScript) can only represent integer
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -25,6 +26,7 @@ Languages that use IEEE-754 doubles (e.g. JavaScript) can only represent integer
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

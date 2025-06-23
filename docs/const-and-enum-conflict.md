@@ -14,6 +14,7 @@ autofixable: false
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "const": 5,

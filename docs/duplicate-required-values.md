@@ -14,6 +14,7 @@ Listing a property name more than once in `required` adds no constraint and can 
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "object",
@@ -27,6 +28,7 @@ Listing a property name more than once in `required` adds no constraint and can 
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "type": "object",

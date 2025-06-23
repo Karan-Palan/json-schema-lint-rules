@@ -14,6 +14,7 @@ If both `minimum` and numeric `exclusiveMinimum` coexist, remove the weaker boun
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "number",
@@ -24,6 +25,7 @@ If both `minimum` and numeric `exclusiveMinimum` coexist, remove the weaker boun
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "type": "number",

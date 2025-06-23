@@ -14,6 +14,7 @@ An `array` without `items` leaves element validation undefined. Provide an expli
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -23,6 +24,7 @@ An `array` without `items` leaves element validation undefined. Provide an expli
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

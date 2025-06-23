@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Remove siblings of $ref (draft-07 and older)",
   "description": "Up to draft-07 the $ref keyword overrides every other keyword in the same object. The siblings are ignored during validation, so they can be deleted without changing behaviour.",
   "examples": [

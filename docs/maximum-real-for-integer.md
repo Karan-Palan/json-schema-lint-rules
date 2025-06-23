@@ -14,6 +14,7 @@ For `type:"integer"`, a non-integer `maximum` is equivalent to its floor value.
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "integer",
@@ -23,6 +24,7 @@ For `type:"integer"`, a non-integer `maximum` is equivalent to its floor value.
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "type": "integer",

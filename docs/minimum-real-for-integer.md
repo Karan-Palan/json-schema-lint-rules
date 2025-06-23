@@ -14,6 +14,7 @@ On an integer schema, a non-integer `minimum` can be replaced by its ceiling val
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "integer",
@@ -23,6 +24,7 @@ On an integer schema, a non-integer `minimum` can be replaced by its ceiling val
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "type": "integer",

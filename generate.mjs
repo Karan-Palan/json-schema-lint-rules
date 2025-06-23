@@ -44,12 +44,12 @@ function renderMarkdown(rule, code) {
   const docEx = rule.examples.filter((e) => e.doc) || [rule.examples[0]];
   docEx.forEach(({ before, after }, i) => {
     lines.push(`### Example ${i + 1}`);
-    lines.push("<details><summary>Before</summary>\n```json");
+    lines.push("<details><summary>Before</summary>\n\n```json");
     lines.push(JSON.stringify(before, null, 2));
     lines.push("```\n</details>\n");
 
     if (after) {
-      lines.push("<details><summary>After</summary>\n```json");
+      lines.push("<details><summary>After</summary>\n\n```json");
       lines.push(JSON.stringify(after, null, 2));
       lines.push("```\n</details>\n");
     }

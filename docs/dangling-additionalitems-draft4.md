@@ -14,6 +14,7 @@ Up to draft-2019-09, `additionalItems` is ignored unless `items` is an array. (T
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -26,6 +27,7 @@ Up to draft-2019-09, `additionalItems` is ignored unless `items` is an array. (T
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",

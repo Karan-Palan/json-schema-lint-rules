@@ -14,6 +14,7 @@ Every JSON Schema should declare its dialect with a top-level `$schema` keyword 
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "object",
@@ -27,6 +28,7 @@ Every JSON Schema should declare its dialect with a top-level `$schema` keyword 
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

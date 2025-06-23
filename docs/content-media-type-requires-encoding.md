@@ -14,6 +14,7 @@ When a schema specifies the media type of string data, it should also specify ho
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -24,6 +25,7 @@ When a schema specifies the media type of string data, it should also specify ho
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

@@ -14,6 +14,7 @@ When `items` is the always-true schema (`{}` or `true`) it adds no restriction a
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -24,6 +25,7 @@ When `items` is the always-true schema (`{}` or `true`) it adds no restriction a
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

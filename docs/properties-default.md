@@ -14,6 +14,7 @@ autofixable: true
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "object",
@@ -23,6 +24,7 @@ autofixable: true
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "type": "object"

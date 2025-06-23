@@ -14,6 +14,7 @@ If the number of items in `required` ≥ `minProperties`, the `minProperties` ke
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "object",
@@ -27,6 +28,7 @@ If the number of items in `required` ≥ `minProperties`, the `minProperties` ke
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "type": "object",

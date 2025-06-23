@@ -14,6 +14,7 @@ A lone `if` keyword has no impact on validation; at least one of `then` or `else
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "if": {
@@ -28,6 +29,7 @@ A lone `if` keyword has no impact on validation; at least one of `then` or `else
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "if": {

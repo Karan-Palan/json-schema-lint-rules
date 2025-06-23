@@ -14,6 +14,7 @@ When `minContains` is 0 and `maxContains` is absent, the schema accepts any numb
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -27,6 +28,7 @@ When `minContains` is 0 and `maxContains` is absent, the schema accepts any numb
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

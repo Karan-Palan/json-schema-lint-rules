@@ -14,6 +14,7 @@ Every entry in `required` must correspond to a key in `properties` or match at l
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "object",
@@ -32,6 +33,7 @@ Every entry in `required` must correspond to a key in `properties` or match at l
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "type": "object",

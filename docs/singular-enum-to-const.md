@@ -14,6 +14,7 @@ An enum with exactly one element can be expressed more clearly with const.
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -25,6 +26,7 @@ An enum with exactly one element can be expressed more clearly with const.
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

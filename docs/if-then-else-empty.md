@@ -14,6 +14,7 @@ autofixable: true
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "if": {
@@ -29,6 +30,7 @@ autofixable: true
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "if": {
@@ -44,6 +46,7 @@ autofixable: true
 
 ### Example 2
 <details><summary>Before</summary>
+
 ```json
 {
   "if": {
@@ -59,6 +62,7 @@ autofixable: true
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "if": {

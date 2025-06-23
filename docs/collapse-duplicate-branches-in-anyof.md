@@ -14,6 +14,7 @@ Redundant branches inside `anyOf` add noise without changing validation results.
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -33,6 +34,7 @@ Redundant branches inside `anyOf` add noise without changing validation results.
 </details>
 
 <details><summary>After</summary>
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

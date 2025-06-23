@@ -14,6 +14,7 @@ Inclusive bounds are contradictory when minimum > maximum.
 
 ### Example 1
 <details><summary>Before</summary>
+
 ```json
 {
   "type": "number",
