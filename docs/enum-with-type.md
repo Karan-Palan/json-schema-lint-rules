@@ -12,31 +12,5 @@ autofixable: true
 > **Message shown to user:**
 > Delete the redundant `type` keyword (or drop `enum`).
 
-### Example 1
-<details><summary>Before</summary>
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "string",
-  "enum": [
-    "foo",
-    "bar"
-  ]
-}
-```
-</details>
-
-<details><summary>After</summary>
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "enum": [
-    "foo",
-    "bar"
-  ]
-}
-```
-</details>
-
 ## References
 * <https://www.learnjsonschema.com/2020-12/validation/enum/>
