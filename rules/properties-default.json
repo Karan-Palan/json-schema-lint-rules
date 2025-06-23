@@ -1,0 +1,28 @@
+{
+  "title": "Remove empty `properties` object",
+  "description": "`properties:{}` does not impose any constraints. Drop it to reduce clutter.",
+  "examples": [
+    {
+      "after": {
+        "type": "object"
+      },
+      "before": {
+        "type": "object",
+        "properties": {}
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "style" ],
+  "dialects": {
+    "2019-09": [ "properties" ],
+    "2020-12": [ "properties" ],
+    "draft4": [ "properties" ],
+    "draft6": [ "properties" ],
+    "draft7": [ "properties" ]
+  },
+  "message": "Delete the empty `properties` object.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/object.html#properties"
+  ]
+}

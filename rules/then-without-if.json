@@ -1,0 +1,28 @@
+{
+  "title": "`then` without `if` is ignored",
+  "description": "`then` has effect only when paired with `if`. Without `if` it can be removed.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "then": {
+          "required": [ "foo" ]
+        }
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "then" ],
+    "2020-12": [ "then" ],
+    "draft7": [ "then" ]
+  },
+  "message": "Remove `then` because there is no matching `if`.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-core.html#name-conditionals"
+  ]
+}
