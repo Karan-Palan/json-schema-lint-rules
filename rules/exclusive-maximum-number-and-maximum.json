@@ -1,0 +1,29 @@
+{
+  "title": "Keep only the tighter upper bound (`exclusiveMaximum` vs `maximum`)",
+  "description": "When both `maximum` and numeric `exclusiveMaximum` are present, one of them is redundant. Retain the stricter limit and drop the other.",
+  "examples": [
+    {
+      "after": {
+        "type": "number",
+        "exclusiveMaximum": 5
+      },
+      "before": {
+        "type": "number",
+        "exclusiveMaximum": 5,
+        "maximum": 6
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "maximum", "exclusiveMaximum" ],
+    "2020-12": [ "maximum", "exclusiveMaximum" ],
+    "draft6": [ "maximum", "exclusiveMaximum" ],
+    "draft7": [ "maximum", "exclusiveMaximum" ]
+  },
+  "message": "Drop the looser upper-bound keyword; it’s redundant.",
+  "references": [
+    "https://json-schema.org/draft/2019-09/json-schema-validation.html#name-exclusivemaximum"
+  ]
+}

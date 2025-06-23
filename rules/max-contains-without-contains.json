@@ -1,0 +1,27 @@
+{
+  "title": "`maxContains` without `contains` is meaningless",
+  "description": "`maxContains` can never match if `contains` is absent. Delete it or add a `contains` schema.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2019-09/schema",
+        "type": "array"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2019-09/schema",
+        "type": "array",
+        "maxContains": 1
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "maxContains", "contains" ],
+    "2020-12": [ "maxContains", "contains" ]
+  },
+  "message": "Remove `maxContains` or add a `contains` keyword.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-maxcontains"
+  ]
+}
