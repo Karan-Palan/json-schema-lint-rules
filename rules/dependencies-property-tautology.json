@@ -3,9 +3,7 @@
   "description": "A `dependencies` entry with an empty array never changes validation; it is redundant.",
   "examples": [
     {
-      "after": {
-        "{}": {}
-      },
+      "after": {},
       "before": {
         "dependencies": {
           "foo": []
