@@ -1,0 +1,30 @@
+{
+  "title": "`minProperties` covered by `required`",
+  "description": "If the number of items in `required` ≥ `minProperties`, the `minProperties` keyword is redundant.",
+  "examples": [
+    {
+      "after": {
+        "type": "object",
+        "required": [ "a", "b" ]
+      },
+      "before": {
+        "type": "object",
+        "required": [ "a", "b" ],
+        "minProperties": 2
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "style" ],
+  "dialects": {
+    "2019-09": [ "minProperties", "required" ],
+    "2020-12": [ "minProperties", "required" ],
+    "draft4": [ "minProperties", "required" ],
+    "draft6": [ "minProperties", "required" ],
+    "draft7": [ "minProperties", "required" ]
+  },
+  "message": "Remove `minProperties` – the `required` list already guarantees that many properties.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/object.html#properties"
+  ]
+}

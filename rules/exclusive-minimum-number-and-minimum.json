@@ -1,0 +1,29 @@
+{
+  "title": "Keep only the tighter lower bound (`exclusiveMinimum` vs `minimum`)",
+  "description": "If both `minimum` and numeric `exclusiveMinimum` coexist, remove the weaker bound.",
+  "examples": [
+    {
+      "after": {
+        "type": "number",
+        "exclusiveMinimum": 10
+      },
+      "before": {
+        "type": "number",
+        "exclusiveMinimum": 10,
+        "minimum": 8
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "minimum", "exclusiveMinimum" ],
+    "2020-12": [ "minimum", "exclusiveMinimum" ],
+    "draft6": [ "minimum", "exclusiveMinimum" ],
+    "draft7": [ "minimum", "exclusiveMinimum" ]
+  },
+  "message": "Drop the weaker lower-bound keyword; it’s redundant.",
+  "references": [
+    "https://json-schema.org/draft/2019-09/json-schema-validation.html#name-exclusiveminimum"
+  ]
+}
