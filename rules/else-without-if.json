@@ -1,0 +1,28 @@
+{
+  "title": "`else` without `if` is ignored",
+  "description": "`else` only has meaning when paired with `if`. If `if` is missing, drop the `else` branch.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "else": {
+          "type": "string"
+        }
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "else" ],
+    "2020-12": [ "else" ],
+    "draft7": [ "else" ]
+  },
+  "message": "Remove `else` because there is no matching `if`.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-core.html#name-conditionals"
+  ]
+}
