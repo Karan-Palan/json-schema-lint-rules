@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Remove siblings of $ref (draft-07 and older)",
+  "description": "Up to draft-07 the $ref keyword overrides every other keyword in the same object. The siblings are ignored during validation, so they can be deleted without changing behaviour.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$ref": "#/definitions/INTEGER"
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "description": "ignored in draft-07",
+        "$ref": "#/definitions/INTEGER",
+        "type": "integer",
+        "minimum": 0
+      },
+      "doc": true
+    },
+    {
+      "after": {
+        "$ref": "#/definitions/person"
+      },
+      "before": {
+        "$ref": "#/definitions/person",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "categories": [ "readability", "style" ],
+  "dialects": {
+    "draft4": [ "$ref" ],
+    "draft6": [ "$ref" ],
+    "draft7": [ "$ref" ]
+  },
+  "message": "Remove sibling keywords – in drafts ≤ 7 only $ref is evaluated.",
+  "references": [
+    "https://json-schema.org/draft-07/draft-handrews-json-schema-01#rfc.section.8.3"
+  ]
+}
