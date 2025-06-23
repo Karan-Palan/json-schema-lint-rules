@@ -1,6 +1,6 @@
 ---
 title: Use $defs over definitions in 2019-09 + drafts
-code: modernize-definitions-to-$defs
+code: invalid-definitions-keyword
 categories: correctness, readability
 dialects: 2019-09, 2020-12
 autofixable: true
