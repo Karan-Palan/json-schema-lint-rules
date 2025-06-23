@@ -1,0 +1,30 @@
+{
+  "title": "Omit `items:{}` (it’s the default)",
+  "description": "When `items` is the always-true schema (`{}` or `true`) it adds no restriction and should be omitted.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array",
+        "items": {}
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "style" ],
+  "dialects": {
+    "2019-09": [ "items" ],
+    "2020-12": [ "items" ],
+    "draft4": [ "items" ],
+    "draft6": [ "items" ],
+    "draft7": [ "items" ]
+  },
+  "message": "Remove `items` when it is the always-true schema.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-core.html#name-boolean-schemas"
+  ]
+}

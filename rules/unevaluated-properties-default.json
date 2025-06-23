@@ -1,0 +1,24 @@
+{
+  "title": "Omit `unevaluatedProperties:true/{}` (default behaviour)",
+  "description": "`unevaluatedProperties:true` (or `{}`) is the default and need not be stated explicitly.",
+  "examples": [
+    {
+      "after": {
+        "type": "object"
+      },
+      "before": {
+        "type": "object",
+        "unevaluatedProperties": {}
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "style" ],
+  "dialects": {
+    "2020-12": [ "unevaluatedProperties" ]
+  },
+  "message": "Remove redundant `unevaluatedProperties`.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-unevaluatedproperties"
+  ]
+}

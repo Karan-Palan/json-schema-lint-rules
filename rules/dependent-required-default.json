@@ -1,0 +1,27 @@
+{
+  "title": "Remove empty `dependentRequired` object",
+  "description": "`dependentRequired:{}` has no effect and should be removed.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "dependentRequired": {}
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "style" ],
+  "dialects": {
+    "2019-09": [ "dependentRequired" ],
+    "2020-12": [ "dependentRequired" ]
+  },
+  "message": "Delete the empty `dependentRequired` object.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-dependentrequired"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Omit empty `items: []`",
+  "description": "`items` as an empty array imposes no constraints in drafts up to 2019-09. Remove it for clarity.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "array"
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "array",
+        "items": []
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "style" ],
+  "dialects": {
+    "2019-09": [ "items" ],
+    "draft4": [ "items" ],
+    "draft6": [ "items" ],
+    "draft7": [ "items" ]
+  },
+  "message": "Remove the empty `items` array.",
+  "references": [
+    "https://json-schema.org/draft/07/json-schema-validation.html#items"
+  ]
+}

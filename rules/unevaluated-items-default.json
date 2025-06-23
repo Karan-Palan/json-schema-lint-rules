@@ -1,0 +1,24 @@
+{
+  "title": "Omit `unevaluatedItems:true/{}` (default behaviour)",
+  "description": "`unevaluatedItems` set to `true` or `{}` does not change validation; drop it for brevity.",
+  "examples": [
+    {
+      "after": {
+        "type": "array"
+      },
+      "before": {
+        "type": "array",
+        "unevaluatedItems": true
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "style" ],
+  "dialects": {
+    "2020-12": [ "unevaluatedItems" ]
+  },
+  "message": "Remove redundant `unevaluatedItems`.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-unevaluateditems"
+  ]
+}
