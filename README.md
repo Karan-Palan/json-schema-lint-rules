@@ -1,116 +1,77 @@
-# jsonschema-lint-rules
+# JSON Schema Lint Rules
 
-A collection of lint rules for [JSON Schema](https://json-schema.org/) with metadata, examples, and documentation generation.
+> A **linter‑agnostic** catalogue of machine‑readable JSON Schema quality rules.
 
-## Features
+---
 
-- **Rule Metadata**: Each rule is defined as a JSON file with a title, description, message, vocabularies, valid/invalid examples, and references.
-- **Schema Validation**: All rule files are validated against a central [`rule.schema.json`](rule.schema.json).
-- **Documentation Generation**: Automatically generates Markdown documentation for each rule in the `docs/` directory.
-- **Best Practices**: Includes rules to promote best practices, such as preferring `const` over single-value `enum`.
+## Why does this exist?
 
-## Directory Structure
+Working with large JSON Schemas (OpenAPI, AsyncAPI, event contracts, etc.) gets messy fast. Most linters ship with a fixed set of checks and the logic hard‑codes the rules. By extracting the rules into a standalone catalogue:
+
+* **Any linter** – written in Java, Go, Rust, or even Bash – can consume the *same* rule set simply by reading these JSON documents.
+* Rule authors focus on *declarative* constraints rather than imperative code.
+* CI pipelines can upgrade, pin, or diff rule versions without rebuilding the engine.
+
+## Repo layout
 
 ```
 json-schema-lint-rules/
-├── docs/                # Generated Markdown documentation for rules
-├── rules/               # Rule definitions organized 
-├── .dockerignore
-├── Dockerfile
-├── LICENSE
-├── rule.schema.json    # JSON Schema for rule metadata
-├── generate.mjs        # Script to validate rules and generate docs
-├── package.json
-├── package-lock.json
-└── .gitignore
+├── rules/          # ★ Machine‑readable rule manifests (JSON)
+├── docs/           # Auto‑generated, human‑friendly Markdown docs
+├── rule.schema.json# JSON Schema describing the rule manifest format
+├── generate.mjs    # Script that turns rules/* into docs/*
+├── .github/workflows/rule-docs.yml  # CI job to (re)generate docs on push
+├── package.json    # Dev scripts (validation, doc gen, release helpers)
+└── ...
 ```
 
-## Usage
+### Rule manifest shape
 
-### 1. Install Dependencies
+Each file in `rules/` is a **single JSON object** that must validate against [`rule.schema.json`](./rule.schema.json). **No extra properties** are allowed – the meta‑schema rejects them.
 
-```sh
-npm install
-```
+| Key           | Type      | Required | Notes                                                                                         |
+| ------------- | --------- | -------- | --------------------------------------------------------------------------------------------- |
+| `title`       | string    | ✅        | Short, imperative headline for humans and UIs.                                                |
+| `description` | string    | ✅        | One‑paragraph explanation of what the rule checks and why it matters.                         |
+| `message`     | string    | ✅        | Error message template emitted by the linter.                                                 |
+| `categories`  | string\[] | ✅        | One or more of `readability`, `correctness`, `performance`, `safety`, `style`, `opinionated`. |
+| `dialects`    | object    | ✅        | Map of JSON Schema draft → array of keywords touched by the rule.                             |
+| `examples`    | object\[] | ✅        | Example pairs: each item must have `before` (invalid schema); `after` is optional.            |
+| `references`  | string\[] | ❌        | Optional list of URLs to spec sections or external write‑ups.                                 |
 
-### 2. Generate Documentation & Validate Rules
 
-Run the documentation generator and validate JSON files:
 
-```sh
-node generate.mjs
-```
+## Developing & validating rules
 
-This will validate all rules against `rule.schema.json` and generate Markdown documentation in the `docs/` directory.
+1. **Install deps**
 
-You can also validate rules separately:
+   ```bash
+   npm install
+   ```
+2. **Validate all rule manifests**
 
-```sh
-npm run validate:rules
-```
+   ```bash
+   npm run validate:rules
+   ```
 
-### 3. Development Setup
+   This command must exit **non‑zero** on any schema violation.
+3. **Regenerate docs**
 
-The project includes a pre-commit hook that automatically formats JSON schema files using `jsonschema fmt`. This runs automatically when you make a commit that includes changes to:
-- `rule.schema.json`
-- Any files in the `rules/` directory
+   ```bash
+   npm run build
+   ```
 
-To set up the pre-commit hook (already configured in the project):
+   The CI workflow does the same on every push.
 
-```sh
-npm install
-```
+## Contributing
 
-The hook will automatically run when you make commits that include changes to JSON schema files.
+* **Fix or add a rule** – create `<slug>.json` in `rules/` and run `npm run validate:rules`.
+* **Docs** are generated; never edit files in `docs/` by hand.
+* Open a PR. CI will fail if your manifest breaks the schema or if docs are stale.
 
-### 4. Generate Documentation
 
-Generate Markdown documentation for each rule:
+## License
 
-```sh
-npm run build
-```
+[MIT](./LICENSE)
 
-The generated docs will appear in the `docs/` directory, organized by category.
-
-### Docker Usage
-
-You can use Docker to build and run this project without installing Node.js locally.
-
-### 1. Build the Docker Image
-
-```sh
-docker build -t jsonschema-lint-rules .
-```
-
-### 2. Run the Generator
-
-```sh
-docker run --rm -v $(pwd):/app jsonschema-lint-rules
-```
-
-This will execute the documentation generator inside a container. The output will appear in the `docs/` directory of your local project.
-
-### Notes
-- The Dockerfile and .dockerignore are provided for convenience.
-- You can override the default command if needed, e.g.:
-  ```sh
-  docker run --rm -v $(pwd):/app jsonschema-lint-rules npm run validate:rules
-  ```
-
-### 3. Generate Documentation
-
-Generate Markdown documentation for each rule:
-
-```sh
-npm run build
-```
-
-The generated docs will appear in the `docs/` directory, organized by category.
-
-## Adding New Rules
-
-1. Create a new JSON file in the appropriate category under `rules/`.
-2. Follow the structure defined in [`rule.schema.json`](rule.schema.json).
-3. Add before and after examples.
-4. Run validation and documentation generation scripts.
+---
