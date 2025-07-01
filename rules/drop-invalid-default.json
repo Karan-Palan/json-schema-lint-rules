@@ -1,0 +1,49 @@
+{
+  "title": "`default` value must validate",
+  "description": "`default` is supposed to be a valid example of the instance. If it does **not** satisfy the schema, drop it so that tools and docs are not mis-led.",
+  "examples": [
+    {
+      "after": {
+        "type": "integer"
+      },
+      "before": {
+        "default": "not-an-integer",
+        "type": "integer"
+      },
+      "doc": true
+    },
+    {
+      "after": {
+        "type": "object",
+        "properties": {
+          "flag": {
+            "type": "boolean"
+          }
+        }
+      },
+      "before": {
+        "default": {
+          "flag": "maybe"
+        },
+        "type": "object",
+        "properties": {
+          "flag": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  ],
+  "categories": [ "correctness", "readability" ],
+  "dialects": {
+    "2019-09": [ "default" ],
+    "2020-12": [ "default" ],
+    "draft4": [ "default" ],
+    "draft6": [ "default" ],
+    "draft7": [ "default" ]
+  },
+  "message": "Remove `default` – its value doesn’t validate.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/generic.html#default"
+  ]
+}

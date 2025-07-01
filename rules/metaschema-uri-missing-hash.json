@@ -1,0 +1,27 @@
+{
+  "title": "Metaschema URI must include trailing `#`",
+  "description": "The canonical metaschema URLs end with `schema#`. Omitting the fragment identifier can confuse tooling and may bypass caching.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-07/schema",
+        "type": "string"
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness", "style" ],
+  "dialects": {
+    "2019-09": [ "$schema" ],
+    "2020-12": [ "$schema" ],
+    "draft4": [ "$schema" ],
+    "draft6": [ "$schema" ],
+    "draft7": [ "$schema" ]
+  },
+  "message": "Append a trailing `#` to the metaschema URI (e.g. …`schema#`).",
+  "references": [ "https://json-schema.org/draft-07/schema#" ]
+}

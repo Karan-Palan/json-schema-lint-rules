@@ -1,15 +1,15 @@
 {
-  "title": "Remove single-`$ref` `allOf` wrapper",
-  "description": "`allOf` containing only one `$ref` adds no semantics; reference the schema directly.",
+  "title": "Remove single-`$ref` `allOf` wrapper (draft-2019-09, 2020-12 only)",
+  "description": "In draft-04/06/07 the `$ref` MUST remain inside the `allOf`; starting in 2019-09 a solitary `$ref` does not require the wrapper.",
   "examples": [
     {
       "after": {
-        "$ref": "#/definitions/User"
+        "$ref": "#/$defs/User"
       },
       "before": {
         "allOf": [
           {
-            "$ref": "#/definitions/User"
+            "$ref": "#/$defs/User"
           }
         ]
       },
@@ -19,12 +19,9 @@
   "categories": [ "readability", "style" ],
   "dialects": {
     "2019-09": [ "allOf", "$ref" ],
-    "2020-12": [ "allOf", "$ref" ],
-    "draft4": [ "allOf", "$ref" ],
-    "draft6": [ "allOf", "$ref" ],
-    "draft7": [ "allOf", "$ref" ]
+    "2020-12": [ "allOf", "$ref" ]
   },
-  "message": "Inline the `$ref` and drop the unnecessary `allOf`.",
+  "message": "Inline the `$ref` and delete the redundant `allOf` wrapper.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-allof"
   ]

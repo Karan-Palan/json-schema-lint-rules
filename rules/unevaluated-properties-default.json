@@ -9,7 +9,8 @@
       "before": {
         "type": "object",
         "unevaluatedProperties": true
-      }
+      },
+      "doc": true
     },
     {
       "after": {

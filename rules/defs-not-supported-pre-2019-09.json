@@ -1,0 +1,39 @@
+{
+  "title": "Do not use $defs before draft-2019-09",
+  "description": "$defs was introduced in draft-2019-09. For draft-04/06/07 use the legacy `definitions` keyword instead.",
+  "examples": [
+    {
+      "after": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$ref": "#/definitions/uuid",
+        "definitions": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$ref": "#/$defs/uuid",
+        "$defs": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "doc": true
+    }
+  ],
+  "categories": [ "correctness", "readability" ],
+  "dialects": {
+    "draft4": [ "$defs" ],
+    "draft6": [ "$defs" ],
+    "draft7": [ "$defs" ]
+  },
+  "message": "Replace `$defs` with `definitions`, and update any `$ref`s that target it.",
+  "references": [
+    "https://json-schema.org/draft/2019-09/release-notes#definitions"
+  ]
+}

@@ -4,11 +4,9 @@
   "examples": [
     {
       "after": {
-        "type": "number",
         "const": 5
       },
       "before": {
-        "type": "number",
         "maximum": 5,
         "minimum": 5
       },
