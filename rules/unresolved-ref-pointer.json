@@ -1,6 +1,6 @@
 {
-  "title": "`$ref` targets must resolve",
-  "description": "Every relative JSON Pointer in `$ref` must resolve to a subschema within the same document. If the `$ref` is an absolute/URI reference, it must locate a retrievable JSON Schema resource. Dangling pointers or links to non-schema content are errors.",
+  "title": "`$ref` targets must resolve **and** point to a JSON Schema",
+  "description": "Every relative JSON Pointer in `$ref` must resolve to a subschema within the same document. If the `$ref` is an absolute / URI reference, it must locate a retrievable **JSON Schema resource** (an object or boolean). Dangling pointers or links to non-schema content are errors.",
   "examples": [
     {
       "before": {
@@ -25,6 +25,13 @@
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$ref": "https://example.com/readme.txt"
       }
+    },
+    {
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$ref": "https://example.com/data.json"
+      },
+      "doc": true
     }
   ],
   "categories": [ "correctness", "safety" ],
@@ -35,7 +42,7 @@
     "draft6": [ "$ref" ],
     "draft7": [ "$ref" ]
   },
-  "message": "Ensure `$ref` resolves to an existing subschema or to a valid JSON Schema resource.",
+  "message": "Ensure `$ref` resolves to an existing subschema and that the target itself is a valid JSON Schema.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#rfc.section.8.3",
     "https://json-schema.org/understanding-json-schema/structuring.html#id64"
