@@ -15,7 +15,8 @@
           "type": "integer"
         },
         "unevaluatedItems": {}
-      }
+      },
+      "doc": true
     },
     {
       "after": {

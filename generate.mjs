@@ -41,8 +41,12 @@ function renderMarkdown(rule, code) {
   lines.push("> **Message shown to user:**");
   lines.push(`> ${rule.message}\n`);
 
-  const docEx = rule.examples.filter((e) => e.doc) || [rule.examples[0]];
-  docEx.forEach(({ before, after }, i) => {
+  // Show examples marked with doc:true, or all examples if none are marked
+  const docExamples = rule.examples.filter((e) => e.doc);
+  const examplesWithBefore = rule.examples.filter((e) => e.before);
+  const examplesToShow = docExamples.length > 0 ? docExamples : examplesWithBefore.slice(0, 2);
+  
+  examplesToShow.forEach(({ before, after }, i) => {
     lines.push(`### Example ${i + 1}`);
     lines.push("<details><summary>Before</summary>\n\n```json");
     lines.push(JSON.stringify(before, null, 2));
