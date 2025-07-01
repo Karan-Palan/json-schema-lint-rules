@@ -1,16 +1,16 @@
 ---
-title: Remove single-\`$ref\` \`allOf\` wrapper
+title: Remove single-\`$ref\` \`allOf\` wrapper (draft-2019-09, 2020-12 only)
 code: unnecessary-allof-ref-wrapper
 categories: readability, style
-dialects: 2019-09, 2020-12, draft4, draft6, draft7
+dialects: 2019-09, 2020-12
 autofixable: true
 ---
 
 ## Description
-`allOf` containing only one `$ref` adds no semantics; reference the schema directly.
+In draft-04/06/07 the `$ref` MUST remain inside the `allOf`; starting in 2019-09 a solitary `$ref` does not require the wrapper.
 
 > **Message shown to user:**
-> Inline the `$ref` and drop the unnecessary `allOf`.
+> Inline the `$ref` and delete the redundant `allOf` wrapper.
 
 ### Example 1
 <details><summary>Before</summary>
@@ -19,7 +19,7 @@ autofixable: true
 {
   "allOf": [
     {
-      "$ref": "#/definitions/User"
+      "$ref": "#/$defs/User"
     }
   ]
 }
@@ -30,7 +30,7 @@ autofixable: true
 
 ```json
 {
-  "$ref": "#/definitions/User"
+  "$ref": "#/$defs/User"
 }
 ```
 </details>
