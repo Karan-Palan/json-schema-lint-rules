@@ -17,7 +17,6 @@ autofixable: true
 
 ```json
 {
-  "type": "number",
   "maximum": 5,
   "minimum": 5
 }
@@ -28,7 +27,6 @@ autofixable: true
 
 ```json
 {
-  "type": "number",
   "const": 5
 }
 ```
