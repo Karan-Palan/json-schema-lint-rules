@@ -1,13 +1,13 @@
 ---
-title: Metaschema URI must include trailing \`#\`
+title: Metaschema URI must include trailing \`#\` (Draft 4-7)
 code: metaschema_uri_missing_hash
 categories: correctness, style
-dialects: 2019-09, 2020-12, draft4, draft6, draft7
+dialects: draft4, draft6, draft7
 autofixable: true
 ---
 
 ## Description
-The canonical metaschema URLs end with `schema#`. Omitting the fragment identifier can confuse tooling and may bypass caching.
+For Draft 4, 6, and 7, the canonical metaschema URLs end with `schema#`. Omitting the fragment identifier can confuse tooling and may bypass caching.
 
 > **Message shown to user:**
 > Append a trailing `#` to the metaschema URI (e.g. …`schema#`).

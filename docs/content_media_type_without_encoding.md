@@ -1,5 +1,5 @@
 ---
-title: \`contentMediaType\` should pair with \`contentEncoding\`
+title: Binary \`contentMediaType\` should pair with \`contentEncoding\`
 code: content_media_type_without_encoding
 categories: readability, style
 dialects: 2019-09, 2020-12, draft7
@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-When a schema specifies the media type of string data, it should also specify how the string is encoded.
+When a schema specifies a binary media type (like images), it should also specify how the binary data is encoded as a string.
 
 > **Message shown to user:**
 > Add `contentEncoding` or remove `contentMediaType`.

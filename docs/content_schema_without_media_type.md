@@ -3,7 +3,7 @@ title: \`contentSchema\` without \`contentMediaType\` is unhelpful
 code: content_schema_without_media_type
 categories: readability, style
 dialects: 2019-09, 2020-12, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -19,6 +19,21 @@ autofixable: false
 {
   "type": "string",
   "contentSchema": {
+    "type": "object"
+  }
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "type": "string",
+  "contentMediaType": "application/json",
+  "contentSchema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schema",
     "type": "object"
   }
 }
