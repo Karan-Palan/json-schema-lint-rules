@@ -1,11 +1,8 @@
 {
-  "title": "Omit `unevaluatedProperties:true/{}` (default behaviour)",
-  "description": "`unevaluatedProperties:true` (or `{}`) is the default and need not be stated explicitly.",
+  "title": "Consider if `unevaluatedProperties:true/{}` is necessary",
+  "description": "While `unevaluatedProperties:true` (or `{}`) may appear redundant, removing it can change schema behavior in some contexts. Verify it's safe to remove before doing so.",
   "examples": [
     {
-      "after": {
-        "type": "object"
-      },
       "before": {
         "type": "object",
         "unevaluatedProperties": true
@@ -13,14 +10,6 @@
       "doc": true
     },
     {
-      "after": {
-        "type": "array",
-        "prefixItems": [
-          {
-            "type": "object"
-          }
-        ]
-      },
       "before": {
         "type": "array",
         "prefixItems": [
@@ -36,7 +25,7 @@
   "dialects": {
     "2020-12": [ "unevaluatedProperties" ]
   },
-  "message": "Remove redundant `unevaluatedProperties`.",
+  "message": "Verify if `unevaluatedProperties` can be safely removed.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-unevaluatedproperties"
   ]

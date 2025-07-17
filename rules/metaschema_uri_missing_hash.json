@@ -1,6 +1,6 @@
 {
-  "title": "Metaschema URI must include trailing `#`",
-  "description": "The canonical metaschema URLs end with `schema#`. Omitting the fragment identifier can confuse tooling and may bypass caching.",
+  "title": "Metaschema URI must include trailing `#` (Draft 4-7)",
+  "description": "For Draft 4, 6, and 7, the canonical metaschema URLs end with `schema#`. Omitting the fragment identifier can confuse tooling and may bypass caching.",
   "examples": [
     {
       "after": {
@@ -16,8 +16,6 @@
   ],
   "categories": [ "correctness", "style" ],
   "dialects": {
-    "2019-09": [ "$schema" ],
-    "2020-12": [ "$schema" ],
     "draft4": [ "$schema" ],
     "draft6": [ "$schema" ],
     "draft7": [ "$schema" ]
