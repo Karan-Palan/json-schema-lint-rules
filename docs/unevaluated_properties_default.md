@@ -1,16 +1,16 @@
 ---
-title: Omit \`unevaluatedProperties:true/{}\` (default behaviour)
+title: Consider if \`unevaluatedProperties:true/{}\` is necessary
 code: unevaluated_properties_default
 categories: style
 dialects: 2020-12
-autofixable: true
+autofixable: false
 ---
 
 ## Description
-`unevaluatedProperties:true` (or `{}`) is the default and need not be stated explicitly.
+While `unevaluatedProperties:true` (or `{}`) may appear redundant, removing it can change schema behavior in some contexts. Verify it's safe to remove before doing so.
 
 > **Message shown to user:**
-> Remove redundant `unevaluatedProperties`.
+> Verify if `unevaluatedProperties` can be safely removed.
 
 ### Example 1
 <details><summary>Before</summary>
@@ -19,15 +19,6 @@ autofixable: true
 {
   "type": "object",
   "unevaluatedProperties": true
-}
-```
-</details>
-
-<details><summary>After</summary>
-
-```json
-{
-  "type": "object"
 }
 ```
 </details>
