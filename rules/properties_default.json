@@ -11,6 +11,46 @@
         "properties": {}
       },
       "doc": true
+    },
+    {
+      "after": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      },
+      "before": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {}
+          }
+        ]
+      }
+    },
+    {
+      "after": {
+        "allOf": [
+          {
+            "type": "object"
+          }
+        ]
+      },
+      "before": {
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {}
+          }
+        ]
+      }
     }
   ],
   "categories": [ "style" ],

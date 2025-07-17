@@ -1,0 +1,75 @@
+{
+  "title": "Wrapping any keyword other than `$ref` in `allOf` is unnecessary",
+  "description": "In Draft 4-7, keywords other than `$ref` can be moved out of `allOf` to the parent level when they don't conflict with existing keywords.",
+  "examples": [
+    {
+      "after": {
+        "type": "string",
+        "minLength": 5
+      },
+      "before": {
+        "allOf": [
+          {
+            "type": "string",
+            "minLength": 5
+          }
+        ]
+      },
+      "doc": true
+    },
+    {
+      "after": {
+        "type": "object",
+        "required": [ "name" ],
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "allOf": [
+          {
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [ "name" ]
+          }
+        ]
+      }
+    },
+    {
+      "after": {
+        "type": "number",
+        "maximum": 100,
+        "minimum": 0
+      },
+      "before": {
+        "allOf": [
+          {
+            "type": "number"
+          },
+          {
+            "maximum": 100,
+            "minimum": 0
+          }
+        ]
+      }
+    }
+  ],
+  "categories": [ "style", "readability" ],
+  "dialects": {
+    "draft4": [ "allOf" ],
+    "draft6": [ "allOf" ],
+    "draft7": [ "allOf" ]
+  },
+  "message": "Move keywords from `allOf` to parent level when they don't conflict.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/combining.html#allof"
+  ]
+}

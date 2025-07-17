@@ -4,13 +4,26 @@
   "examples": [
     {
       "after": {
+        "type": "number",
         "const": 5
       },
       "before": {
+        "type": "number",
         "maximum": 5,
         "minimum": 5
       },
       "doc": true
+    },
+    {
+      "after": {
+        "type": "integer",
+        "const": 42
+      },
+      "before": {
+        "type": "integer",
+        "maximum": 42,
+        "minimum": 42
+      }
     }
   ],
   "categories": [ "style", "readability" ],

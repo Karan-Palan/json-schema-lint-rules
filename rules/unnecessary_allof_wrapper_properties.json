@@ -1,0 +1,86 @@
+{
+  "title": "Avoid unnecessarily wrapping object `properties` in `allOf`",
+  "description": "When `allOf` contains schemas with `properties` that don't conflict with the parent's `properties`, move them to the parent level for clarity.",
+  "examples": [
+    {
+      "after": {
+        "type": "object",
+        "properties": {
+          "age": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "allOf": [
+          {
+            "properties": {
+              "age": {
+                "type": "integer"
+              }
+            }
+          }
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "doc": true
+    },
+    {
+      "after": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "allOf": [
+          {
+            "properties": {
+              "value": {
+                "type": "number"
+              }
+            }
+          },
+          {
+            "properties": {
+              "metadata": {
+                "type": "object"
+              }
+            }
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "categories": [ "style", "readability" ],
+  "dialects": {
+    "2019-09": [ "allOf", "properties" ],
+    "2020-12": [ "allOf", "properties" ]
+  },
+  "message": "Move non-conflicting properties from `allOf` to parent level.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/combining.html#allof"
+  ]
+}
