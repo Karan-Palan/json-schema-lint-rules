@@ -3,13 +3,6 @@
   "description": "When `minContains` is 0 and `maxContains` is absent, the schema accepts any number of matching elements. Specify `maxContains` to make the constraint meaningful.",
   "examples": [
     {
-      "after": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "array",
-        "contains": {
-          "type": "number"
-        }
-      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "array",

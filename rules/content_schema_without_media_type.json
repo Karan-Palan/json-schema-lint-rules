@@ -3,6 +3,15 @@
   "description": "`contentSchema` refines the structure of non-JSON media; without a media type consumers cannot choose a codec.",
   "examples": [
     {
+      "after": {
+        "type": "string",
+        "contentMediaType": "application/json",
+        "contentSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://example.com/schema",
+          "type": "object"
+        }
+      },
       "before": {
         "type": "string",
         "contentSchema": {

@@ -1,0 +1,51 @@
+{
+  "title": "Remove sibling properties when `$ref` is present (Draft 4-7)",
+  "description": "In Draft 4, 6, and 7, `$ref` ignores all sibling properties. Remove them to avoid confusion and make the schema clearer.",
+  "examples": [
+    {
+      "after": {
+        "$ref": "#/definitions/User"
+      },
+      "before": {
+        "description": "A user object",
+        "$ref": "#/definitions/User",
+        "type": "object"
+      },
+      "doc": true
+    },
+    {
+      "after": {
+        "allOf": [
+          {
+            "$ref": "#/definitions/BaseSchema"
+          },
+          {
+            "properties": {
+              "additionalField": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "before": {
+        "$ref": "#/definitions/BaseSchema",
+        "properties": {
+          "additionalField": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "categories": [ "correctness", "style" ],
+  "dialects": {
+    "draft4": [ "$ref" ],
+    "draft6": [ "$ref" ],
+    "draft7": [ "$ref" ]
+  },
+  "message": "Remove properties alongside `$ref` or wrap in `allOf`.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/structuring.html#ref"
+  ]
+}

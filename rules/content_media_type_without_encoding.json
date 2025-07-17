@@ -1,6 +1,6 @@
 {
-  "title": "`contentMediaType` should pair with `contentEncoding`",
-  "description": "When a schema specifies the media type of string data, it should also specify how the string is encoded.",
+  "title": "Binary `contentMediaType` should pair with `contentEncoding`",
+  "description": "When a schema specifies a binary media type (like images), it should also specify how the binary data is encoded as a string.",
   "examples": [
     {
       "after": {
@@ -15,6 +15,17 @@
         "contentMediaType": "image/png"
       },
       "doc": true
+    },
+    {
+      "after": {
+        "type": "string",
+        "contentEncoding": "base64",
+        "contentMediaType": "application/pdf"
+      },
+      "before": {
+        "type": "string",
+        "contentMediaType": "application/pdf"
+      }
     }
   ],
   "categories": [ "readability", "style" ],
