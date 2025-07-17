@@ -1,0 +1,39 @@
+{
+  "title": "Equal numeric bounds can be expressed with single-value `enum`",
+  "description": "Setting `minimum` and `maximum` to the same number only leaves one possible value; use `enum` with a single value.",
+  "examples": [
+    {
+      "after": {
+        "enum": [ 5 ]
+      },
+      "before": {
+        "type": "number",
+        "maximum": 5,
+        "minimum": 5
+      },
+      "doc": true
+    },
+    {
+      "after": {
+        "enum": [ 42 ]
+      },
+      "before": {
+        "type": "integer",
+        "maximum": 42,
+        "minimum": 42
+      }
+    }
+  ],
+  "categories": [ "style", "readability" ],
+  "dialects": {
+    "2019-09": [ "minimum", "maximum", "enum", "type" ],
+    "2020-12": [ "minimum", "maximum", "enum", "type" ],
+    "draft4": [ "minimum", "maximum", "enum", "type" ],
+    "draft6": [ "minimum", "maximum", "enum", "type" ],
+    "draft7": [ "minimum", "maximum", "enum", "type" ]
+  },
+  "message": "Replace equal numeric bounds with single-value `enum`.",
+  "references": [
+    "https://json-schema.org/understanding-json-schema/reference/generic.html#enumerated-values"
+  ]
+}
