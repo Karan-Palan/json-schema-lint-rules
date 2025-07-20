@@ -16,13 +16,23 @@
       "doc": true
     }
   ],
-  "categories": [ "readability", "style" ],
+  "categories": [
+    "readability",
+    "style"
+  ],
   "dialects": {
-    "2019-09": [ "allOf", "$ref" ],
-    "2020-12": [ "allOf", "$ref" ]
+    "2019-09": [
+      "allOf",
+      "$ref"
+    ],
+    "2020-12": [
+      "allOf",
+      "$ref"
+    ]
   },
   "message": "Inline the `$ref` and delete the redundant `allOf` wrapper.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-allof"
-  ]
+  ],
+  "autofix": true
 }

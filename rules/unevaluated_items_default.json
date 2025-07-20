@@ -38,12 +38,17 @@
       }
     }
   ],
-  "categories": [ "style" ],
+  "categories": [
+    "style"
+  ],
   "dialects": {
-    "2020-12": [ "unevaluatedItems" ]
+    "2020-12": [
+      "unevaluatedItems"
+    ]
   },
   "message": "Remove redundant `unevaluatedItems`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-unevaluateditems"
-  ]
+  ],
+  "autofix": true
 }

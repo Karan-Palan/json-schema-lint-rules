@@ -11,16 +11,33 @@
           "type": "integer"
         }
       },
-      "doc": true
+      "doc": true,
+      "after": {
+        "type": "array",
+        "maxContains": 1,
+        "minContains": 3,
+        "contains": {
+          "type": "integer"
+        }
+      }
     }
   ],
-  "categories": [ "correctness" ],
+  "categories": [
+    "correctness"
+  ],
   "dialects": {
-    "2019-09": [ "minContains", "maxContains" ],
-    "2020-12": [ "minContains", "maxContains" ]
+    "2019-09": [
+      "minContains",
+      "maxContains"
+    ],
+    "2020-12": [
+      "minContains",
+      "maxContains"
+    ]
   },
   "message": "Increase `maxContains` or lower `minContains`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-maxcontains"
-  ]
+  ],
+  "autofix": true
 }

@@ -53,16 +53,29 @@
       }
     }
   ],
-  "categories": [ "style" ],
+  "categories": [
+    "style"
+  ],
   "dialects": {
-    "2019-09": [ "properties" ],
-    "2020-12": [ "properties" ],
-    "draft4": [ "properties" ],
-    "draft6": [ "properties" ],
-    "draft7": [ "properties" ]
+    "2019-09": [
+      "properties"
+    ],
+    "2020-12": [
+      "properties"
+    ],
+    "draft4": [
+      "properties"
+    ],
+    "draft6": [
+      "properties"
+    ],
+    "draft7": [
+      "properties"
+    ]
   },
   "message": "Delete the empty `properties` object.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/object.html#properties"
-  ]
+  ],
+  "autofix": true
 }

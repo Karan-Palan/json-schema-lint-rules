@@ -7,9 +7,21 @@
         "type": "object",
         "unevaluatedProperties": true
       },
-      "doc": true
+      "doc": true,
+      "after": {
+        "type": "object",
+        "unevaluatedProperties": false
+      }
     },
     {
+      "after": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "object"
+          }
+        ]
+      },
       "before": {
         "type": "array",
         "prefixItems": [
@@ -21,12 +33,17 @@
       }
     }
   ],
-  "categories": [ "style" ],
+  "categories": [
+    "style"
+  ],
   "dialects": {
-    "2020-12": [ "unevaluatedProperties" ]
+    "2020-12": [
+      "unevaluatedProperties"
+    ]
   },
   "message": "Verify if `unevaluatedProperties` can be safely removed.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-unevaluatedproperties"
-  ]
+  ],
+  "autofix": true
 }

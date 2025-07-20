@@ -12,22 +12,46 @@
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "integer",
-        "maximum": 90071992547409992,
-        "minimum": -90071992547409992
+        "maximum": 90071992547409980,
+        "minimum": -90071992547409980
       },
       "doc": true
     }
   ],
-  "categories": [ "safety", "readability" ],
+  "categories": [
+    "safety",
+    "readability"
+  ],
   "dialects": {
-    "2019-09": [ "type", "minimum", "maximum" ],
-    "2020-12": [ "type", "minimum", "maximum" ],
-    "draft4": [ "type", "minimum", "maximum" ],
-    "draft6": [ "type", "minimum", "maximum" ],
-    "draft7": [ "type", "minimum", "maximum" ]
+    "2019-09": [
+      "type",
+      "minimum",
+      "maximum"
+    ],
+    "2020-12": [
+      "type",
+      "minimum",
+      "maximum"
+    ],
+    "draft4": [
+      "type",
+      "minimum",
+      "maximum"
+    ],
+    "draft6": [
+      "type",
+      "minimum",
+      "maximum"
+    ],
+    "draft7": [
+      "type",
+      "minimum",
+      "maximum"
+    ]
   },
   "message": "Constrain integer limits to Number.MAX_SAFE_INTEGER bounds.",
   "references": [
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER"
-  ]
+  ],
+  "autofix": true
 }

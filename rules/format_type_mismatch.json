@@ -3,6 +3,11 @@
   "description": "`format` applies only to string instances. Using it with another `type` is invalid.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string",
+        "format": "uuid"
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "integer",
@@ -11,6 +16,11 @@
       "doc": true
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string",
+        "format": "email"
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": [ "integer", "boolean" ],
@@ -28,5 +38,6 @@
   "message": "Remove `format` or set `type` to `\"string\"`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-format"
-  ]
+  ],
+  "autofix": true
 }

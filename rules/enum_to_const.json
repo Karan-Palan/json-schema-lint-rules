@@ -15,6 +15,10 @@
       "tags": [ "basic" ]
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "const": 42
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "enum": [ 42 ]
@@ -29,5 +33,6 @@
   "message": "Single-value enum detected – replace with const.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/const"
-  ]
+  ],
+  "autofix": true
 }

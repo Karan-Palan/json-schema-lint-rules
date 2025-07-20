@@ -12,14 +12,23 @@
       "doc": true
     }
   ],
-  "categories": [ "style" ],
+  "categories": [
+    "style"
+  ],
   "dialects": {
-    "draft4": [ "dependencies" ],
-    "draft6": [ "dependencies" ],
-    "draft7": [ "dependencies" ]
+    "draft4": [
+      "dependencies"
+    ],
+    "draft6": [
+      "dependencies"
+    ],
+    "draft7": [
+      "dependencies"
+    ]
   },
   "message": "Delete tautological dependency arrays.",
   "references": [
     "https://json-schema.org/draft-07/json-schema-validation.html#dependencies"
-  ]
+  ],
+  "autofix": true
 }

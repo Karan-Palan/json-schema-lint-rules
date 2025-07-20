@@ -28,15 +28,28 @@
       }
     }
   ],
-  "categories": [ "readability", "style" ],
+  "categories": [
+    "readability",
+    "style"
+  ],
   "dialects": {
-    "2019-09": [ "contentMediaType", "contentEncoding" ],
-    "2020-12": [ "contentMediaType", "contentEncoding" ],
-    "draft7": [ "contentMediaType", "contentEncoding" ]
+    "2019-09": [
+      "contentMediaType",
+      "contentEncoding"
+    ],
+    "2020-12": [
+      "contentMediaType",
+      "contentEncoding"
+    ],
+    "draft7": [
+      "contentMediaType",
+      "contentEncoding"
+    ]
   },
   "message": "Add `contentEncoding` or remove `contentMediaType`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-contentencoding",
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-contentmediatype"
-  ]
+  ],
+  "autofix": true
 }

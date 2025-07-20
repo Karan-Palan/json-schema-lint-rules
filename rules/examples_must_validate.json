@@ -3,6 +3,11 @@
   "description": "Each entry in an `examples` array should be a valid instance of the schema it annotates; misleading examples hinder tooling and docs.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "examples": [ 42 ],
+        "type": "integer"
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "examples": [ "not-an-integer" ],
@@ -11,8 +16,13 @@
       "doc": true
     },
     {
-      "before": {
+      "after": {
         "examples": [ "user@example.com" ],
+        "type": "string",
+        "format": "email"
+      },
+      "before": {
+        "examples": [ "invalid-email" ],
         "type": "string",
         "format": "email"
       }
@@ -28,5 +38,6 @@
   "message": "Remove or fix invalid example values.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-examples"
-  ]
+  ],
+  "autofix": true
 }

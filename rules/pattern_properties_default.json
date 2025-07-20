@@ -13,16 +13,29 @@
       "doc": true
     }
   ],
-  "categories": [ "style" ],
+  "categories": [
+    "style"
+  ],
   "dialects": {
-    "2019-09": [ "patternProperties" ],
-    "2020-12": [ "patternProperties" ],
-    "draft4": [ "patternProperties" ],
-    "draft6": [ "patternProperties" ],
-    "draft7": [ "patternProperties" ]
+    "2019-09": [
+      "patternProperties"
+    ],
+    "2020-12": [
+      "patternProperties"
+    ],
+    "draft4": [
+      "patternProperties"
+    ],
+    "draft6": [
+      "patternProperties"
+    ],
+    "draft7": [
+      "patternProperties"
+    ]
   },
   "message": "Delete the empty `patternProperties` object.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/object.html#pattern-properties"
-  ]
+  ],
+  "autofix": true
 }

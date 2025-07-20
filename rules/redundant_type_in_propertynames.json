@@ -21,22 +21,44 @@
       "doc": true
     },
     {
+      "after": {
+        "propertyNames": {
+        }
+      },
       "before": {
         "propertyNames": {
-          "type": [ "string" ]
+          "type": [
+            "string"
+          ]
         }
       }
     }
   ],
-  "categories": [ "style", "readability" ],
+  "categories": [
+    "style",
+    "readability"
+  ],
   "dialects": {
-    "2019-09": [ "propertyNames", "type" ],
-    "2020-12": [ "propertyNames", "type" ],
-    "draft6": [ "propertyNames", "type" ],
-    "draft7": [ "propertyNames", "type" ]
+    "2019-09": [
+      "propertyNames",
+      "type"
+    ],
+    "2020-12": [
+      "propertyNames",
+      "type"
+    ],
+    "draft6": [
+      "propertyNames",
+      "type"
+    ],
+    "draft7": [
+      "propertyNames",
+      "type"
+    ]
   },
   "message": "Remove the redundant `type:\"string\"` inside `propertyNames`.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/object.html#property-names"
-  ]
+  ],
+  "autofix": true
 }

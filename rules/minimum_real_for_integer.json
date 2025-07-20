@@ -14,16 +14,34 @@
       "doc": true
     }
   ],
-  "categories": [ "style" ],
+  "categories": [
+    "style"
+  ],
   "dialects": {
-    "2019-09": [ "minimum", "type" ],
-    "2020-12": [ "minimum", "type" ],
-    "draft4": [ "minimum", "type" ],
-    "draft6": [ "minimum", "type" ],
-    "draft7": [ "minimum", "type" ]
+    "2019-09": [
+      "minimum",
+      "type"
+    ],
+    "2020-12": [
+      "minimum",
+      "type"
+    ],
+    "draft4": [
+      "minimum",
+      "type"
+    ],
+    "draft6": [
+      "minimum",
+      "type"
+    ],
+    "draft7": [
+      "minimum",
+      "type"
+    ]
   },
   "message": "Ceil the real `minimum` or convert it to an integer value.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/numeric.html#range"
-  ]
+  ],
+  "autofix": true
 }

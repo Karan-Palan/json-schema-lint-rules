@@ -3,6 +3,12 @@
   "description": "In draft-06 and newer the exclusive keywords take numeric values. They must satisfy `exclusiveMinimum < exclusiveMaximum`.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "number",
+        "exclusiveMaximum": 100,
+        "exclusiveMinimum": 50
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "number",
@@ -22,5 +28,6 @@
   "message": "Ensure exclusiveMinimum is lower than exclusiveMaximum.",
   "references": [
     "https://json-schema.org/draft/2019-09/json-schema-validation.html#section-6.2.3"
-  ]
+  ],
+  "autofix": true
 }

@@ -26,14 +26,24 @@
       "doc": true
     }
   ],
-  "categories": [ "correctness", "readability" ],
+  "categories": [
+    "correctness",
+    "readability"
+  ],
   "dialects": {
-    "draft4": [ "$defs" ],
-    "draft6": [ "$defs" ],
-    "draft7": [ "$defs" ]
+    "draft4": [
+      "$defs"
+    ],
+    "draft6": [
+      "$defs"
+    ],
+    "draft7": [
+      "$defs"
+    ]
   },
   "message": "Replace `$defs` with `definitions`, and update any `$ref`s that target it.",
   "references": [
     "https://json-schema.org/draft/2019-09/release-notes#definitions"
-  ]
+  ],
+  "autofix": true
 }

@@ -23,6 +23,15 @@
       "doc": true
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://example.com/thing",
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        }
+      },
       "before": {
         "$id": "https://example.com/thing",
         "properties": {
@@ -33,14 +42,29 @@
       }
     }
   ],
-  "categories": [ "correctness" ],
+  "categories": [
+    "correctness"
+  ],
   "dialects": {
-    "2019-09": [ "$schema" ],
-    "2020-12": [ "$schema" ],
-    "draft4": [ "$schema" ],
-    "draft6": [ "$schema" ],
-    "draft7": [ "$schema" ]
+    "2019-09": [
+      "$schema"
+    ],
+    "2020-12": [
+      "$schema"
+    ],
+    "draft4": [
+      "$schema"
+    ],
+    "draft6": [
+      "$schema"
+    ],
+    "draft7": [
+      "$schema"
+    ]
   },
   "message": "Add a `$schema` property pointing to the draft URI.",
-  "references": [ "https://json-schema.org/specification" ]
+  "references": [
+    "https://json-schema.org/specification"
+  ],
+  "autofix": true
 }

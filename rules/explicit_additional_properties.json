@@ -31,6 +31,15 @@
       "doc": true
     },
     {
+      "after": {
+        "type": "object",
+        "patternProperties": {
+          "^S_": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "before": {
         "type": "object",
         "patternProperties": {
@@ -41,16 +50,31 @@
       }
     }
   ],
-  "categories": [ "readability", "style", "opinionated" ],
+  "categories": [
+    "readability",
+    "style",
+    "opinionated"
+  ],
   "dialects": {
-    "2019-09": [ "additionalproperties" ],
-    "2020-12": [ "additionalproperties" ],
-    "draft4": [ "additionalproperties" ],
-    "draft6": [ "additionalproperties" ],
-    "draft7": [ "additionalproperties" ]
+    "2019-09": [
+      "additionalproperties"
+    ],
+    "2020-12": [
+      "additionalproperties"
+    ],
+    "draft4": [
+      "additionalproperties"
+    ],
+    "draft6": [
+      "additionalproperties"
+    ],
+    "draft7": [
+      "additionalproperties"
+    ]
   },
   "message": "Add an explicit `additionalProperties` declaration.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/object.html#additional-properties"
-  ]
+  ],
+  "autofix": true
 }

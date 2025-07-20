@@ -15,13 +15,22 @@
       "doc": true
     }
   ],
-  "categories": [ "correctness" ],
+  "categories": [
+    "correctness"
+  ],
   "dialects": {
-    "2019-09": [ "minContains", "contains" ],
-    "2020-12": [ "minContains", "contains" ]
+    "2019-09": [
+      "minContains",
+      "contains"
+    ],
+    "2020-12": [
+      "minContains",
+      "contains"
+    ]
   },
   "message": "Remove `minContains` or add a `contains` keyword.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-mincontains"
-  ]
+  ],
+  "autofix": true
 }

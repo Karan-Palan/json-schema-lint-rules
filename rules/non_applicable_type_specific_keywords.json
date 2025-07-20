@@ -3,6 +3,11 @@
   "description": "Keywords like `minimum` apply only to numbers; `minLength` only to strings, etc. Mixing them is always invalid.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string",
+        "minLength": 1
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "string",
@@ -11,6 +16,9 @@
       "doc": true
     },
     {
+      "after": {
+        "type": [ "integer", "string" ]
+      },
       "before": {
         "type": [ "integer", "string" ],
         "exclusiveMaximum": 10,
@@ -29,5 +37,6 @@
   "message": "Remove keyword(s) that do not apply to the declared type.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#section-6"
-  ]
+  ],
+  "autofix": true
 }

@@ -3,6 +3,16 @@
   "description": "`readOnly:true` means a value is *output-only*; `writeOnly:true` means it is *input-only*. Setting both to `true` simultaneously is contradictory.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "password": {
+            "writeOnly": true,
+            "type": "string"
+          }
+        }
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
@@ -17,6 +27,10 @@
       "doc": true
     },
     {
+      "after": {
+        "writeOnly": true,
+        "type": "string"
+      },
       "before": {
         "readOnly": true,
         "writeOnly": true,
@@ -34,5 +48,6 @@
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-readonly",
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-writeonly"
-  ]
+  ],
+  "autofix": true
 }

@@ -12,21 +12,48 @@
           }
         }
       },
-      "doc": true
+      "doc": true,
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/uuid"
+          }
+        },
+        "$defs": {}
+      }
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$ref": "#/$defs/User",
+        "$defs": {
+          "User": {
+            "type": "object"
+          }
+        }
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$ref": "#/components/schemas/User"
       }
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string"
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$ref": "https://example.com/readme.txt"
       }
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$ref": "https://example.com/user.schema.json"
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$ref": "https://example.com/data.json"
@@ -34,17 +61,31 @@
       "doc": true
     }
   ],
-  "categories": [ "correctness", "safety" ],
+  "categories": [
+    "correctness",
+    "safety"
+  ],
   "dialects": {
-    "2019-09": [ "$ref" ],
-    "2020-12": [ "$ref" ],
-    "draft4": [ "$ref" ],
-    "draft6": [ "$ref" ],
-    "draft7": [ "$ref" ]
+    "2019-09": [
+      "$ref"
+    ],
+    "2020-12": [
+      "$ref"
+    ],
+    "draft4": [
+      "$ref"
+    ],
+    "draft6": [
+      "$ref"
+    ],
+    "draft7": [
+      "$ref"
+    ]
   },
   "message": "Ensure `$ref` resolves to an existing subschema and that the target itself is a valid JSON Schema.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#rfc.section.8.3",
     "https://json-schema.org/understanding-json-schema/structuring.html#id64"
-  ]
+  ],
+  "autofix": true
 }

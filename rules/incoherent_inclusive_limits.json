@@ -3,6 +3,11 @@
   "description": "Inclusive bounds are contradictory when minimum > maximum.",
   "examples": [
     {
+      "after": {
+        "type": "number",
+        "maximum": 10,
+        "minimum": 5
+      },
       "before": {
         "type": "number",
         "maximum": 5,
@@ -22,5 +27,6 @@
   "message": "Adjust numeric limits or swap their values.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/numeric.html#range"
-  ]
+  ],
+  "autofix": true
 }

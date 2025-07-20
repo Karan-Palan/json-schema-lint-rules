@@ -15,13 +15,22 @@
       "doc": true
     }
   ],
-  "categories": [ "correctness" ],
+  "categories": [
+    "correctness"
+  ],
   "dialects": {
-    "2019-09": [ "maxContains", "contains" ],
-    "2020-12": [ "maxContains", "contains" ]
+    "2019-09": [
+      "maxContains",
+      "contains"
+    ],
+    "2020-12": [
+      "maxContains",
+      "contains"
+    ]
   },
   "message": "Remove `maxContains` or add a `contains` keyword.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-maxcontains"
-  ]
+  ],
+  "autofix": true
 }

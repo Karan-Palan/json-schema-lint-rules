@@ -3,6 +3,9 @@
   "description": "A single-branch `oneOf` is meaningless; use the schema directly instead.",
   "examples": [
     {
+      "after": {
+        "type": "string"
+      },
       "before": {
         "oneOf": [
           {
@@ -24,5 +27,6 @@
   "message": "Add a second branch or remove `oneOf` wrapper.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#rfc.section.10.2.1"
-  ]
+  ],
+  "autofix": true
 }

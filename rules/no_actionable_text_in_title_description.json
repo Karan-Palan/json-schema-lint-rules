@@ -15,16 +15,40 @@
       "doc": true
     }
   ],
-  "categories": [ "readability", "style" ],
+  "categories": [
+    "readability",
+    "style"
+  ],
   "dialects": {
-    "2019-09": [ "title", "description", "$comment" ],
-    "2020-12": [ "title", "description", "$comment" ],
-    "draft4": [ "title", "description", "$comment" ],
-    "draft6": [ "title", "description", "$comment" ],
-    "draft7": [ "title", "description", "$comment" ]
+    "2019-09": [
+      "title",
+      "description",
+      "$comment"
+    ],
+    "2020-12": [
+      "title",
+      "description",
+      "$comment"
+    ],
+    "draft4": [
+      "title",
+      "description",
+      "$comment"
+    ],
+    "draft6": [
+      "title",
+      "description",
+      "$comment"
+    ],
+    "draft7": [
+      "title",
+      "description",
+      "$comment"
+    ]
   },
   "message": "Move actionable text to `$comment`.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/generic.html#annotations"
-  ]
+  ],
+  "autofix": true
 }
