@@ -25,6 +25,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "enum", "const" ],
@@ -33,6 +34,5 @@
   "message": "Single-value enum detected – replace with const.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/const"
-  ],
-  "autofix": true
+  ]
 }

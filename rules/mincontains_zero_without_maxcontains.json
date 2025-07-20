@@ -21,23 +21,14 @@
       "doc": true
     }
   ],
-  "categories": [
-    "style",
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "style", "readability" ],
   "dialects": {
-    "2019-09": [
-      "contains",
-      "minContains"
-    ],
-    "2020-12": [
-      "contains",
-      "minContains"
-    ]
+    "2019-09": [ "contains", "minContains" ],
+    "2020-12": [ "contains", "minContains" ]
   },
   "message": "Add an upper bound with `maxContains` or remove `minContains: 0`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-mincontains"
-  ],
-  "autofix": true
+  ]
 }

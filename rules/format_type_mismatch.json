@@ -29,6 +29,7 @@
       "doc": true
     }
   ],
+  "autofix": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "type", "format" ],
@@ -38,6 +39,5 @@
   "message": "Remove `format` or set `type` to `\"string\"`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-format"
-  ],
-  "autofix": true
+  ]
 }

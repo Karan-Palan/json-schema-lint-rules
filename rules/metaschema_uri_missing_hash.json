@@ -14,24 +14,13 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness",
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "correctness", "style" ],
   "dialects": {
-    "draft4": [
-      "$schema"
-    ],
-    "draft6": [
-      "$schema"
-    ],
-    "draft7": [
-      "$schema"
-    ]
+    "draft4": [ "$schema" ],
+    "draft6": [ "$schema" ],
+    "draft7": [ "$schema" ]
   },
   "message": "Append a trailing `#` to the metaschema URI (e.g. …`schema#`).",
-  "references": [
-    "https://json-schema.org/draft-07/schema#"
-  ],
-  "autofix": true
+  "references": [ "https://json-schema.org/draft-07/schema#" ]
 }

@@ -13,6 +13,7 @@
       "doc": true
     }
   ],
+  "autofix": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "const", "enum" ],
@@ -23,6 +24,5 @@
   "message": "Remove `enum` when `const` is present, or vice-versa.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-const"
-  ],
-  "autofix": true
+  ]
 }

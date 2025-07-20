@@ -20,9 +20,7 @@
     {
       "after": {
         "type": "object",
-        "required": [
-          "name"
-        ],
+        "required": [ "name" ],
         "properties": {
           "name": {
             "type": "string"
@@ -40,9 +38,7 @@
             }
           },
           {
-            "required": [
-              "name"
-            ]
+            "required": [ "name" ]
           }
         ]
       }
@@ -66,24 +62,15 @@
       }
     }
   ],
-  "categories": [
-    "style",
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "style", "readability" ],
   "dialects": {
-    "draft4": [
-      "allOf"
-    ],
-    "draft6": [
-      "allOf"
-    ],
-    "draft7": [
-      "allOf"
-    ]
+    "draft4": [ "allOf" ],
+    "draft6": [ "allOf" ],
+    "draft7": [ "allOf" ]
   },
   "message": "Move keywords from `allOf` to parent level when they don't conflict.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/combining.html#allof"
-  ],
-  "autofix": true
+  ]
 }

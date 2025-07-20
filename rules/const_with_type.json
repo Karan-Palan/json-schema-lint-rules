@@ -19,10 +19,7 @@
         "const": 3.14
       },
       "before": {
-        "type": [
-          "number",
-          "integer"
-        ],
+        "type": [ "number", "integer" ],
         "const": 3.14
       }
     },
@@ -36,30 +33,14 @@
       }
     }
   ],
-  "categories": [
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "readability" ],
   "dialects": {
-    "2019-09": [
-      "const",
-      "type"
-    ],
-    "2020-12": [
-      "const",
-      "type"
-    ],
-    "draft6": [
-      "const",
-      "type"
-    ],
-    "draft7": [
-      "const",
-      "type"
-    ]
+    "2019-09": [ "const", "type" ],
+    "2020-12": [ "const", "type" ],
+    "draft6": [ "const", "type" ],
+    "draft7": [ "const", "type" ]
   },
   "message": "Delete the redundant `type` keyword (or drop `const`).",
-  "references": [
-    "https://www.learnjsonschema.com/2020-12/validation/const/"
-  ],
-  "autofix": true
+  "references": [ "https://www.learnjsonschema.com/2020-12/validation/const/" ]
 }

@@ -18,6 +18,7 @@
       "doc": true
     }
   ],
+  "autofix": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "exclusiveMinimum", "exclusiveMaximum" ],
@@ -28,6 +29,5 @@
   "message": "Ensure exclusiveMinimum is lower than exclusiveMaximum.",
   "references": [
     "https://json-schema.org/draft/2019-09/json-schema-validation.html#section-6.2.3"
-  ],
-  "autofix": true
+  ]
 }

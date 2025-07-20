@@ -38,6 +38,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "readOnly", "writeOnly" ],
@@ -48,6 +49,5 @@
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-readonly",
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-writeonly"
-  ],
-  "autofix": true
+  ]
 }

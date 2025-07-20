@@ -3,16 +3,6 @@
   "description": "Every relative JSON Pointer in `$ref` must resolve to a subschema within the same document. If the `$ref` is an absolute / URI reference, it must locate a retrievable **JSON Schema resource** (an object or boolean). Dangling pointers or links to non-schema content are errors.",
   "examples": [
     {
-      "before": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/$defs/uuid"
-          }
-        }
-      },
-      "doc": true,
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
@@ -22,7 +12,17 @@
           }
         },
         "$defs": {}
-      }
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/uuid"
+          }
+        }
+      },
+      "doc": true
     },
     {
       "after": {
@@ -61,31 +61,18 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness",
-    "safety"
-  ],
+  "autofix": true,
+  "categories": [ "correctness", "safety" ],
   "dialects": {
-    "2019-09": [
-      "$ref"
-    ],
-    "2020-12": [
-      "$ref"
-    ],
-    "draft4": [
-      "$ref"
-    ],
-    "draft6": [
-      "$ref"
-    ],
-    "draft7": [
-      "$ref"
-    ]
+    "2019-09": [ "$ref" ],
+    "2020-12": [ "$ref" ],
+    "draft4": [ "$ref" ],
+    "draft6": [ "$ref" ],
+    "draft7": [ "$ref" ]
   },
   "message": "Ensure `$ref` resolves to an existing subschema and that the target itself is a valid JSON Schema.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#rfc.section.8.3",
     "https://json-schema.org/understanding-json-schema/structuring.html#id64"
-  ],
-  "autofix": true
+  ]
 }

@@ -4,9 +4,7 @@
   "examples": [
     {
       "after": {
-        "enum": [
-          5
-        ]
+        "enum": [ 5 ]
       },
       "before": {
         "type": "number",
@@ -17,9 +15,7 @@
     },
     {
       "after": {
-        "enum": [
-          42
-        ]
+        "enum": [ 42 ]
       },
       "before": {
         "type": "integer",
@@ -28,45 +24,17 @@
       }
     }
   ],
-  "categories": [
-    "style",
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "style", "readability" ],
   "dialects": {
-    "2019-09": [
-      "minimum",
-      "maximum",
-      "enum",
-      "type"
-    ],
-    "2020-12": [
-      "minimum",
-      "maximum",
-      "enum",
-      "type"
-    ],
-    "draft4": [
-      "minimum",
-      "maximum",
-      "enum",
-      "type"
-    ],
-    "draft6": [
-      "minimum",
-      "maximum",
-      "enum",
-      "type"
-    ],
-    "draft7": [
-      "minimum",
-      "maximum",
-      "enum",
-      "type"
-    ]
+    "2019-09": [ "minimum", "maximum", "enum", "type" ],
+    "2020-12": [ "minimum", "maximum", "enum", "type" ],
+    "draft4": [ "minimum", "maximum", "enum", "type" ],
+    "draft6": [ "minimum", "maximum", "enum", "type" ],
+    "draft7": [ "minimum", "maximum", "enum", "type" ]
   },
   "message": "Replace equal numeric bounds with single-value `enum`.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/generic.html#enumerated-values"
-  ],
-  "autofix": true
+  ]
 }

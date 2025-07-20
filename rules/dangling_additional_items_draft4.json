@@ -19,31 +19,17 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "autofix": true,
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "items",
-      "additionalItems"
-    ],
-    "draft4": [
-      "items",
-      "additionalItems"
-    ],
-    "draft6": [
-      "items",
-      "additionalItems"
-    ],
-    "draft7": [
-      "items",
-      "additionalItems"
-    ]
+    "2019-09": [ "items", "additionalItems" ],
+    "draft4": [ "items", "additionalItems" ],
+    "draft6": [ "items", "additionalItems" ],
+    "draft7": [ "items", "additionalItems" ]
   },
   "message": "Remove `additionalItems` or convert `items` into an array.",
   "references": [
     "https://json-schema.org/draft-04/json-schema-validation.html#anchor66",
     "https://json-schema.org/draft/2019-09/release-notes#unevaluateditems"
-  ],
-  "autofix": true
+  ]
 }

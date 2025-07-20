@@ -14,31 +14,19 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "autofix": true,
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "$schema"
-    ],
-    "2020-12": [
-      "$schema"
-    ],
-    "draft4": [
-      "$schema"
-    ],
-    "draft6": [
-      "$schema"
-    ],
-    "draft7": [
-      "$schema"
-    ]
+    "2019-09": [ "$schema" ],
+    "2020-12": [ "$schema" ],
+    "draft4": [ "$schema" ],
+    "draft6": [ "$schema" ],
+    "draft7": [ "$schema" ]
   },
   "message": "Set $schema to a absolute draft URI.",
   "references": [
     "https://json-schema.org/draft/2020-12/schema",
     "https://json-schema.org/draft/2019-09/schema",
     "https://json-schema.org/draft-07/schema#"
-  ],
-  "autofix": true
+  ]
 }

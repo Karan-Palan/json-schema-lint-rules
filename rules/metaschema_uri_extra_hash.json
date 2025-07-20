@@ -24,22 +24,15 @@
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "correctness", "style" ],
   "dialects": {
-    "2019-09": [
-      "$schema"
-    ],
-    "2020-12": [
-      "$schema"
-    ]
+    "2019-09": [ "$schema" ],
+    "2020-12": [ "$schema" ]
   },
   "message": "Remove the trailing `#` from the metaschema URI.",
   "references": [
     "https://json-schema.org/draft/2019-09/schema",
     "https://json-schema.org/draft/2020-12/schema"
-  ],
-  "autofix": true
+  ]
 }

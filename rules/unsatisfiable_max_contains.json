@@ -3,6 +3,14 @@
   "description": "If `maxContains` is present it must be ≥ `minContains` (or ≥ 1 if `minContains` is omitted).",
   "examples": [
     {
+      "after": {
+        "type": "array",
+        "maxContains": 1,
+        "minContains": 3,
+        "contains": {
+          "type": "integer"
+        }
+      },
       "before": {
         "type": "array",
         "maxContains": 1,
@@ -11,33 +19,17 @@
           "type": "integer"
         }
       },
-      "doc": true,
-      "after": {
-        "type": "array",
-        "maxContains": 1,
-        "minContains": 3,
-        "contains": {
-          "type": "integer"
-        }
-      }
+      "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "autofix": true,
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "minContains",
-      "maxContains"
-    ],
-    "2020-12": [
-      "minContains",
-      "maxContains"
-    ]
+    "2019-09": [ "minContains", "maxContains" ],
+    "2020-12": [ "minContains", "maxContains" ]
   },
   "message": "Increase `maxContains` or lower `minContains`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-maxcontains"
-  ],
-  "autofix": true
+  ]
 }

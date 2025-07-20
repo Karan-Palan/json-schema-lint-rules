@@ -3,15 +3,15 @@
   "description": "While `unevaluatedProperties:true` (or `{}`) may appear redundant, removing it can change schema behavior in some contexts. Verify it's safe to remove before doing so.",
   "examples": [
     {
+      "after": {
+        "type": "object",
+        "unevaluatedProperties": false
+      },
       "before": {
         "type": "object",
         "unevaluatedProperties": true
       },
-      "doc": true,
-      "after": {
-        "type": "object",
-        "unevaluatedProperties": false
-      }
+      "doc": true
     },
     {
       "after": {
@@ -33,17 +33,13 @@
       }
     }
   ],
-  "categories": [
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "style" ],
   "dialects": {
-    "2020-12": [
-      "unevaluatedProperties"
-    ]
+    "2020-12": [ "unevaluatedProperties" ]
   },
   "message": "Verify if `unevaluatedProperties` can be safely removed.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-unevaluatedproperties"
-  ],
-  "autofix": true
+  ]
 }

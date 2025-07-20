@@ -15,23 +15,15 @@
       "doc": true
     }
   ],
-  "categories": [
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "style" ],
   "dialects": {
-    "2019-09": [
-      "contentSchema"
-    ],
-    "2020-12": [
-      "contentSchema"
-    ],
-    "draft7": [
-      "contentSchema"
-    ]
+    "2019-09": [ "contentSchema" ],
+    "2020-12": [ "contentSchema" ],
+    "draft7": [ "contentSchema" ]
   },
   "message": "Remove empty `contentSchema` – it adds no validation power.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-contentschema"
-  ],
-  "autofix": true
+  ]
 }

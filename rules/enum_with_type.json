@@ -5,87 +5,43 @@
     {
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "enum": [
-          1,
-          2,
-          3
-        ]
+        "enum": [ 1, 2, 3 ]
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "integer",
-        "enum": [
-          1,
-          2,
-          3
-        ]
+        "enum": [ 1, 2, 3 ]
       },
       "doc": true
     },
     {
       "after": {
-        "enum": [
-          "none",
-          "some",
-          null
-        ]
+        "enum": [ "none", "some", null ]
       },
       "before": {
-        "type": [
-          "string",
-          "null"
-        ],
-        "enum": [
-          "none",
-          "some",
-          null
-        ]
+        "type": [ "string", "null" ],
+        "enum": [ "none", "some", null ]
       }
     },
     {
       "after": {
-        "enum": [
-          true,
-          false
-        ]
+        "enum": [ true, false ]
       },
       "before": {
         "type": "boolean",
-        "enum": [
-          true,
-          false
-        ]
+        "enum": [ true, false ]
       }
     }
   ],
-  "categories": [
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "readability" ],
   "dialects": {
-    "2019-09": [
-      "enum",
-      "type"
-    ],
-    "2020-12": [
-      "enum",
-      "type"
-    ],
-    "draft4": [
-      "enum",
-      "type"
-    ],
-    "draft6": [
-      "enum",
-      "type"
-    ],
-    "draft7": [
-      "enum",
-      "type"
-    ]
+    "2019-09": [ "enum", "type" ],
+    "2020-12": [ "enum", "type" ],
+    "draft4": [ "enum", "type" ],
+    "draft6": [ "enum", "type" ],
+    "draft7": [ "enum", "type" ]
   },
   "message": "Delete the redundant `type` keyword (or drop `enum`).",
-  "references": [
-    "https://www.learnjsonschema.com/2020-12/validation/enum/"
-  ],
-  "autofix": true
+  "references": [ "https://www.learnjsonschema.com/2020-12/validation/enum/" ]
 }

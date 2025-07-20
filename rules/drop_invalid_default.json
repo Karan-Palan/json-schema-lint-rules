@@ -34,30 +34,17 @@
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "correctness", "readability" ],
   "dialects": {
-    "2019-09": [
-      "default"
-    ],
-    "2020-12": [
-      "default"
-    ],
-    "draft4": [
-      "default"
-    ],
-    "draft6": [
-      "default"
-    ],
-    "draft7": [
-      "default"
-    ]
+    "2019-09": [ "default" ],
+    "2020-12": [ "default" ],
+    "draft4": [ "default" ],
+    "draft6": [ "default" ],
+    "draft7": [ "default" ]
   },
   "message": "Remove `default` – its value doesn’t validate.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/generic.html#default"
-  ],
-  "autofix": true
+  ]
 }

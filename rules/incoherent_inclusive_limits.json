@@ -16,6 +16,7 @@
       "doc": true
     }
   ],
+  "autofix": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "minimum", "maximum" ],
@@ -27,6 +28,5 @@
   "message": "Adjust numeric limits or swap their values.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/numeric.html#range"
-  ],
-  "autofix": true
+  ]
 }

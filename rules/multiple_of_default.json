@@ -13,30 +13,17 @@
       "doc": true
     }
   ],
-  "categories": [
-    "style",
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "style", "readability" ],
   "dialects": {
-    "2019-09": [
-      "multipleOf"
-    ],
-    "2020-12": [
-      "multipleOf"
-    ],
-    "draft4": [
-      "multipleOf"
-    ],
-    "draft6": [
-      "multipleOf"
-    ],
-    "draft7": [
-      "multipleOf"
-    ]
+    "2019-09": [ "multipleOf" ],
+    "2020-12": [ "multipleOf" ],
+    "draft4": [ "multipleOf" ],
+    "draft6": [ "multipleOf" ],
+    "draft7": [ "multipleOf" ]
   },
   "message": "Remove `multipleOf` when its value is 1.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/numeric.html#multiple-of"
-  ],
-  "autofix": true
+  ]
 }

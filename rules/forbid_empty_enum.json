@@ -5,7 +5,7 @@
     {
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "enum": ["value1", "value2"]
+        "enum": [ "value1", "value2" ]
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14,6 +14,7 @@
       "doc": true
     }
   ],
+  "autofix": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "enum" ],
@@ -25,6 +26,5 @@
   "message": "Remove empty enum or add allowed values.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/generic.html#enumerated-values"
-  ],
-  "autofix": true
+  ]
 }

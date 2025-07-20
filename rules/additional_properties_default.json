@@ -15,29 +15,17 @@
       "doc": true
     }
   ],
-  "categories": [
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "style" ],
   "dialects": {
-    "2019-09": [
-      "additionalProperties"
-    ],
-    "2020-12": [
-      "additionalProperties"
-    ],
-    "draft4": [
-      "additionalProperties"
-    ],
-    "draft6": [
-      "additionalProperties"
-    ],
-    "draft7": [
-      "additionalProperties"
-    ]
+    "2019-09": [ "additionalProperties" ],
+    "2020-12": [ "additionalProperties" ],
+    "draft4": [ "additionalProperties" ],
+    "draft6": [ "additionalProperties" ],
+    "draft7": [ "additionalProperties" ]
   },
   "message": "Remove `\"additionalProperties\": true`.",
   "references": [
     "https://www.learnjsonschema.com/2020-12/structuring/#additionalproperties"
-  ],
-  "autofix": true
+  ]
 }

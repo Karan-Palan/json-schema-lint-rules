@@ -15,30 +15,16 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "autofix": true,
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "maximum",
-      "exclusiveMaximum"
-    ],
-    "2020-12": [
-      "maximum",
-      "exclusiveMaximum"
-    ],
-    "draft6": [
-      "maximum",
-      "exclusiveMaximum"
-    ],
-    "draft7": [
-      "maximum",
-      "exclusiveMaximum"
-    ]
+    "2019-09": [ "maximum", "exclusiveMaximum" ],
+    "2020-12": [ "maximum", "exclusiveMaximum" ],
+    "draft6": [ "maximum", "exclusiveMaximum" ],
+    "draft7": [ "maximum", "exclusiveMaximum" ]
   },
   "message": "Drop the looser upper-bound keyword; it’s redundant.",
   "references": [
     "https://json-schema.org/draft/2019-09/json-schema-validation.html#name-exclusivemaximum"
-  ],
-  "autofix": true
+  ]
 }

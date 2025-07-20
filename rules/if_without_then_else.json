@@ -12,9 +12,7 @@
           }
         },
         "then": {
-          "required": [
-            "flag"
-          ]
+          "required": [ "flag" ]
         }
       },
       "before": {
@@ -29,29 +27,15 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "autofix": true,
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "if",
-      "then",
-      "else"
-    ],
-    "2020-12": [
-      "if",
-      "then",
-      "else"
-    ],
-    "draft7": [
-      "if",
-      "then",
-      "else"
-    ]
+    "2019-09": [ "if", "then", "else" ],
+    "2020-12": [ "if", "then", "else" ],
+    "draft7": [ "if", "then", "else" ]
   },
   "message": "Add `then`, `else`, or remove `if`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-conditionals"
-  ],
-  "autofix": true
+  ]
 }

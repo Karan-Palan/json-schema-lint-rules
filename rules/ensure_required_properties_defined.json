@@ -5,10 +5,7 @@
     {
       "after": {
         "type": "object",
-        "required": [
-          "a",
-          "b"
-        ],
+        "required": [ "a", "b" ],
         "patternProperties": {
           "^a|b$": {
             "type": "string"
@@ -17,11 +14,7 @@
       },
       "before": {
         "type": "object",
-        "required": [
-          "a",
-          "b",
-          "c"
-        ],
+        "required": [ "a", "b", "c" ],
         "patternProperties": {
           "^a|b$": {
             "type": "string"
@@ -31,40 +24,18 @@
       "doc": true
     }
   ],
-  "categories": [
-    "correctness"
-  ],
+  "autofix": true,
+  "categories": [ "correctness" ],
   "dialects": {
-    "2019-09": [
-      "required",
-      "properties",
-      "patternProperties"
-    ],
-    "2020-12": [
-      "required",
-      "properties",
-      "patternProperties"
-    ],
-    "draft4": [
-      "required",
-      "properties",
-      "patternProperties"
-    ],
-    "draft6": [
-      "required",
-      "properties",
-      "patternProperties"
-    ],
-    "draft7": [
-      "required",
-      "properties",
-      "patternProperties"
-    ]
+    "2019-09": [ "required", "properties", "patternProperties" ],
+    "2020-12": [ "required", "properties", "patternProperties" ],
+    "draft4": [ "required", "properties", "patternProperties" ],
+    "draft6": [ "required", "properties", "patternProperties" ],
+    "draft7": [ "required", "properties", "patternProperties" ]
   },
   "message": "Remove unknown names, declare them, or add a matching pattern.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/object.html#required-properties",
     "https://json-schema.org/understanding-json-schema/reference/object.html#pattern-properties"
-  ],
-  "autofix": true
+  ]
 }

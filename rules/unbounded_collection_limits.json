@@ -6,10 +6,10 @@
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "array",
+        "maxItems": 100,
         "items": {
           "type": "integer"
-        },
-        "maxItems": 100
+        }
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -32,41 +32,18 @@
       }
     }
   ],
-  "categories": [
-    "safety",
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "safety", "style" ],
   "dialects": {
-    "2019-09": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ],
-    "2020-12": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ],
-    "draft4": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ],
-    "draft6": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ],
-    "draft7": [
-      "maxItems",
-      "maxLength",
-      "type"
-    ]
+    "2019-09": [ "maxItems", "maxLength", "type" ],
+    "2020-12": [ "maxItems", "maxLength", "type" ],
+    "draft4": [ "maxItems", "maxLength", "type" ],
+    "draft6": [ "maxItems", "maxLength", "type" ],
+    "draft7": [ "maxItems", "maxLength", "type" ]
   },
   "message": "Add `maxItems` or `maxLength` to cap collection size.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/array.html#length",
     "https://json-schema.org/understanding-json-schema/reference/string.html#length"
-  ],
-  "autofix": true
+  ]
 }

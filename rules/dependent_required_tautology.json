@@ -12,20 +12,14 @@
       "doc": true
     }
   ],
-  "categories": [
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "style" ],
   "dialects": {
-    "2019-09": [
-      "dependentRequired"
-    ],
-    "2020-12": [
-      "dependentRequired"
-    ]
+    "2019-09": [ "dependentRequired" ],
+    "2020-12": [ "dependentRequired" ]
   },
   "message": "Delete empty dependency arrays.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-dependentrequired"
-  ],
-  "autofix": true
+  ]
 }

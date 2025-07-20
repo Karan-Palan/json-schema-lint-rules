@@ -38,24 +38,15 @@
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "correctness", "style" ],
   "dialects": {
-    "draft4": [
-      "$ref"
-    ],
-    "draft6": [
-      "$ref"
-    ],
-    "draft7": [
-      "$ref"
-    ]
+    "draft4": [ "$ref" ],
+    "draft6": [ "$ref" ],
+    "draft7": [ "$ref" ]
   },
   "message": "Remove properties alongside `$ref` or wrap in `allOf`.",
   "references": [
     "https://json-schema.org/understanding-json-schema/structuring.html#ref"
-  ],
-  "autofix": true
+  ]
 }

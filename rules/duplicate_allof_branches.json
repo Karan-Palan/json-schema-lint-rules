@@ -23,30 +23,17 @@
       "doc": true
     }
   ],
-  "categories": [
-    "readability",
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "readability", "style" ],
   "dialects": {
-    "2019-09": [
-      "allOf"
-    ],
-    "2020-12": [
-      "allOf"
-    ],
-    "draft4": [
-      "allOf"
-    ],
-    "draft6": [
-      "allOf"
-    ],
-    "draft7": [
-      "allOf"
-    ]
+    "2019-09": [ "allOf" ],
+    "2020-12": [ "allOf" ],
+    "draft4": [ "allOf" ],
+    "draft6": [ "allOf" ],
+    "draft7": [ "allOf" ]
   },
   "message": "Remove duplicate branches; keep one instance.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-allof"
-  ],
-  "autofix": true
+  ]
 }

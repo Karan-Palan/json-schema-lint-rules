@@ -24,6 +24,7 @@
       "doc": true
     }
   ],
+  "autofix": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "minContains", "maxContains" ],
@@ -32,6 +33,5 @@
   "message": "Adjust numeric bounds so `minContains` ≤ `maxContains`, or drop one keyword.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-maxcontains"
-  ],
-  "autofix": true
+  ]
 }

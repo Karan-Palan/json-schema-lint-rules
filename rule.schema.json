@@ -44,6 +44,9 @@
         "additionalProperties": false
       }
     },
+    "autofix": {
+      "type": "boolean"
+    },
     "categories": {
       "type": "array",
       "minItems": 1,
@@ -82,9 +85,6 @@
         "type": "string",
         "format": "uri"
       }
-    },
-    "autofix": {
-      "type": "boolean"
     }
   },
   "additionalProperties": false

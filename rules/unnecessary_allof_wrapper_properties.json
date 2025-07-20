@@ -74,23 +74,14 @@
       }
     }
   ],
-  "categories": [
-    "style",
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "style", "readability" ],
   "dialects": {
-    "2019-09": [
-      "allOf",
-      "properties"
-    ],
-    "2020-12": [
-      "allOf",
-      "properties"
-    ]
+    "2019-09": [ "allOf", "properties" ],
+    "2020-12": [ "allOf", "properties" ]
   },
   "message": "Move non-conflicting properties from `allOf` to parent level.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/combining.html#allof"
-  ],
-  "autofix": true
+  ]
 }

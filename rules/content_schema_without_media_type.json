@@ -21,27 +21,15 @@
       "doc": true
     }
   ],
-  "categories": [
-    "readability",
-    "style"
-  ],
+  "autofix": true,
+  "categories": [ "readability", "style" ],
   "dialects": {
-    "2019-09": [
-      "contentSchema",
-      "contentMediaType"
-    ],
-    "2020-12": [
-      "contentSchema",
-      "contentMediaType"
-    ],
-    "draft7": [
-      "contentSchema",
-      "contentMediaType"
-    ]
+    "2019-09": [ "contentSchema", "contentMediaType" ],
+    "2020-12": [ "contentSchema", "contentMediaType" ],
+    "draft7": [ "contentSchema", "contentMediaType" ]
   },
   "message": "Add `contentMediaType` or drop `contentSchema`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-contentschema"
-  ],
-  "autofix": true
+  ]
 }

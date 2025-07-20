@@ -26,40 +26,17 @@
       }
     }
   ],
-  "categories": [
-    "style",
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "style", "readability" ],
   "dialects": {
-    "2019-09": [
-      "minimum",
-      "maximum",
-      "const"
-    ],
-    "2020-12": [
-      "minimum",
-      "maximum",
-      "const"
-    ],
-    "draft4": [
-      "minimum",
-      "maximum",
-      "const"
-    ],
-    "draft6": [
-      "minimum",
-      "maximum",
-      "const"
-    ],
-    "draft7": [
-      "minimum",
-      "maximum",
-      "const"
-    ]
+    "2019-09": [ "minimum", "maximum", "const" ],
+    "2020-12": [ "minimum", "maximum", "const" ],
+    "draft4": [ "minimum", "maximum", "const" ],
+    "draft6": [ "minimum", "maximum", "const" ],
+    "draft7": [ "minimum", "maximum", "const" ]
   },
   "message": "Replace equal numeric bounds with `const`.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/numeric.html#range"
-  ],
-  "autofix": true
+  ]
 }

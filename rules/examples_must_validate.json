@@ -28,6 +28,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "examples" ],
@@ -38,6 +39,5 @@
   "message": "Remove or fix invalid example values.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-examples"
-  ],
-  "autofix": true
+  ]
 }

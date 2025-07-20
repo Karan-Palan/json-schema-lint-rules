@@ -26,10 +26,8 @@
       }
     }
   ],
-  "categories": [
-    "correctness",
-    "readability"
-  ],
+  "autofix": true,
+  "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [],
     "2020-12": [],
@@ -40,6 +38,5 @@
   "message": "Prefix unknown keyword(s) with \"x-\".",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#rfc.section.4.4.4"
-  ],
-  "autofix": true
+  ]
 }
