@@ -3,7 +3,7 @@ title: Require absolute draft URI in $schema
 code: require_absolute_draft_uri
 categories: correctness
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -18,6 +18,16 @@ $schema must be one of the recognised draft URLs (draft-04, draft-06, draft-07, 
 ```json
 {
   "$schema": "./schema",
+  "type": "string"
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "string"
 }
 ```
