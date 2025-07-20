@@ -3,6 +3,11 @@
   "description": "Keywords like `minimum` apply only to numbers; `minLength` only to strings, etc. Mixing them is always invalid.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string",
+        "minLength": 1
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "string",
@@ -11,6 +16,9 @@
       "doc": true
     },
     {
+      "after": {
+        "type": [ "integer", "string" ]
+      },
       "before": {
         "type": [ "integer", "string" ],
         "exclusiveMaximum": 10,
@@ -18,6 +26,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "minimum", "maxlength", "multipleof" ],

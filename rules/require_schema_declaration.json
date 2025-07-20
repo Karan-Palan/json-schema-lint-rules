@@ -23,6 +23,15 @@
       "doc": true
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://example.com/thing",
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        }
+      },
       "before": {
         "$id": "https://example.com/thing",
         "properties": {
@@ -33,6 +42,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "$schema" ],

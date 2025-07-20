@@ -16,12 +16,17 @@
       "doc": true
     },
     {
+      "after": {
+        "type": "string",
+        "x-baz": 123
+      },
       "before": {
         "type": "string",
         "baz": 123
       }
     }
   ],
+  "autofix": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [],

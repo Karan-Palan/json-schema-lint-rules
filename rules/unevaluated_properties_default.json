@@ -3,6 +3,10 @@
   "description": "While `unevaluatedProperties:true` (or `{}`) may appear redundant, removing it can change schema behavior in some contexts. Verify it's safe to remove before doing so.",
   "examples": [
     {
+      "after": {
+        "type": "object",
+        "unevaluatedProperties": false
+      },
       "before": {
         "type": "object",
         "unevaluatedProperties": true
@@ -10,6 +14,14 @@
       "doc": true
     },
     {
+      "after": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "object"
+          }
+        ]
+      },
       "before": {
         "type": "array",
         "prefixItems": [
@@ -21,6 +33,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "style" ],
   "dialects": {
     "2020-12": [ "unevaluatedProperties" ]

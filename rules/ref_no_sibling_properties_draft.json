@@ -38,6 +38,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "correctness", "style" ],
   "dialects": {
     "draft4": [ "$ref" ],

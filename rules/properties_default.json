@@ -53,6 +53,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "properties" ],

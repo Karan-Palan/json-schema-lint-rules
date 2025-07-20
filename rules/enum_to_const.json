@@ -15,12 +15,17 @@
       "tags": [ "basic" ]
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "const": 42
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "enum": [ 42 ]
       }
     }
   ],
+  "autofix": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "enum", "const" ],

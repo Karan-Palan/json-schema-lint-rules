@@ -34,6 +34,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "default" ],

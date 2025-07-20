@@ -3,7 +3,7 @@ title: Arrays and strings should declare upper size limits
 code: unbounded_collection_limits
 categories: safety, style
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -19,6 +19,20 @@ Omitting `maxItems` for arrays or `maxLength` for strings can lead to unbounded 
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "array",
+  "items": {
+    "type": "integer"
+  }
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "maxItems": 100,
   "items": {
     "type": "integer"
   }

@@ -3,7 +3,7 @@ title: \`minContains: 0\` without \`maxContains\` never fails
 code: mincontains_zero_without_maxcontains
 categories: style, readability
 dialects: 2019-09, 2020-12
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -20,6 +20,19 @@ When `minContains` is 0 and `maxContains` is absent, the schema accepts any numb
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "array",
   "minContains": 0,
+  "contains": {
+    "type": "number"
+  }
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
   "contains": {
     "type": "number"
   }

@@ -31,6 +31,15 @@
       "doc": true
     },
     {
+      "after": {
+        "type": "object",
+        "patternProperties": {
+          "^S_": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "before": {
         "type": "object",
         "patternProperties": {
@@ -41,6 +50,7 @@
       }
     }
   ],
+  "autofix": true,
   "categories": [ "readability", "style", "opinionated" ],
   "dialects": {
     "2019-09": [ "additionalproperties" ],

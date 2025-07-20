@@ -24,6 +24,7 @@
       "doc": true
     }
   ],
+  "autofix": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "required", "properties", "patternProperties" ],

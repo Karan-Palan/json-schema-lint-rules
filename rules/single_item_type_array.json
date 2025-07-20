@@ -14,11 +14,15 @@
       "doc": true
     },
     {
+      "after": {
+        "type": "integer"
+      },
       "before": {
         "type": [ "integer" ]
       }
     }
   ],
+  "autofix": true,
   "categories": [ "style", "readability" ],
   "dialects": {
     "2019-09": [ "type" ],
