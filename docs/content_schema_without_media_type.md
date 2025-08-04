@@ -1,5 +1,5 @@
 ---
-title: \`contentSchema\` without \`contentMediaType\` is unhelpful
+title: \`contentSchema\` without \`contentMediaType\` is meaningless
 code: content_schema_without_media_type
 categories: readability, style
 dialects: 2019-09, 2020-12, draft7
@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-`contentSchema` refines the structure of non-JSON media; without a media type consumers cannot choose a codec.
+The `contentSchema` keyword has no effect unless `contentMediaType` is also present.
 
 > **Message shown to user:**
-> Add `contentMediaType` or drop `contentSchema`.
+> Add `contentMediaType` or remove `contentSchema`.
 
 ### Example 1
 <details><summary>Before</summary>

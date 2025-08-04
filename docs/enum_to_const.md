@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-An enum with exactly one element can be expressed more clearly with const.
+Setting `type` alongside `enum` is considered an anti-pattern, as the enumeration already implies its types.
 
 > **Message shown to user:**
-> Single-value enum detected – replace with const.
+> Drop the redundant `type` keyword (or drop `enum`).
 
 ### Example 1
 <details><summary>Before</summary>

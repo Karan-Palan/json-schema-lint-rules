@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-`else` set to the empty schema (`{}`) does not restrict validation and is most likely ineffective.
+Setting the else keyword to the empty schema does not add any further constraint.
 
 > **Message shown to user:**
-> Remove empty `else` or add restrictions.
+> Remove the empty else schema or add restrictions.
 
 ### Example 1
 <details><summary>Before</summary>

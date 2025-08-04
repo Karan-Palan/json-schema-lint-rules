@@ -1,6 +1,6 @@
 ---
 title: Do not use $defs before draft-2019-09
-code: defs_not_supported_pre_2019_09
+code: defs_not_supported_draft
 categories: correctness, readability
 dialects: draft4, draft6, draft7
 autofixable: true

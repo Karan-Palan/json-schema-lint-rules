@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`minimum` == `maximum` forces one exact value; use `const` for clarity.
+Setting `minimum` and `maximum` to the same number only leaves one possible value.
 
 > **Message shown to user:**
 > Replace equal numeric bounds with `const`.

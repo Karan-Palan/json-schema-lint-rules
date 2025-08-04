@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`maxContains` can never match if `contains` is absent. Delete it or add a `contains` schema.
+The `maxContains` keyword is meaningless without the presence of the `contains` keyword.
 
 > **Message shown to user:**
 > Remove `maxContains` or add a `contains` keyword.

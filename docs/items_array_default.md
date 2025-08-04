@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`items` as an empty array imposes no constraints in drafts up to 2019-09. Remove it for clarity.
+Setting the `items` keyword to the empty array does not add any further constraint.
 
 > **Message shown to user:**
 > Remove the empty `items` array.

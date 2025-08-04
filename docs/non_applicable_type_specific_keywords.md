@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Keywords like `minimum` apply only to numbers; `minLength` only to strings, etc. Mixing them is always invalid.
+Avoid keywords that don't apply to the type or types that the current subschema expects.
 
 > **Message shown to user:**
 > Remove keyword(s) that do not apply to the declared type.

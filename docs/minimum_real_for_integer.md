@@ -1,5 +1,5 @@
 ---
-title: Round up real \`minimum\` for integer schemas
+title: Real \`minimum\` on integer schema
 code: minimum_real_for_integer
 categories: style
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-On an integer schema, a non-integer `minimum` can be replaced by its ceiling value.
+If an instance is guaranteed to be an integer, setting a real number lower bound is the same as ceiling that bound.
 
 > **Message shown to user:**
-> Ceil the real `minimum` or convert it to an integer value.
+> Ceil the real `minimum` to an integer value.
 
 ### Example 1
 <details><summary>Before</summary>

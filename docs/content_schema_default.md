@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-`contentSchema` set to `{}` (or `true`) imposes no constraints. Leaving it in the schema only adds noise.
+Setting the `contentSchema` keyword to the true schema (or `{}`) does not add any further constraint.
 
 > **Message shown to user:**
-> Remove empty `contentSchema` – it adds no validation power.
+> Remove `contentSchema` when it is `true` or empty.
 
 ### Example 1
 <details><summary>Before</summary>

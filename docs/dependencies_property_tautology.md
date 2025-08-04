@@ -1,5 +1,5 @@
 ---
-title: Remove empty property lists in \`dependencies\`
+title: Property already required – \`dependencies\` tautology
 code: dependencies_property_tautology
 categories: style
 dialects: draft4, draft6, draft7
@@ -7,18 +7,25 @@ autofixable: true
 ---
 
 ## Description
-A `dependencies` entry with an empty array never changes validation; it is redundant.
+Using `dependencies` to declare that a property depends on itself (when it is already in `required`) is unnecessary and needlessly complex.
 
 > **Message shown to user:**
-> Delete tautological dependency arrays.
+> Remove tautological entries from `dependencies` (property is already required).
 
 ### Example 1
 <details><summary>Before</summary>
 
 ```json
 {
+  "type": "object",
+  "required": [
+    "id",
+    "name"
+  ],
   "dependencies": {
-    "foo": []
+    "id": [
+      "name"
+    ]
   }
 }
 ```
@@ -27,7 +34,13 @@ A `dependencies` entry with an empty array never changes validation; it is redun
 <details><summary>After</summary>
 
 ```json
-{}
+{
+  "type": "object",
+  "required": [
+    "id",
+    "name"
+  ]
+}
 ```
 </details>
 

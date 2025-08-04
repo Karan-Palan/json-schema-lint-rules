@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`dependencies:{}` never alters validation; it should be dropped.
+Setting the `dependencies` keyword to an empty object does not add any further constraint.
 
 > **Message shown to user:**
 > Delete the empty `dependencies` object.

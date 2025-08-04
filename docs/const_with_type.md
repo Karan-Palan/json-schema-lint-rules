@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-`const` fixes the instance to a single value, which already determines its primitive type.
+Setting `type` alongside `const` is an anti-pattern: the constant already implies its primitive type.
 
 > **Message shown to user:**
-> Delete the redundant `type` keyword (or drop `const`).
+> Drop the redundant `type` keyword (or drop `const`).
 
 ### Example 1
 <details><summary>Before</summary>

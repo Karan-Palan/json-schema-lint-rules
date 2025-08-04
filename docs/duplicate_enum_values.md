@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-All elements in `enum` must be unique; duplicates add no meaning and may hide mistakes.
+Setting duplicate values in `enum` is an anti-pattern and adds no information.
 
 > **Message shown to user:**
-> Remove duplicate values from enum array.
+> Remove duplicate values from the `enum` array.
 
 ### Example 1
 <details><summary>Before</summary>

@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-`allOf` with duplicate branches is redundant and can be collapsed.
+Setting duplicate subschemas in `allOf` is redundant and only adds unnecessary validation work.
 
 > **Message shown to user:**
-> Remove duplicate branches; keep one instance.
+> Remove duplicate branches; keep just one instance.
 
 ### Example 1
 <details><summary>Before</summary>

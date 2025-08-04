@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-Setting `minimum` and `maximum` to the same number only leaves one possible value; use `enum` with a single value.
+Setting `minimum` and `maximum` to the same number only leaves one possible value.
 
 > **Message shown to user:**
-> Replace equal numeric bounds with single-value `enum`.
+> Replace equal numeric bounds with a single-value `enum`.
 
 ### Example 1
 <details><summary>Before</summary>

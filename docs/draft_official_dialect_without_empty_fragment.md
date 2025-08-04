@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-For Draft 4, 6, and 7, the canonical metaschema URLs end with `schema#`. Omitting the fragment identifier can confuse tooling and may bypass caching.
+The official dialect URI of Draft 7 and older versions must include the trailing `#` fragment (e.g. `…schema#`).
 
 > **Message shown to user:**
-> Append a trailing `#` to the metaschema URI (e.g. …`schema#`).
+> Append a trailing `#` to the metaschema URI.
 
 ### Example 1
 <details><summary>Before</summary>

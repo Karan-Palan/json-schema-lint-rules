@@ -1,6 +1,6 @@
 ---
 title: \`minContains\` must not exceed \`maxContains\`
-code: mincontains_greater_than_maxcontains
+code: min_contains_greater_than_max_contains
 categories: correctness
 dialects: 2019-09, 2020-12
 autofixable: true
