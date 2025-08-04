@@ -9,7 +9,8 @@
     "message",
     "categories",
     "dialects",
-    "examples"
+    "examples",
+    "autofixable"
   ],
   "properties": {
     "title": {
@@ -43,6 +44,10 @@
         },
         "additionalProperties": false
       }
+    },
+    "autofixable": {
+      "description": "Whether this rule can automatically fixd by the linter",
+      "type": "boolean"
     },
     "categories": {
       "type": "array",
