@@ -1,6 +1,6 @@
 {
   "title": "Disallow duplicate values in enum",
-  "description": "All elements in `enum` must be unique; duplicates add no meaning and may hide mistakes.",
+  "description": "Setting duplicate values in `enum` is an anti-pattern and adds no information.",
   "examples": [
     {
       "after": {
@@ -21,7 +21,7 @@
     "draft6": [ "enum" ],
     "draft7": [ "enum" ]
   },
-  "message": "Remove duplicate values from enum array.",
+  "message": "Remove duplicate values from the `enum` array.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/generic.html#enumerated-values"
   ]

@@ -1,6 +1,6 @@
 {
-  "title": "`else:false` branch can be desugared",
-  "description": "`if: S, else:false` collapses to just `S` (since the schema is valid only when `S` is true).",
+  "title": "`if: S, else:false` collapses to just `S`",
+  "description": "`if: S, else:false` is logically equivalent to just `S` – the wrapper adds no constraint.",
   "examples": [
     {
       "after": {
@@ -30,7 +30,7 @@
     "2020-12": [ "if", "then", "else" ],
     "draft7": [ "if", "then", "else" ]
   },
-  "message": "Replace `else:false` with its equivalent positive schema.",
+  "message": "Inline the `if` schema and drop `else:false`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-conditionals",
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-boolean-schemas"

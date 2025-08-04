@@ -1,6 +1,6 @@
 {
   "title": "Collapse duplicate schemas in `anyOf`",
-  "description": "Redundant branches inside `anyOf` add noise without changing validation results.",
+  "description": "Setting duplicate subschemas in `anyOf` is redundant and only adds unnecessary validation work.",
   "examples": [
     {
       "after": {

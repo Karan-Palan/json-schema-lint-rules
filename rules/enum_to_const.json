@@ -1,6 +1,6 @@
 {
   "title": "Replace single-value enum with const",
-  "description": "An enum with exactly one element can be expressed more clearly with const.",
+  "description": "Setting `type` alongside `enum` is considered an anti-pattern, as the enumeration already implies its types.",
   "examples": [
     {
       "after": {
@@ -27,7 +27,7 @@
     "2019-09": [ "enum", "const" ],
     "2020-12": [ "enum", "const" ]
   },
-  "message": "Single-value enum detected – replace with const.",
+  "message": "Drop the redundant `type` keyword (or drop `enum`).",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/const"
   ]

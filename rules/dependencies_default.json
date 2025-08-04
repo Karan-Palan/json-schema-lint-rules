@@ -1,6 +1,6 @@
 {
   "title": "Remove empty `dependencies` object",
-  "description": "`dependencies:{}` never alters validation; it should be dropped.",
+  "description": "Setting the `dependencies` keyword to an empty object does not add any further constraint.",
   "examples": [
     {
       "after": {

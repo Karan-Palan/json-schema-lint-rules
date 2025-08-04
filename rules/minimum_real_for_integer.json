@@ -1,6 +1,6 @@
 {
-  "title": "Round up real `minimum` for integer schemas",
-  "description": "On an integer schema, a non-integer `minimum` can be replaced by its ceiling value.",
+  "title": 	"Real `minimum` on integer schema",
+  "description": "If an instance is guaranteed to be an integer, setting a real number lower bound is the same as ceiling that bound.",
   "examples": [
     {
       "after": {
@@ -23,7 +23,7 @@
     "draft6": [ "minimum", "type" ],
     "draft7": [ "minimum", "type" ]
   },
-  "message": "Ceil the real `minimum` or convert it to an integer value.",
+  "message": "Ceil the real `minimum` to an integer value.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/numeric.html#range"
   ]

@@ -1,6 +1,6 @@
 {
   "title": "Remove empty `patternProperties` object",
-  "description": "`patternProperties:{}` does nothing and should be removed.",
+  "description": "Setting the `patternProperties` keyword to the empty object does not add any further constraint.",
   "examples": [
     {
       "after": {

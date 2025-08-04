@@ -1,6 +1,6 @@
 {
   "title": "Collapse duplicate schemas in `allOf`",
-  "description": "`allOf` with duplicate branches is redundant and can be collapsed.",
+  "description": "Setting duplicate subschemas in `allOf` is redundant and only adds unnecessary validation work.",
   "examples": [
     {
       "after": {
@@ -32,7 +32,7 @@
     "draft6": [ "allOf" ],
     "draft7": [ "allOf" ]
   },
-  "message": "Remove duplicate branches; keep one instance.",
+  "message": "Remove duplicate branches; keep just one instance.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-allof"
   ]

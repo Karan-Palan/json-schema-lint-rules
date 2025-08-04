@@ -1,6 +1,6 @@
 {
-  "title": "Duplicate entries in `required`",
-  "description": "The `required` array must contain unique property names. Duplicated values are redundant and can be removed.",
+  "title": "Duplicate values in `required`",
+  "description": 	"Setting duplicate values in required` is considered an anti-pattern.",
   "examples": [
     {
       "after": {
@@ -23,7 +23,7 @@
     "draft6": [ "required" ],
     "draft7": [ "required" ]
   },
-  "message": "Remove duplicate items from the `required` array.",
+  "message": "Remove duplicate values from the `required` array.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-required"
   ]

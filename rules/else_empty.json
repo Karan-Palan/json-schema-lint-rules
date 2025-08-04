@@ -1,6 +1,6 @@
 {
   "title": "`else` is an empty schema",
-  "description": "`else` set to the empty schema (`{}`) does not restrict validation and is most likely ineffective.",
+  "description": "Setting the else keyword to the empty schema does not add any further constraint.",
   "examples": [
     {
       "after": {
@@ -32,7 +32,7 @@
     "2020-12": [ "if", "then", "else" ],
     "draft7": [ "if", "then", "else" ]
   },
-  "message": "Remove empty `else` or add restrictions.",
+  "message": "Remove the empty else schema or add restrictions.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-conditionals"
   ]

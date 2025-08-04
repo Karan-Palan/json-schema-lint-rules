@@ -1,6 +1,6 @@
 {
-  "title": "`else` without `if` is ignored",
-  "description": "`else` only has meaning when paired with `if`. If `if` is missing, drop the `else` branch.",
+  "title": "`else` without `if` is meaningless",
+  "description": "The `else` keyword is meaningless without the presence of the `if` keyword.",
   "examples": [
     {
       "after": {
