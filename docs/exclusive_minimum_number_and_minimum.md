@@ -1,6 +1,6 @@
 ---
 title: Keep only the tighter upper bound (\`exclusiveMaximum\` vs \`maximum\`)
-code: exclusive_maximum_number_and_maximum_upper
+code: exclusive_minimum_number_and_minimum
 categories: correctness
 dialects: 2019-09, 2020-12, draft6, draft7
 autofixable: true

@@ -1,6 +1,6 @@
 ---
 title: \`additionalItems\` ignored when \`items\` is an object
-code: dangling_additional_items_draft4
+code: additional_items_with_schema_items
 categories: correctness
 dialects: 2019-09, draft4, draft6, draft7
 autofixable: true

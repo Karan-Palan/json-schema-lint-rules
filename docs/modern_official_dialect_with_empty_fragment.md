@@ -1,6 +1,6 @@
 ---
 title: Metaschema URI must not include trailing \`#\` (Draft 2019-09+)
-code: metaschema_uri_extra_hash
+code: modern_official_dialect_with_empty_fragment
 categories: correctness, style
 dialects: 2019-09, 2020-12
 autofixable: true

@@ -1,6 +1,6 @@
 ---
 title: Avoid redundant \`type:"string"\` inside \`propertyNames\`
-code: redundant_type_in_propertynames
+code: property_names_type_default
 categories: style, readability
 dialects: 2019-09, 2020-12, draft6, draft7
 autofixable: true
