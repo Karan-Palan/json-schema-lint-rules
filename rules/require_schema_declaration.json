@@ -33,6 +33,7 @@
       }
     }
   ],
+  "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "$schema" ],

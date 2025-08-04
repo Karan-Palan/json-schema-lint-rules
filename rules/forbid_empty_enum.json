@@ -3,6 +3,10 @@
   "description": "`enum` must contain at least one element. An empty array always fails validation and is likely a mistake.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "enum": [ "option1", "option2" ]
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "enum": []
@@ -10,6 +14,7 @@
       "doc": true
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "enum" ],

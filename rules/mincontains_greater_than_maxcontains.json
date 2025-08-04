@@ -3,6 +3,15 @@
   "description": "If both keywords are present, `minContains` must be ≤ `maxContains`; otherwise the array constraint is unsatisfiable.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2019-09/schema",
+        "type": "array",
+        "maxContains": 3,
+        "minContains": 1,
+        "contains": {
+          "type": "string"
+        }
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2019-09/schema",
         "type": "array",
@@ -15,6 +24,7 @@
       "doc": true
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "minContains", "maxContains" ],

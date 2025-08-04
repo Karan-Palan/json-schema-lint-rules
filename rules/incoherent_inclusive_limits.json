@@ -3,6 +3,11 @@
   "description": "Inclusive bounds are contradictory when minimum > maximum.",
   "examples": [
     {
+      "after": {
+        "type": "number",
+        "maximum": 10,
+        "minimum": 5
+      },
       "before": {
         "type": "number",
         "maximum": 5,
@@ -11,6 +16,7 @@
       "doc": true
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "minimum", "maximum" ],

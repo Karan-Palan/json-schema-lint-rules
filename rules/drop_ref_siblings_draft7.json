@@ -30,6 +30,7 @@
       }
     }
   ],
+  "autofixable": true,
   "categories": [ "readability", "style" ],
   "dialects": {
     "draft4": [ "$ref" ],

@@ -15,6 +15,7 @@
       "doc": true
     }
   ],
+  "autofixable": true,
   "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "dependentRequired" ],

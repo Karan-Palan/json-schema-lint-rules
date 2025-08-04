@@ -41,6 +41,7 @@
       }
     }
   ],
+  "autofixable": true,
   "categories": [ "readability", "style", "opinionated" ],
   "dialects": {
     "2019-09": [ "additionalproperties" ],

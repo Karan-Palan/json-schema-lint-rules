@@ -3,6 +3,18 @@
   "description": "`oneOf` is intended for mutually-exclusive alternatives; duplicate schemas make it ambiguous which branch should match.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "oneOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "oneOf": [
@@ -17,6 +29,7 @@
       "doc": true
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "oneOf" ],

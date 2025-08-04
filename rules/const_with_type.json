@@ -33,6 +33,7 @@
       }
     }
   ],
+  "autofixable": true,
   "categories": [ "readability" ],
   "dialects": {
     "2019-09": [ "const", "type" ],

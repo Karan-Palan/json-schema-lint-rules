@@ -3,6 +3,11 @@
   "description": "Each entry in an `examples` array should be a valid instance of the schema it annotates; misleading examples hinder tooling and docs.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "examples": [ 42 ],
+        "type": "integer"
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "examples": [ "not-an-integer" ],
@@ -11,6 +16,11 @@
       "doc": true
     },
     {
+      "after": {
+        "examples": [ "user@example.com" ],
+        "type": "string",
+        "format": "email"
+      },
       "before": {
         "examples": [ "user@example.com" ],
         "type": "string",
@@ -18,6 +28,7 @@
       }
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "examples" ],

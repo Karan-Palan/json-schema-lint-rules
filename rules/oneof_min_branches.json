@@ -3,6 +3,16 @@
   "description": "A single-branch `oneOf` is meaningless; use the schema directly instead.",
   "examples": [
     {
+      "after": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
       "before": {
         "oneOf": [
           {
@@ -13,6 +23,7 @@
       "doc": true
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "oneOf" ],

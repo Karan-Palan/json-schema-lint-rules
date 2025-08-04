@@ -12,12 +12,13 @@
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "integer",
-        "maximum": 90071992547409992,
-        "minimum": -90071992547409992
+        "maximum": 90071992547409980,
+        "minimum": -90071992547409980
       },
       "doc": true
     }
   ],
+  "autofixable": true,
   "categories": [ "safety", "readability" ],
   "dialects": {
     "2019-09": [ "type", "minimum", "maximum" ],
