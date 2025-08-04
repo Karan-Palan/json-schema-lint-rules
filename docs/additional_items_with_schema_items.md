@@ -1,5 +1,5 @@
 ---
-title: \`additionalItems\` ignored when \`items\` is an object
+title: \`additionalItems\` ignored when \`items\` is a schema
 code: additional_items_with_schema_items
 categories: correctness
 dialects: 2019-09, draft4, draft6, draft7
@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-Up to draft-2019-09, `additionalItems` is ignored unless `items` is an array. (The keyword was removed in draft-2020-12.)
+The `additionalItems` keyword is ignored whenever `items` is a single schema object rather than an array.
 
 > **Message shown to user:**
-> Remove `additionalItems` or convert `items` into an array.
+> Remove `additionalItems` (or convert `items` into an array).
 
 ### Example 1
 <details><summary>Before</summary>

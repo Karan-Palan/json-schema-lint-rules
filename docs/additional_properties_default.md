@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-`additionalProperties` defaults to `true`. Setting it explicitly adds noise without changing validation behaviour.
+Setting the `additionalProperties` keyword to the true schema does not add any further constraint.
 
 > **Message shown to user:**
-> Remove `"additionalProperties": true`.
+> Remove the redundant `"additionalProperties": true` entry.
 
 ### Example 1
 <details><summary>Before</summary>

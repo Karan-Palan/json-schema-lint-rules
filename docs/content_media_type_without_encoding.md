@@ -1,5 +1,5 @@
 ---
-title: Binary \`contentMediaType\` should pair with \`contentEncoding\`
+title: \`contentMediaType\` without \`contentEncoding\` is meaningless
 code: content_media_type_without_encoding
 categories: readability, style
 dialects: 2019-09, 2020-12, draft7
@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-When a schema specifies a binary media type (like images), it should also specify how the binary data is encoded as a string.
+The `contentMediaType` keyword has no effect unless `contentEncoding` is also present.
 
 > **Message shown to user:**
 > Add `contentEncoding` or remove `contentMediaType`.

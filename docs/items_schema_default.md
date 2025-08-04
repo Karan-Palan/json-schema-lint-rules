@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-When `items` is the always-true schema (`{}` or `true`) it adds no restriction and should be omitted.
+Setting the `items` keyword to the true schema does not add any further constraint.
 
 > **Message shown to user:**
 > Remove `items` when it is the always-true schema.

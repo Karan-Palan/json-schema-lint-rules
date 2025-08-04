@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`patternProperties:{}` does nothing and should be removed.
+Setting the `patternProperties` keyword to the empty object does not add any further constraint.
 
 > **Message shown to user:**
 > Delete the empty `patternProperties` object.

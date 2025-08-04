@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-For Draft 2019-09 and 2020-12, the canonical metaschema URLs do not end with `#`. Including the fragment identifier is incorrect for these newer drafts.
+The official dialect URI of 2019-09 and newer versions must not contain the empty fragment (no trailing #).
 
 > **Message shown to user:**
 > Remove the trailing `#` from the metaschema URI.

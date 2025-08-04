@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-A divisor of 1 accepts every number that already matches the parent `type`; dropping it makes schemas clearer.
+Setting `multipleOf` to 1 does not add any further constraint.
 
 > **Message shown to user:**
 > Remove `multipleOf` when its value is 1.

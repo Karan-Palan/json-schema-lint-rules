@@ -1,5 +1,5 @@
 ---
-title: \`else\` without \`if\` is ignored
+title: \`else\` without \`if\` is meaningless
 code: else_without_if
 categories: correctness
 dialects: 2019-09, 2020-12, draft7
@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`else` only has meaning when paired with `if`. If `if` is missing, drop the `else` branch.
+The `else` keyword is meaningless without the presence of the `if` keyword.
 
 > **Message shown to user:**
 > Remove `else` because there is no matching `if`.

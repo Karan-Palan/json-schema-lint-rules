@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Redundant branches inside `anyOf` add noise without changing validation results.
+Setting duplicate subschemas in `anyOf` is redundant and only adds unnecessary validation work.
 
 > **Message shown to user:**
 > Remove duplicate schemas; keep one representative branch.

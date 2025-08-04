@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`dependentRequired:{}` has no effect and should be removed.
+Setting the `dependentRequired` keyword to an empty object does not add any further constraint.
 
 > **Message shown to user:**
 > Delete the empty `dependentRequired` object.

@@ -1,6 +1,6 @@
 ---
 title: Collapse single-item \`type\` arrays
-code: single_item_type_array
+code: single_type_array
 categories: style, readability
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
 autofixable: true

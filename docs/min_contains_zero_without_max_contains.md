@@ -1,6 +1,6 @@
 ---
 title: \`minContains: 0\` without \`maxContains\` never fails
-code: mincontains_zero_without_maxcontains
+code: min_contains_zero_without_max_contains
 categories: style, readability
 dialects: 2019-09, 2020-12
 autofixable: true

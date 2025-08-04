@@ -1,5 +1,5 @@
 ---
-title: Remove empty arrays in \`dependentRequired\`
+title: Property already required – \`dependentRequired\` tautology
 code: dependent_required_tautology
 categories: style
 dialects: 2019-09, 2020-12
@@ -7,18 +7,24 @@ autofixable: true
 ---
 
 ## Description
-An empty `dependentRequired` list has no effect and clutters the schema.
+Specifying dependents for a property that is itself in `required` adds no constraint and complicates the schema.
 
 > **Message shown to user:**
-> Delete empty dependency arrays.
+> Remove tautological `dependentRequired` entries (property is already required).
 
 ### Example 1
 <details><summary>Before</summary>
 
 ```json
 {
+  "type": "object",
+  "required": [
+    "meta"
+  ],
   "dependentRequired": {
-    "meta": []
+    "meta": [
+      "data"
+    ]
   }
 }
 ```
@@ -27,7 +33,13 @@ An empty `dependentRequired` list has no effect and clutters the schema.
 <details><summary>After</summary>
 
 ```json
-{}
+{
+  "type": "object",
+  "required": [
+    "meta",
+    "data"
+  ]
+}
 ```
 </details>
 

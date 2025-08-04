@@ -7,10 +7,10 @@ autofixable: true
 ---
 
 ## Description
-Up to draft-07 the $ref keyword overrides every other keyword in the same object. The siblings are ignored during validation, so they can be deleted without changing behaviour.
+In Draft 7 and older dialects, keywords that are siblings of `$ref` are never evaluated.
 
 > **Message shown to user:**
-> Remove sibling keywords – in drafts ≤ 7 only $ref is evaluated.
+> Remove sibling keywords – in drafts ≤ 7 only `$ref` is evaluated.
 
 ### Example 1
 <details><summary>Before</summary>
