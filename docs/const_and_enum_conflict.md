@@ -3,7 +3,7 @@ title: \`const\` and \`enum\` are mutually exclusive
 code: const_and_enum_conflict
 categories: correctness
 dialects: 2019-09, 2020-12, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -22,6 +22,15 @@ autofixable: false
     5,
     6
   ]
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "const": 5
 }
 ```
 </details>

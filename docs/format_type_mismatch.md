@@ -3,7 +3,7 @@ title: \`format\` must match declared \`type\`
 code: format_type_mismatch
 categories: correctness
 dialects: 2019-09, 2020-12, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -24,6 +24,17 @@ autofixable: false
 ```
 </details>
 
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "string",
+  "format": "uuid"
+}
+```
+</details>
+
 ### Example 2
 <details><summary>Before</summary>
 
@@ -34,6 +45,17 @@ autofixable: false
     "integer",
     "boolean"
   ],
+  "format": "email"
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "string",
   "format": "email"
 }
 ```

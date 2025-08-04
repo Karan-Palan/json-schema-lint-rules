@@ -3,7 +3,7 @@ title: \`maxContains\` less than \`minContains\` is unsatisfiable
 code: unsatisfiable_max_contains
 categories: correctness
 dialects: 2019-09, 2020-12
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -20,6 +20,20 @@ If `maxContains` is present it must be ≥ `minContains` (or ≥ 1 if `minContai
   "type": "array",
   "maxContains": 1,
   "minContains": 3,
+  "contains": {
+    "type": "integer"
+  }
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "type": "array",
+  "maxContains": 3,
+  "minContains": 1,
   "contains": {
     "type": "integer"
   }

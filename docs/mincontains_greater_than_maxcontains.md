@@ -3,7 +3,7 @@ title: \`minContains\` must not exceed \`maxContains\`
 code: mincontains_greater_than_maxcontains
 categories: correctness
 dialects: 2019-09, 2020-12
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -21,6 +21,21 @@ If both keywords are present, `minContains` must be ≤ `maxContains`; otherwise
   "type": "array",
   "maxContains": 1,
   "minContains": 3,
+  "contains": {
+    "type": "string"
+  }
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "array",
+  "maxContains": 3,
+  "minContains": 1,
   "contains": {
     "type": "string"
   }

@@ -3,7 +3,7 @@ title: Values in \`examples\` must validate against the schema
 code: examples_must_validate
 categories: correctness, readability
 dialects: 2019-09, 2020-12, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -20,6 +20,19 @@ Each entry in an `examples` array should be a valid instance of the schema it an
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "examples": [
     "not-an-integer"
+  ],
+  "type": "integer"
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "examples": [
+    42
   ],
   "type": "integer"
 }

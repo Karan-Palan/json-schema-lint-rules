@@ -3,7 +3,7 @@ title: \`$ref\` targets must resolve **and** point to a JSON Schema
 code: unresolved_ref_pointer
 categories: correctness, safety
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -28,6 +28,27 @@ Every relative JSON Pointer in `$ref` must resolve to a subschema within the sam
 ```
 </details>
 
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/uuid"
+    }
+  },
+  "$defs": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}
+```
+</details>
+
 ### Example 2
 <details><summary>Before</summary>
 
@@ -35,6 +56,16 @@ Every relative JSON Pointer in `$ref` must resolve to a subschema within the sam
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$ref": "https://example.com/data.json"
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$ref": "https://example.com/user-schema.json"
 }
 ```
 </details>

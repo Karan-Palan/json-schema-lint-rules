@@ -3,7 +3,7 @@ title: Disallow empty \`enum\` arrays
 code: forbid_empty_enum
 categories: correctness
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -19,6 +19,19 @@ autofixable: false
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "enum": []
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "enum": [
+    "option1",
+    "option2"
+  ]
 }
 ```
 </details>

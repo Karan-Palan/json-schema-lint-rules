@@ -3,7 +3,7 @@ title: \`oneOf\` must contain at least two schemas
 code: oneof_min_branches
 categories: correctness, readability
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -20,6 +20,22 @@ A single-branch `oneOf` is meaningless; use the schema directly instead.
   "oneOf": [
     {
       "type": "string"
+    }
+  ]
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "oneOf": [
+    {
+      "type": "string"
+    },
+    {
+      "type": "number"
     }
   ]
 }
