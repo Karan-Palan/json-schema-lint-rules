@@ -3,6 +3,11 @@
   "description": "Relative identifiers at the document root lead to ambiguous references. Use an absolute URI for $id.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://example.com/user",
+        "type": "object"
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$id": "/user",
@@ -11,6 +16,7 @@
       "doc": true
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "$id" ],

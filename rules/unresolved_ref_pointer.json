@@ -3,6 +3,21 @@
   "description": "Every relative JSON Pointer in `$ref` must resolve to a subschema within the same document. If the `$ref` is an absolute / URI reference, it must locate a retrievable **JSON Schema resource** (an object or boolean). Dangling pointers or links to non-schema content are errors.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/uuid"
+          }
+        },
+        "$defs": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
@@ -15,18 +30,35 @@
       "doc": true
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$ref": "#/$defs/User",
+        "$defs": {
+          "User": {
+            "type": "object"
+          }
+        }
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$ref": "#/components/schemas/User"
       }
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$ref": "https://example.com/user-schema.json"
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$ref": "https://example.com/readme.txt"
       }
     },
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$ref": "https://example.com/user-schema.json"
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$ref": "https://example.com/data.json"
@@ -34,6 +66,7 @@
       "doc": true
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness", "safety" ],
   "dialects": {
     "2019-09": [ "$ref" ],

@@ -21,6 +21,7 @@
       }
     }
   ],
+  "autofixable": true,
   "categories": [ "readability", "correctness" ],
   "dialects": {
     "2019-09": [ "items" ],

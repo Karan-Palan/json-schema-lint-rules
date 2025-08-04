@@ -19,6 +19,7 @@
       }
     }
   ],
+  "autofixable": true,
   "categories": [ "style", "readability" ],
   "dialects": {
     "2019-09": [ "type" ],

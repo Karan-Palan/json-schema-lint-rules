@@ -26,6 +26,7 @@
       "doc": true
     }
   ],
+  "autofixable": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "draft4": [ "$defs" ],

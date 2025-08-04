@@ -3,6 +3,14 @@
   "description": "Omitting `maxItems` for arrays or `maxLength` for strings can lead to unbounded payloads and denial-of-service risks.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array",
+        "maxItems": 100,
+        "items": {
+          "type": "integer"
+        }
+      },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "array",
@@ -13,12 +21,18 @@
       "doc": true
     },
     {
+      "after": {
+        "type": "string",
+        "pattern": "^[A-Z]+$",
+        "maxLength": 255
+      },
       "before": {
         "type": "string",
         "pattern": "^[A-Z]+$"
       }
     }
   ],
+  "autofixable": false,
   "categories": [ "safety", "style" ],
   "dialects": {
     "2019-09": [ "maxItems", "maxLength", "type" ],

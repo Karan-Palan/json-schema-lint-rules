@@ -12,6 +12,7 @@
       "doc": true
     }
   ],
+  "autofixable": true,
   "categories": [ "style" ],
   "dialects": {
     "draft4": [ "dependencies" ],

@@ -47,6 +47,7 @@
       "doc": true
     }
   ],
+  "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "if", "then", "else" ],

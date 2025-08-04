@@ -3,6 +3,14 @@
   "description": "If `maxContains` is present it must be ≥ `minContains` (or ≥ 1 if `minContains` is omitted).",
   "examples": [
     {
+      "after": {
+        "type": "array",
+        "maxContains": 3,
+        "minContains": 1,
+        "contains": {
+          "type": "integer"
+        }
+      },
       "before": {
         "type": "array",
         "maxContains": 1,
@@ -14,6 +22,7 @@
       "doc": true
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "minContains", "maxContains" ],

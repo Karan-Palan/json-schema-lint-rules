@@ -28,6 +28,7 @@
       }
     }
   ],
+  "autofixable": true,
   "categories": [ "readability", "style" ],
   "dialects": {
     "2019-09": [ "contentMediaType", "contentEncoding" ],

@@ -36,6 +36,7 @@
       "doc": true
     }
   ],
+  "autofixable": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "definitions", "$defs" ],

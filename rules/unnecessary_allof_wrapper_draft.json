@@ -62,6 +62,7 @@
       }
     }
   ],
+  "autofixable": true,
   "categories": [ "style", "readability" ],
   "dialects": {
     "draft4": [ "allOf" ],

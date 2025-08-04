@@ -3,6 +3,10 @@
   "description": "$schema must be one of the recognised draft URLs (draft-04, draft-06, draft-07, 2019-09, 2020-12). Relative or unrecognised URIs are disallowed.",
   "examples": [
     {
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string"
+      },
       "before": {
         "$schema": "./schema",
         "type": "string"
@@ -10,6 +14,7 @@
       "doc": true
     }
   ],
+  "autofixable": false,
   "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "$schema" ],
