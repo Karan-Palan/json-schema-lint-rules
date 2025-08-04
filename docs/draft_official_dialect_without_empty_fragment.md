@@ -1,6 +1,6 @@
 ---
 title: Metaschema URI must include trailing \`#\` (Draft 4-7)
-code: metaschema_uri_missing_hash
+code: draft_official_dialect_without_empty_fragment
 categories: correctness, style
 dialects: draft4, draft6, draft7
 autofixable: true

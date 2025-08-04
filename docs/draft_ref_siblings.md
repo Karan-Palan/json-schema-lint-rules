@@ -1,6 +1,6 @@
 ---
 title: Remove siblings of $ref (draft-07 and older)
-code: drop_ref_siblings_draft7
+code: draft_ref_siblings
 categories: readability, style
 dialects: draft4, draft6, draft7
 autofixable: true

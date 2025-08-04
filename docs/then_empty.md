@@ -1,16 +1,16 @@
 ---
-title: Desugar \`then:false\` / \`else:false\` branches
-code: if_then_else_always_false
-categories: style
+title: \`then\` is an empty schema
+code: then_empty
+categories: correctness
 dialects: 2019-09, 2020-12, draft7
 autofixable: true
 ---
 
 ## Description
-`if: S, then:false` is logically equivalent to `not: S`. Likewise `if: S, else:false` collapses to `allOf:[S]` (or just `S`).
+`then` set to the empty schema (`{}`) does not restrict validation and is most likely ineffective.
 
 > **Message shown to user:**
-> Replace always-false branches with their equivalent negation.
+> Remove empty `then` or add restrictions.
 
 ### Example 1
 <details><summary>Before</summary>
@@ -24,7 +24,7 @@ autofixable: true
       }
     }
   },
-  "then": false
+  "then": {}
 }
 ```
 </details>
@@ -33,7 +33,7 @@ autofixable: true
 
 ```json
 {
-  "not": {
+  "if": {
     "properties": {
       "flag": {
         "const": true
@@ -46,4 +46,3 @@ autofixable: true
 
 ## References
 * <https://json-schema.org/draft/2020-12/json-schema-core.html#name-conditionals>
-* <https://json-schema.org/draft/2020-12/json-schema-core.html#name-boolean-schemas>

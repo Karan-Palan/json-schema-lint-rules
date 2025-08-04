@@ -1,6 +1,6 @@
 ---
 title: Avoid combining enum with other validation keywords
-code: enum_no_extra_keywords
+code: enum_validation_keywords_default
 categories: correctness, readability
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
 autofixable: true
