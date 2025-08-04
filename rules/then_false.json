@@ -1,6 +1,6 @@
 {
-  "title": "Desugar `then:false` / `else:false` branches",
-  "description": "`if: S, then:false` is logically equivalent to `not: S`. Likewise `if: S, else:false` collapses to `allOf:[S]` (or just `S`).",
+  "title": "`then:false` branch can be desugared",
+  "description": "`if: S, then:false` is logically equivalent to `not: S`.",
   "examples": [
     {
       "after": {
@@ -32,7 +32,7 @@
     "2020-12": [ "if", "then", "else", "not" ],
     "draft7": [ "if", "then", "else", "not" ]
   },
-  "message": "Replace always-false branches with their equivalent negation.",
+  "message": "Replace `then:false` with its equivalent `not` schema.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-conditionals",
     "https://json-schema.org/draft/2020-12/json-schema-core.html#name-boolean-schemas"

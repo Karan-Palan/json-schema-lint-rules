@@ -28,7 +28,7 @@
       "doc": true
     }
   ],
-  "autofixable": true,
+  "autofixable": false,
   "categories": [ "readability", "style" ],
   "dialects": {
     "2019-09": [ "title", "description" ],

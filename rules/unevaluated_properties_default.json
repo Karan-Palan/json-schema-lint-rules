@@ -32,7 +32,7 @@
       }
     }
   ],
-  "autofixable": false,
+  "autofixable": true,
   "categories": [ "style" ],
   "dialects": {
     "2020-12": [ "unevaluatedProperties" ]
