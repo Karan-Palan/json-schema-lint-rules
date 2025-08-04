@@ -1,6 +1,6 @@
 {
   "title": "Omit `contentSchema:{}` (it’s the default)",
-  "description": "`contentSchema` set to `{}` (or `true`) imposes no constraints. Leaving it in the schema only adds noise.",
+  "description": "Setting the `contentSchema` keyword to the true schema (or `{}`) does not add any further constraint.",
   "examples": [
     {
       "after": {
@@ -22,7 +22,7 @@
     "2020-12": [ "contentSchema" ],
     "draft7": [ "contentSchema" ]
   },
-  "message": "Remove empty `contentSchema` – it adds no validation power.",
+  "message": "Remove `contentSchema` when it is `true` or empty.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-contentschema"
   ]

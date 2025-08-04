@@ -1,6 +1,6 @@
 {
   "title": "Remove empty `dependentRequired` object",
-  "description": "`dependentRequired:{}` has no effect and should be removed.",
+  "description": "Setting the `dependentRequired` keyword to an empty object does not add any further constraint.",
   "examples": [
     {
       "after": {

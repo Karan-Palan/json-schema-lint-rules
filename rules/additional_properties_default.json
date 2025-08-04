@@ -1,6 +1,6 @@
 {
   "title": "Omit `additionalProperties:true` (it’s the default)",
-  "description": "`additionalProperties` defaults to `true`. Setting it explicitly adds noise without changing validation behaviour.",
+  "description": "Setting the `additionalProperties` keyword to the true schema does not add any further constraint.",
   "examples": [
     {
       "after": {
@@ -24,7 +24,7 @@
     "draft6": [ "additionalProperties" ],
     "draft7": [ "additionalProperties" ]
   },
-  "message": "Remove `\"additionalProperties\": true`.",
+  "message": "Remove the redundant `\"additionalProperties\": true` entry.",
   "references": [
     "https://www.learnjsonschema.com/2020-12/structuring/#additionalproperties"
   ]

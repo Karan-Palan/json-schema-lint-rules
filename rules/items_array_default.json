@@ -1,6 +1,6 @@
 {
   "title": "Omit empty `items: []`",
-  "description": "`items` as an empty array imposes no constraints in drafts up to 2019-09. Remove it for clarity.",
+  "description": "Setting the `items` keyword to the empty array does not add any further constraint.",
   "examples": [
     {
       "after": {

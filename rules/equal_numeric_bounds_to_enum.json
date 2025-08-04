@@ -1,6 +1,6 @@
 {
   "title": "Equal numeric bounds can be expressed with single-value `enum`",
-  "description": "Setting `minimum` and `maximum` to the same number only leaves one possible value; use `enum` with a single value.",
+  "description": "Setting `minimum` and `maximum` to the same number only leaves one possible value.",
   "examples": [
     {
       "after": {
@@ -33,7 +33,7 @@
     "draft6": [ "minimum", "maximum", "enum", "type" ],
     "draft7": [ "minimum", "maximum", "enum", "type" ]
   },
-  "message": "Replace equal numeric bounds with single-value `enum`.",
+  "message": "Replace equal numeric bounds with a single-value `enum`.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/generic.html#enumerated-values"
   ]

@@ -1,12 +1,17 @@
 {
-  "title": "Remove empty arrays in `dependentRequired`",
-  "description": "An empty `dependentRequired` list has no effect and clutters the schema.",
+  "title": "Property already required – `dependentRequired` tautology",
+  "description": "Specifying dependents for a property that is itself in `required` adds no constraint and complicates the schema.",
   "examples": [
     {
-      "after": {},
+      "after": {
+        "type": "object",
+        "required": [ "meta", "data" ]
+      },
       "before": {
+        "type": "object",
+        "required": [ "meta" ],
         "dependentRequired": {
-          "meta": []
+          "meta": [ "data" ]
         }
       },
       "doc": true
@@ -15,10 +20,10 @@
   "autofixable": true,
   "categories": [ "style" ],
   "dialects": {
-    "2019-09": [ "dependentRequired" ],
-    "2020-12": [ "dependentRequired" ]
+    "2019-09": [ "dependentRequired", "required" ],
+    "2020-12": [ "dependentRequired", "required" ]
   },
-  "message": "Delete empty dependency arrays.",
+  "message": "Remove tautological `dependentRequired` entries (property is already required).",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-dependentrequired"
   ]

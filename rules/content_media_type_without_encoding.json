@@ -1,6 +1,6 @@
 {
-  "title": "Binary `contentMediaType` should pair with `contentEncoding`",
-  "description": "When a schema specifies a binary media type (like images), it should also specify how the binary data is encoded as a string.",
+  "title": "`contentMediaType` without `contentEncoding` is meaningless",
+  "description": "The `contentMediaType` keyword has no effect unless `contentEncoding` is also present.",
   "examples": [
     {
       "after": {

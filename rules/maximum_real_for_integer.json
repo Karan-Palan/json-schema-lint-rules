@@ -1,6 +1,6 @@
 {
-  "title": "Round down real `maximum` for integer schemas",
-  "description": "For `type:\"integer\"`, a non-integer `maximum` is equivalent to its floor value.",
+  "title": "Real `maximum` on integer schema",
+  "description": "If an instance is guaranteed to be an integer, setting a real number upper bound is the same as flooring that bound.",
   "examples": [
     {
       "after": {
@@ -23,7 +23,7 @@
     "draft6": [ "maximum", "type" ],
     "draft7": [ "maximum", "type" ]
   },
-  "message": "Floor the real `maximum` or convert it to an integer value.",
+  "message": "Floor the real `maximum` to an integer value.",
   "references": [
     "https://json-schema.org/understanding-json-schema/reference/numeric.html#range"
   ]

@@ -1,6 +1,6 @@
 {
   "title": "Remove siblings of $ref (draft-07 and older)",
-  "description": "Up to draft-07 the $ref keyword overrides every other keyword in the same object. The siblings are ignored during validation, so they can be deleted without changing behaviour.",
+  "description": "In Draft 7 and older dialects, keywords that are siblings of `$ref` are never evaluated.",
   "examples": [
     {
       "after": {
@@ -37,7 +37,7 @@
     "draft6": [ "$ref" ],
     "draft7": [ "$ref" ]
   },
-  "message": "Remove sibling keywords – in drafts ≤ 7 only $ref is evaluated.",
+  "message": "Remove sibling keywords – in drafts ≤ 7 only `$ref` is evaluated.",
   "references": [
     "https://json-schema.org/draft-07/draft-handrews-json-schema-01#rfc.section.8.3"
   ]

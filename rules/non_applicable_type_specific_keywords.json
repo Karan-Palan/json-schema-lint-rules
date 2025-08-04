@@ -1,6 +1,6 @@
 {
   "title": "Disallow type-specific keywords on incompatible types",
-  "description": "Keywords like `minimum` apply only to numbers; `minLength` only to strings, etc. Mixing them is always invalid.",
+  "description": "Avoid keywords that don't apply to the type or types that the current subschema expects.",
   "examples": [
     {
       "after": {

@@ -1,12 +1,17 @@
 {
-  "title": "Remove empty property lists in `dependencies`",
-  "description": "A `dependencies` entry with an empty array never changes validation; it is redundant.",
+  "title": "Property already required – `dependencies` tautology",
+  "description": "Using `dependencies` to declare that a property depends on itself (when it is already in `required`) is unnecessary and needlessly complex.",
   "examples": [
     {
-      "after": {},
+      "after": {
+        "type": "object",
+        "required": [ "id", "name" ]
+      },
       "before": {
+        "type": "object",
+        "required": [ "id", "name" ],
         "dependencies": {
-          "foo": []
+          "id": [ "name" ]
         }
       },
       "doc": true
@@ -15,11 +20,11 @@
   "autofixable": true,
   "categories": [ "style" ],
   "dialects": {
-    "draft4": [ "dependencies" ],
-    "draft6": [ "dependencies" ],
-    "draft7": [ "dependencies" ]
+    "draft4": [ "dependencies", "required" ],
+    "draft6": [ "dependencies", "required" ],
+    "draft7": [ "dependencies", "required" ]
   },
-  "message": "Delete tautological dependency arrays.",
+  "message": "Remove tautological entries from `dependencies` (property is already required).",
   "references": [
     "https://json-schema.org/draft-07/json-schema-validation.html#dependencies"
   ]

@@ -1,6 +1,6 @@
 {
-  "title": "`additionalItems` ignored when `items` is an object",
-  "description": "Up to draft-2019-09, `additionalItems` is ignored unless `items` is an array. (The keyword was removed in draft-2020-12.)",
+  "title": "`additionalItems` ignored when `items` is a schema",
+  "description": "The `additionalItems` keyword is ignored whenever `items` is a single schema object rather than an array.",
   "examples": [
     {
       "after": {
@@ -27,7 +27,7 @@
     "draft6": [ "items", "additionalItems" ],
     "draft7": [ "items", "additionalItems" ]
   },
-  "message": "Remove `additionalItems` or convert `items` into an array.",
+  "message": "Remove `additionalItems` (or convert `items` into an array).",
   "references": [
     "https://json-schema.org/draft-04/json-schema-validation.html#anchor66",
     "https://json-schema.org/draft/2019-09/release-notes#unevaluateditems"

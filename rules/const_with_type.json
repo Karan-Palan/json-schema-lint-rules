@@ -1,6 +1,6 @@
 {
   "title": "Remove `type` when `const` is present",
-  "description": "`const` fixes the instance to a single value, which already determines its primitive type.",
+  "description": "Setting `type` alongside `const` is an anti-pattern: the constant already implies its primitive type.",
   "examples": [
     {
       "after": {
@@ -41,6 +41,6 @@
     "draft6": [ "const", "type" ],
     "draft7": [ "const", "type" ]
   },
-  "message": "Delete the redundant `type` keyword (or drop `const`).",
+  "message": "Drop the redundant `type` keyword (or drop `const`).",
   "references": [ "https://www.learnjsonschema.com/2020-12/validation/const/" ]
 }

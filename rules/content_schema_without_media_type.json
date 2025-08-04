@@ -1,6 +1,6 @@
 {
-  "title": "`contentSchema` without `contentMediaType` is unhelpful",
-  "description": "`contentSchema` refines the structure of non-JSON media; without a media type consumers cannot choose a codec.",
+  "title": "`contentSchema` without `contentMediaType` is meaningless",
+  "description": "The `contentSchema` keyword has no effect unless `contentMediaType` is also present.",
   "examples": [
     {
       "after": {
@@ -28,7 +28,7 @@
     "2020-12": [ "contentSchema", "contentMediaType" ],
     "draft7": [ "contentSchema", "contentMediaType" ]
   },
-  "message": "Add `contentMediaType` or drop `contentSchema`.",
+  "message": "Add `contentMediaType` or remove `contentSchema`.",
   "references": [
     "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-contentschema"
   ]

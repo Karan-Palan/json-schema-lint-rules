@@ -1,6 +1,6 @@
 {
   "title": "`multipleOf: 1` is redundant",
-  "description": "A divisor of 1 accepts every number that already matches the parent `type`; dropping it makes schemas clearer.",
+  "description": "Setting `multipleOf` to 1 does not add any further constraint.",
   "examples": [
     {
       "after": {
