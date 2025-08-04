@@ -1,0 +1,28 @@
+{
+  "title": "`propertyNames` is an empty schema",
+  "description": "`propertyNames: {}` does not impose any constraint on the instance object, so the keyword can be removed.",
+  "examples": [
+    {
+      "after": {
+        "type": "object"
+      },
+      "before": {
+        "type": "object",
+        "propertyNames": {}
+      },
+      "doc": true
+    }
+  ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "propertyNames" ],
+    "2020-12": [ "propertyNames" ],
+    "draft6": [ "propertyNames" ],
+    "draft7": [ "propertyNames" ]
+  },
+  "message": "Remove empty `propertyNames`; it has no effect.",
+  "references": [
+    "https://json-schema.org/draft/2019-09/json-schema-validation.html#name-propertynames"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Duplicate entries in `required`",
+  "description": "The `required` array must contain unique property names. Duplicated values are redundant and can be removed.",
+  "examples": [
+    {
+      "after": {
+        "type": "object",
+        "required": [ "id", "name" ]
+      },
+      "before": {
+        "type": "object",
+        "required": [ "id", "name", "id" ]
+      },
+      "doc": true
+    }
+  ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
+  "dialects": {
+    "2019-09": [ "required" ],
+    "2020-12": [ "required" ],
+    "draft4": [ "required" ],
+    "draft6": [ "required" ],
+    "draft7": [ "required" ]
+  },
+  "message": "Remove duplicate items from the `required` array.",
+  "references": [
+    "https://json-schema.org/draft/2020-12/json-schema-validation.html#name-required"
+  ]
+}
