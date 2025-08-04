@@ -3,7 +3,7 @@ title: \`exclusiveMinimum\` must be strictly less than \`exclusiveMaximum\`
 code: incoherent_exclusive_limits
 categories: correctness
 dialects: 2019-09, 2020-12, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -21,6 +21,18 @@ In draft-06 and newer the exclusive keywords take numeric values. They must sati
   "type": "number",
   "exclusiveMaximum": 50,
   "exclusiveMinimum": 100
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "number",
+  "exclusiveMaximum": 100,
+  "exclusiveMinimum": 50
 }
 ```
 </details>

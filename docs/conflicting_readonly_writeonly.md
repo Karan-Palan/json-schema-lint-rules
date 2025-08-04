@@ -3,7 +3,7 @@ title: Do not set both \`readOnly\` and \`writeOnly\`
 code: conflicting_readonly_writeonly
 categories: correctness, readability
 dialects: 2019-09, 2020-12, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -23,6 +23,22 @@ autofixable: false
     "password": {
       "readOnly": true,
       "writeOnly": true,
+      "type": "string"
+    }
+  }
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "password": {
+      "readOnly": true,
       "type": "string"
     }
   }

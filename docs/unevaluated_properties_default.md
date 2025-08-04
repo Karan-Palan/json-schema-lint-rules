@@ -3,7 +3,7 @@ title: Consider if \`unevaluatedProperties:true/{}\` is necessary
 code: unevaluated_properties_default
 categories: style
 dialects: 2020-12
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -19,6 +19,15 @@ While `unevaluatedProperties:true` (or `{}`) may appear redundant, removing it c
 {
   "type": "object",
   "unevaluatedProperties": true
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "type": "object"
 }
 ```
 </details>

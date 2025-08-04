@@ -3,7 +3,7 @@ title: Branches in \`oneOf\` must be unique
 code: unique_branches_in_oneof
 categories: correctness, readability
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
-autofixable: false
+autofixable: true
 ---
 
 ## Description
@@ -24,6 +24,24 @@ autofixable: false
     },
     {
       "type": "string"
+    }
+  ]
+}
+```
+</details>
+
+<details><summary>After</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "type": "string",
+      "minLength": 1
+    },
+    {
+      "type": "number"
     }
   ]
 }
