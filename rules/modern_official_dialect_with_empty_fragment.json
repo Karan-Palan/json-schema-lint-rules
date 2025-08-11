@@ -24,22 +24,34 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness", "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Trailing # in modern metaschema URI",
       "description": "Draft 2019-09 and 2020-12 metaschema URIs must not end with #.",
-      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema#", "type": "object" },
-      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object" }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema#",
+        "type": "object"
+      }
     },
     {
       "title": "Right: Correct modern URI without #",
       "description": "Using the fragmentless canonical URI is correct for modern drafts.",
-      "before": { "$schema": "https://json-schema.org/draft/2019-09/schema", "type": "string" },
-      "after": { "$schema": "https://json-schema.org/draft/2019-09/schema", "type": "string" }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2019-09/schema",
+        "type": "string"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2019-09/schema",
+        "type": "string"
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness", "style" ],
   "dialects": {
     "2019-09": [ "$schema" ],
     "2020-12": [ "$schema" ]

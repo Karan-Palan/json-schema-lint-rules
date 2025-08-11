@@ -12,22 +12,34 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Empty arrays in dependentRequired",
       "description": "A dependentRequired list must not be empty; otherwise it's useless.",
-      "before": { "dependentRequired": { "meta": [] } },
-      "after": {}
+      "after": {},
+      "before": {
+        "dependentRequired": {
+          "meta": []
+        }
+      }
     },
     {
       "title": "Right: Non-empty dependentRequired",
       "description": "Including at least one dependent key is meaningful.",
-      "before": { "dependentRequired": { "meta": ["version"] } },
-      "after": { "dependentRequired": { "meta": ["version"] } }
+      "after": {
+        "dependentRequired": {
+          "meta": [ "version" ]
+        }
+      },
+      "before": {
+        "dependentRequired": {
+          "meta": [ "version" ]
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "dependentRequired" ],
     "2020-12": [ "dependentRequired" ]

@@ -31,45 +31,77 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "readability", "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: anyOf has two identical branches",
       "description": "Duplicated alternatives add noise without changing validation.",
-      "before": {
-        "anyOf": [ { "type": "string" }, { "type": "string" } ]
-      },
       "after": {
-        "anyOf": [ { "type": "string" } ]
+        "anyOf": [
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "before": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ]
       }
     },
     {
       "title": "Wrong: anyOf branches that accept the same instances",
       "description": "Two branches are redundant when they allow the same set of values.",
-      "before": {
-        "anyOf": [
-          { "type": "integer" },
-          { "type": "number", "multipleOf": 1 }
-        ]
-      },
       "after": {
         "anyOf": [
-          { "type": "integer" }
+          {
+            "type": "integer"
+          }
+        ]
+      },
+      "before": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number",
+            "multipleOf": 1
+          }
         ]
       }
     },
     {
       "title": "Right: anyOf with distinct constraints",
       "description": "Distinct branches that expand the accepted set are appropriate.",
-      "before": {
-        "anyOf": [ { "type": "string" }, { "type": "number" } ]
-      },
       "after": {
-        "anyOf": [ { "type": "string" }, { "type": "number" } ]
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "before": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
       }
     }
   ],
-  "autofixable": true,
-  "categories": [ "readability", "style" ],
   "dialects": {
     "2019-09": [ "anyOf" ],
     "2020-12": [ "anyOf" ],

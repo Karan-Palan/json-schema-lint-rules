@@ -25,22 +25,55 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: then:false can be simplified",
       "description": "`if: S, then:false` equals `not: S`.",
-      "before": { "if": { "properties": { "flag": { "const": true } } }, "then": false },
-      "after": { "not": { "properties": { "flag": { "const": true } } } }
+      "after": {
+        "not": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "then": false
+      }
     },
     {
       "title": "Right: Use explicit not",
       "description": "Using `not` directly communicates the intent clearly.",
-      "before": { "not": { "properties": { "flag": { "const": true } } } },
-      "after": { "not": { "properties": { "flag": { "const": true } } } }
+      "after": {
+        "not": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        }
+      },
+      "before": {
+        "not": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "if", "then", "else", "not" ],
     "2020-12": [ "if", "then", "else", "not" ],

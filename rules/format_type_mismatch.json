@@ -29,28 +29,46 @@
       "doc": true
     }
   ],
+  "autofixable": false,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: format on non-string type",
       "description": "`format` only applies to strings; using it on integer is invalid.",
-      "before": { "type": "integer", "format": "uuid" },
-      "after": { "type": "string", "format": "uuid" }
+      "after": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "before": {
+        "type": "integer",
+        "format": "uuid"
+      }
     },
     {
       "title": "Wrong: format with mixed non-string types",
       "description": "If `format` is present, ensure `type` is or includes `string`.",
-      "before": { "type": [ "integer", "boolean" ], "format": "email" },
-      "after": { "type": [ "string" ], "format": "email" }
+      "after": {
+        "type": [ "string" ],
+        "format": "email"
+      },
+      "before": {
+        "type": [ "integer", "boolean" ],
+        "format": "email"
+      }
     },
     {
       "title": "Right: String union with format",
       "description": "It is fine to allow string among other types as long as format targets the string branch.",
-      "before": { "type": [ "string", "null" ], "format": "date-time" },
-      "after": { "type": [ "string", "null" ], "format": "date-time" }
+      "after": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "before": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      }
     }
   ],
-  "autofixable": false,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "type", "format" ],
     "2020-12": [ "type", "format" ],

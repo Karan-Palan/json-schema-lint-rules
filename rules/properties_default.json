@@ -53,49 +53,66 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Empty properties on a plain object",
       "description": "An empty properties object has no effect and should be removed to reduce noise.",
+      "after": {
+        "type": "object"
+      },
       "before": {
         "type": "object",
         "properties": {}
-      },
-      "after": {
-        "type": "object"
       }
     },
     {
       "title": "Wrong: Empty properties inside anyOf branch",
       "description": "Dropping the empty properties keeps the intended alternative intact.",
-      "before": {
-        "anyOf": [
-          { "type": "string" },
-          { "type": "object", "properties": {} }
-        ]
-      },
       "after": {
         "anyOf": [
-          { "type": "string" },
-          { "type": "object" }
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      },
+      "before": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {}
+          }
         ]
       }
     },
     {
       "title": "Right: Non-empty properties is fine",
       "description": "A populated properties object is meaningful and should remain.",
-      "before": {
-        "type": "object",
-        "properties": { "id": { "type": "integer" } }
-      },
       "after": {
         "type": "object",
-        "properties": { "id": { "type": "integer" } }
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        }
       }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "properties" ],
     "2020-12": [ "properties" ],

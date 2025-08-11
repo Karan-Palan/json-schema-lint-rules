@@ -15,22 +15,39 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: maxContains without contains",
       "description": "maxContains is meaningless without contains.",
-      "before": { "type": "array", "maxContains": 1 },
-      "after": { "type": "array" }
+      "after": {
+        "type": "array"
+      },
+      "before": {
+        "type": "array",
+        "maxContains": 1
+      }
     },
     {
       "title": "Right: contains with maxContains",
       "description": "Pair maxContains with contains to cap matching elements.",
-      "before": { "type": "array", "contains": {"type":"string"}, "maxContains": 3 },
-      "after": { "type": "array", "contains": {"type":"string"}, "maxContains": 3 }
+      "after": {
+        "type": "array",
+        "maxContains": 3,
+        "contains": {
+          "type": "string"
+        }
+      },
+      "before": {
+        "type": "array",
+        "maxContains": 3,
+        "contains": {
+          "type": "string"
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "maxContains", "contains" ],
     "2020-12": [ "maxContains", "contains" ]

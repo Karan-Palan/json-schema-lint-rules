@@ -28,28 +28,48 @@
       }
     }
   ],
+  "autofixable": false,
+  "categories": [ "correctness", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Example contradicts type",
       "description": "All examples must be valid instances of the schema.",
-      "before": { "type": "integer", "examples": ["not-an-integer"] },
-      "after": { "type": "integer", "examples": [42] }
+      "after": {
+        "examples": [ 42 ],
+        "type": "integer"
+      },
+      "before": {
+        "examples": [ "not-an-integer" ],
+        "type": "integer"
+      }
     },
     {
       "title": "Wrong: Example violates format",
       "description": "When using format, ensure examples conform to it.",
-      "before": { "type": "string", "format": "email", "examples": ["invalid"] },
-      "after": { "type": "string", "format": "email", "examples": ["user@example.com"] }
+      "after": {
+        "examples": [ "user@example.com" ],
+        "type": "string",
+        "format": "email"
+      },
+      "before": {
+        "examples": [ "invalid" ],
+        "type": "string",
+        "format": "email"
+      }
     },
     {
       "title": "Right: Multiple valid examples",
       "description": "Providing several valid examples is acceptable and useful.",
-      "before": { "type": "string", "examples": ["a","b"] },
-      "after": { "type": "string", "examples": ["a","b"] }
+      "after": {
+        "examples": [ "a", "b" ],
+        "type": "string"
+      },
+      "before": {
+        "examples": [ "a", "b" ],
+        "type": "string"
+      }
     }
   ],
-  "autofixable": false,
-  "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "examples" ],
     "2020-12": [ "examples" ],

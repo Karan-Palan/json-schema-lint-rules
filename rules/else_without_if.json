@@ -15,30 +15,57 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: else present without if",
       "description": "`else` has no meaning without a sibling `if`.",
-      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "else": { "type": "string" } },
-      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema" }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "else": {
+          "type": "string"
+        }
+      }
     },
     {
       "title": "Right: Valid conditional with if/else",
       "description": "An `else` branch is valid when paired with `if`.",
-      "before": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "if": { "properties": { "premium": { "const": true } } },
-        "else": { "not": { "required": ["discount"] } }
-      },
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "if": { "properties": { "premium": { "const": true } } },
-        "else": { "not": { "required": ["discount"] } }
+        "if": {
+          "properties": {
+            "premium": {
+              "const": true
+            }
+          }
+        },
+        "else": {
+          "not": {
+            "required": [ "discount" ]
+          }
+        }
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "if": {
+          "properties": {
+            "premium": {
+              "const": true
+            }
+          }
+        },
+        "else": {
+          "not": {
+            "required": [ "discount" ]
+          }
+        }
       }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "else" ],
     "2020-12": [ "else" ],

@@ -38,28 +38,74 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Redundant unevaluatedItems:{}",
       "description": "Empty subschema under unevaluatedItems is a no-op; remove it.",
-      "before": { "type": "array", "items": {"type":"integer"}, "unevaluatedItems": {} },
-      "after": { "type": "array", "items": {"type":"integer"} }
+      "after": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
+      },
+      "before": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        },
+        "unevaluatedItems": {}
+      }
     },
     {
       "title": "Wrong: Redundant unevaluatedItems:true",
       "description": "Boolean true does not change validation; omit it.",
-      "before": { "type": "object", "properties": {"numbers": {"type":"array", "unevaluatedItems": true }} },
-      "after": { "type": "object", "properties": {"numbers": {"type":"array"}} }
+      "after": {
+        "type": "object",
+        "properties": {
+          "numbers": {
+            "type": "array"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "properties": {
+          "numbers": {
+            "type": "array",
+            "unevaluatedItems": true
+          }
+        }
+      }
     },
     {
       "title": "Right: Constraining extra items",
       "description": "Using a schema under unevaluatedItems to constrain extras is valid.",
-      "before": { "type": "array", "items": [ {"type":"string"} ], "unevaluatedItems": {"type":"string"} },
-      "after": { "type": "array", "items": [ {"type":"string"} ], "unevaluatedItems": {"type":"string"} }
+      "after": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          }
+        ],
+        "unevaluatedItems": {
+          "type": "string"
+        }
+      },
+      "before": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          }
+        ],
+        "unevaluatedItems": {
+          "type": "string"
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2020-12": [ "unevaluatedItems" ]
   },

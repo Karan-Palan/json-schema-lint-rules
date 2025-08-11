@@ -18,22 +18,38 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "safety", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Integer bounds outside IEEE-754 safe range",
       "description": "Constrain to ±9007199254740991 to avoid precision loss in JavaScript environments.",
-      "before": { "type": "integer", "minimum": -90071992547409980, "maximum": 90071992547409980 },
-      "after": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 }
+      "after": {
+        "type": "integer",
+        "maximum": 9007199254740991,
+        "minimum": -9007199254740991
+      },
+      "before": {
+        "type": "integer",
+        "maximum": 90071992547409980,
+        "minimum": -90071992547409980
+      }
     },
     {
       "title": "Right: Inside safe range",
       "description": "Bounds within the safe range are fine.",
-      "before": { "type": "integer", "minimum": -10, "maximum": 10 },
-      "after": { "type": "integer", "minimum": -10, "maximum": 10 }
+      "after": {
+        "type": "integer",
+        "maximum": 10,
+        "minimum": -10
+      },
+      "before": {
+        "type": "integer",
+        "maximum": 10,
+        "minimum": -10
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "safety", "readability" ],
   "dialects": {
     "2019-09": [ "type", "minimum", "maximum" ],
     "2020-12": [ "type", "minimum", "maximum" ],

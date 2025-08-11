@@ -45,21 +45,6 @@
         "additionalProperties": false
       }
     },
-    "comprehensiveExamples": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "required": [ "title", "description", "before", "after" ],
-        "properties": {
-          "title": { "type": "string" },
-          "description": { "type": "string" },
-          "before": { "type": "object" },
-          "after": { "type": "object" }
-        },
-        "additionalProperties": false
-      }
-    },
     "autofixable": {
       "description": "Whether this rule can automatically fixd by the linter",
       "type": "boolean"
@@ -76,6 +61,29 @@
           "style",
           "opinionated"
         ]
+      }
+    },
+    "comprehensiveExamples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [ "title", "description", "before", "after" ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "after": {
+            "type": "object"
+          },
+          "before": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "dialects": {

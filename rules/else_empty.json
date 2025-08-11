@@ -25,22 +25,61 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: else is an empty schema",
       "description": "Empty else adds no constraint; remove or add restrictions.",
-      "before": { "if": { "properties": { "flag": { "const": true } } }, "else": {} },
-      "after": { "if": { "properties": { "flag": { "const": true } } } }
+      "after": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "else": {}
+      }
     },
     {
       "title": "Right: else with actual constraints",
       "description": "Provide meaningful constraints under else.",
-      "before": { "if": { "properties": { "flag": { "const": true } } }, "else": { "required": ["flag"] } },
-      "after": { "if": { "properties": { "flag": { "const": true } } }, "else": { "required": ["flag"] } }
+      "after": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "else": {
+          "required": [ "flag" ]
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "else": {
+          "required": [ "flag" ]
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "if", "then", "else" ],
     "2020-12": [ "if", "then", "else" ],

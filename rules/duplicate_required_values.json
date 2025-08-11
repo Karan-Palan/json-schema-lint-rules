@@ -14,22 +14,34 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Duplicate names in required",
       "description": "`required` array must contain unique property names.",
-      "before": { "type": "object", "required": ["id","id","name"] },
-      "after": { "type": "object", "required": ["id","name"] }
+      "after": {
+        "type": "object",
+        "required": [ "id", "name" ]
+      },
+      "before": {
+        "type": "object",
+        "required": [ "id", "id", "name" ]
+      }
     },
     {
       "title": "Right: Unique required list",
       "description": "A deduplicated required array is valid.",
-      "before": { "type": "object", "required": ["id","name"] },
-      "after": { "type": "object", "required": ["id","name"] }
+      "after": {
+        "type": "object",
+        "required": [ "id", "name" ]
+      },
+      "before": {
+        "type": "object",
+        "required": [ "id", "name" ]
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "required" ],
     "2020-12": [ "required" ],

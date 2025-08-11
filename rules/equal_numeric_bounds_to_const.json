@@ -26,22 +26,35 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "style", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Equal bounds expressed via min/max",
       "description": "Use const when minimum == maximum.",
-      "before": { "type": "number", "minimum": 5, "maximum": 5 },
-      "after": { "type": "number", "const": 5 }
+      "after": {
+        "type": "number",
+        "const": 5
+      },
+      "before": {
+        "type": "number",
+        "maximum": 5,
+        "minimum": 5
+      }
     },
     {
       "title": "Right: const for exact numeric value",
       "description": "const communicates a single allowed number clearly.",
-      "before": { "type": "integer", "const": 42 },
-      "after": { "type": "integer", "const": 42 }
+      "after": {
+        "type": "integer",
+        "const": 42
+      },
+      "before": {
+        "type": "integer",
+        "const": 42
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style", "readability" ],
   "dialects": {
     "2019-09": [ "minimum", "maximum", "const" ],
     "2020-12": [ "minimum", "maximum", "const" ],

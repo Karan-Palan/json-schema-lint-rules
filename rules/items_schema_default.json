@@ -15,28 +15,48 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: items:{} on array",
       "description": "An always-true items schema is the default and should be omitted.",
-      "before": { "type": "array", "items": {} },
-      "after": { "type": "array" }
+      "after": {
+        "type": "array"
+      },
+      "before": {
+        "type": "array",
+        "items": {}
+      }
     },
     {
       "title": "Wrong: items:true on array",
       "description": "Boolean true is equivalent to {}; omit it for brevity.",
-      "before": { "type": "array", "items": true },
-      "after": { "type": "array" }
+      "after": {
+        "type": "array"
+      },
+      "before": {
+        "type": "array",
+        "items": true
+      }
     },
     {
       "title": "Right: Constraining items is meaningful",
       "description": "Specifying a schema inside items restricts element types.",
-      "before": { "type": "array", "items": { "type": "string" } },
-      "after": { "type": "array", "items": { "type": "string" } }
+      "after": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "before": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "items" ],
     "2020-12": [ "items" ],

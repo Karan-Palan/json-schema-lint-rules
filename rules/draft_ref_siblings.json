@@ -30,22 +30,38 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "readability", "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong (draft-07): $ref with sibling keywords",
       "description": "In ≤ draft-07, only $ref is evaluated; siblings are ignored and should be removed.",
-      "before": { "$schema": "http://json-schema.org/draft-07/schema#", "$ref": "#/definitions/INTEGER", "minimum": 0, "type": "integer" },
-      "after": { "$schema": "http://json-schema.org/draft-07/schema#", "$ref": "#/definitions/INTEGER" }
+      "after": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$ref": "#/definitions/INTEGER"
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$ref": "#/definitions/INTEGER",
+        "type": "integer",
+        "minimum": 0
+      }
     },
     {
       "title": "Right (2019-09+): $ref siblings may be valid (not covered by this rule)",
       "description": "Modern drafts permit annotations adjacent to $ref; this rule targets older drafts only.",
-      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$ref": "#/$defs/id", "description": "ok" },
-      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$ref": "#/$defs/id", "description": "ok" }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "description": "ok",
+        "$ref": "#/$defs/id"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "description": "ok",
+        "$ref": "#/$defs/id"
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "readability", "style" ],
   "dialects": {
     "draft4": [ "$ref" ],
     "draft6": [ "$ref" ],

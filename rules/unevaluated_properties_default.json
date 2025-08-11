@@ -32,34 +32,58 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Redundant unevaluatedProperties:true",
       "description": "Explicit `true` is often redundant; ensure removing it does not change evaluated behavior.",
-      "before": { "type": "object", "unevaluatedProperties": true },
-      "after": { "type": "object" }
+      "after": {
+        "type": "object"
+      },
+      "before": {
+        "type": "object",
+        "unevaluatedProperties": true
+      }
     },
     {
       "title": "Wrong: Redundant unevaluatedProperties:{} in nested arrays",
       "description": "Avoid sprinkling empty subschemas that don't change validation.",
-      "before": {
-        "type": "array",
-        "prefixItems": [ { "type": "object", "unevaluatedProperties": {} } ]
-      },
       "after": {
         "type": "array",
-        "prefixItems": [ { "type": "object" } ]
+        "prefixItems": [
+          {
+            "type": "object"
+          }
+        ]
+      },
+      "before": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "object",
+            "unevaluatedProperties": {}
+          }
+        ]
       }
     },
     {
       "title": "Right: Constraining unevaluatedProperties",
       "description": "It is valid to explicitly allow extra keys with a subschema when needed.",
-      "before": { "type": "object", "unevaluatedProperties": { "type": "string" } },
-      "after": { "type": "object", "unevaluatedProperties": { "type": "string" } }
+      "after": {
+        "type": "object",
+        "unevaluatedProperties": {
+          "type": "string"
+        }
+      },
+      "before": {
+        "type": "object",
+        "unevaluatedProperties": {
+          "type": "string"
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2020-12": [ "unevaluatedProperties" ]
   },

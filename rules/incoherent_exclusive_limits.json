@@ -18,22 +18,38 @@
       "doc": true
     }
   ],
+  "autofixable": false,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: exclusiveMinimum >= exclusiveMaximum",
       "description": "Exclusive bounds must satisfy exclusiveMinimum < exclusiveMaximum.",
-      "before": { "type": "number", "exclusiveMinimum": 5, "exclusiveMaximum": 5 },
-      "after": { "type": "number", "exclusiveMinimum": 4, "exclusiveMaximum": 6 }
+      "after": {
+        "type": "number",
+        "exclusiveMaximum": 6,
+        "exclusiveMinimum": 4
+      },
+      "before": {
+        "type": "number",
+        "exclusiveMaximum": 5,
+        "exclusiveMinimum": 5
+      }
     },
     {
       "title": "Right: Strictly ordered exclusive bounds",
       "description": "Exclusive bounds that are strictly ordered are valid.",
-      "before": { "type": "number", "exclusiveMinimum": 1, "exclusiveMaximum": 2 },
-      "after": { "type": "number", "exclusiveMinimum": 1, "exclusiveMaximum": 2 }
+      "after": {
+        "type": "number",
+        "exclusiveMaximum": 2,
+        "exclusiveMinimum": 1
+      },
+      "before": {
+        "type": "number",
+        "exclusiveMaximum": 2,
+        "exclusiveMinimum": 1
+      }
     }
   ],
-  "autofixable": false,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "exclusiveMinimum", "exclusiveMaximum" ],
     "2020-12": [ "exclusiveMinimum", "exclusiveMaximum" ],

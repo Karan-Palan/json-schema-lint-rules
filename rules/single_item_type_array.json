@@ -19,22 +19,32 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "style", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: type array with a single element",
       "description": "Use a scalar type instead of a single-element array for clarity.",
-      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": ["string"] },
-      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "string" }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": [ "string" ]
+      }
     },
     {
       "title": "Right: Multiple elements express a union",
       "description": "An array is appropriate when modeling a union of types.",
-      "before": { "type": ["string","null"] },
-      "after": { "type": ["string","null"] }
+      "after": {
+        "type": [ "string", "null" ]
+      },
+      "before": {
+        "type": [ "string", "null" ]
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style", "readability" ],
   "dialects": {
     "2019-09": [ "type" ],
     "2020-12": [ "type" ],

@@ -24,52 +24,88 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Required references missing property",
       "description": "Names in `required` must exist in properties or match a pattern.",
-      "before": {
-        "type": "object",
-        "required": ["a","b","c"],
-        "properties": { "a": {"type":"string"}, "b": {"type":"string"} }
-      },
       "after": {
         "type": "object",
-        "required": ["a","b"],
-        "properties": { "a": {"type":"string"}, "b": {"type":"string"} }
+        "required": [ "a", "b" ],
+        "properties": {
+          "a": {
+            "type": "string"
+          },
+          "b": {
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "required": [ "a", "b", "c" ],
+        "properties": {
+          "a": {
+            "type": "string"
+          },
+          "b": {
+            "type": "string"
+          }
+        }
       }
     },
     {
       "title": "Wrong: Required satisfied via patternProperties",
       "description": "If using patternProperties, ensure required names match at least one regex or remove them.",
-      "before": {
-        "type": "object",
-        "required": ["alpha","beta"],
-        "patternProperties": { "^alp": {"type":"string"} }
-      },
       "after": {
         "type": "object",
-        "required": ["alpha"],
-        "patternProperties": { "^alp": {"type":"string"} }
+        "required": [ "alpha" ],
+        "patternProperties": {
+          "^alp": {
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "required": [ "alpha", "beta" ],
+        "patternProperties": {
+          "^alp": {
+            "type": "string"
+          }
+        }
       }
     },
     {
       "title": "Right: All required keys declared",
       "description": "Valid when each required is declared or matched by a pattern.",
-      "before": {
-        "type": "object",
-        "required": ["id","name"],
-        "properties": { "id": {"type":"integer"}, "name": {"type":"string"} }
-      },
       "after": {
         "type": "object",
-        "required": ["id","name"],
-        "properties": { "id": {"type":"integer"}, "name": {"type":"string"} }
+        "required": [ "id", "name" ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "required": [ "id", "name" ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
       }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "required", "properties", "patternProperties" ],
     "2020-12": [ "required", "properties", "patternProperties" ],

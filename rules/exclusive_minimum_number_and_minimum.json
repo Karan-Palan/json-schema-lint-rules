@@ -15,22 +15,35 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Keep only the stricter lower bound",
       "description": "If both minimum and exclusiveMinimum exist, drop the weaker bound.",
-      "before": { "type": "number", "exclusiveMinimum": 10, "minimum": 8 },
-      "after": { "type": "number", "exclusiveMinimum": 10 }
+      "after": {
+        "type": "number",
+        "exclusiveMinimum": 10
+      },
+      "before": {
+        "type": "number",
+        "exclusiveMinimum": 10,
+        "minimum": 8
+      }
     },
     {
       "title": "Right: Single lower bound is clear",
       "description": "Having only exclusiveMinimum is fine and unambiguous.",
-      "before": { "type": "number", "exclusiveMinimum": 0 },
-      "after": { "type": "number", "exclusiveMinimum": 0 }
+      "after": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "before": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "maximum", "exclusiveMaximum" ],
     "2020-12": [ "maximum", "exclusiveMaximum" ],

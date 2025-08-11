@@ -25,38 +25,60 @@
       }
     }
   ],
+  "autofixable": false,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: number-specific keywords on string",
       "description": "Keywords like minimum/maximum apply only to numeric instances.",
-      "before": { "type": "string", "minimum": 0 },
-      "after": { "type": "string" }
+      "after": {
+        "type": "string"
+      },
+      "before": {
+        "type": "string",
+        "minimum": 0
+      }
     },
     {
       "title": "Wrong: string-specific keyword on number",
       "description": "minLength/maxLength apply only to strings.",
-      "before": { "type": "number", "minLength": 1 },
-      "after": { "type": "number" }
+      "after": {
+        "type": "number"
+      },
+      "before": {
+        "type": "number",
+        "minLength": 1
+      }
     },
     {
       "title": "Right: type-appropriate keywords",
       "description": "When using unions, ensure keywords are placed within the relevant branch.",
-      "before": {
-        "anyOf": [
-          { "type": "string", "minLength": 1 },
-          { "type": "number", "minimum": 0 }
-        ]
-      },
       "after": {
         "anyOf": [
-          { "type": "string", "minLength": 1 },
-          { "type": "number", "minimum": 0 }
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "type": "number",
+            "minimum": 0
+          }
+        ]
+      },
+      "before": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "type": "number",
+            "minimum": 0
+          }
         ]
       }
     }
   ],
-  "autofixable": false,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "minimum", "maxlength", "multipleof" ],
     "2020-12": [ "minimum", "maxlength", "multipleof" ],

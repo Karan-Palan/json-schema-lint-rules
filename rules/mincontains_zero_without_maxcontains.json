@@ -23,22 +23,49 @@
       "doc": true
     }
   ],
+  "autofixable": false,
+  "categories": [ "style", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: minContains 0 with no maxContains",
       "description": "Without an upper bound, minContains:0 places no restriction.",
-      "before": { "type": "array", "contains": {"type":"number"}, "minContains": 0 },
-      "after": { "type": "array", "contains": {"type":"number"}, "minContains": 0, "maxContains": 10 }
+      "after": {
+        "type": "array",
+        "maxContains": 10,
+        "minContains": 0,
+        "contains": {
+          "type": "number"
+        }
+      },
+      "before": {
+        "type": "array",
+        "minContains": 0,
+        "contains": {
+          "type": "number"
+        }
+      }
     },
     {
       "title": "Right: minContains with explicit cap",
       "description": "Adding maxContains makes the constraint meaningful.",
-      "before": { "type": "array", "contains": {"type":"number"}, "minContains": 0, "maxContains": 5 },
-      "after": { "type": "array", "contains": {"type":"number"}, "minContains": 0, "maxContains": 5 }
+      "after": {
+        "type": "array",
+        "maxContains": 5,
+        "minContains": 0,
+        "contains": {
+          "type": "number"
+        }
+      },
+      "before": {
+        "type": "array",
+        "maxContains": 5,
+        "minContains": 0,
+        "contains": {
+          "type": "number"
+        }
+      }
     }
   ],
-  "autofixable": false,
-  "categories": [ "style", "readability" ],
   "dialects": {
     "2019-09": [ "contains", "minContains" ],
     "2020-12": [ "contains", "minContains" ]

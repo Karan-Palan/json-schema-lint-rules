@@ -25,22 +25,61 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: then is an empty schema",
       "description": "Empty then adds no constraint; remove or add restrictions.",
-      "before": { "if": { "properties": { "flag": { "const": true } } }, "then": {} },
-      "after": { "if": { "properties": { "flag": { "const": true } } } }
+      "after": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "then": {}
+      }
     },
     {
       "title": "Right: then with constraints",
       "description": "Provide actual constraints in then to make the conditional effective.",
-      "before": { "if": { "properties": { "flag": { "const": true } } }, "then": { "required": ["flag"] } },
-      "after": { "if": { "properties": { "flag": { "const": true } } }, "then": { "required": ["flag"] } }
+      "after": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "required": [ "flag" ]
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "required": [ "flag" ]
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "if", "then", "else" ],
     "2020-12": [ "if", "then", "else" ],

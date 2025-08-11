@@ -13,22 +13,37 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: propertyNames:{} has no effect",
       "description": "Remove empty propertyNames to reduce noise.",
-      "before": { "type": "object", "propertyNames": {} },
-      "after": { "type": "object" }
+      "after": {
+        "type": "object"
+      },
+      "before": {
+        "type": "object",
+        "propertyNames": {}
+      }
     },
     {
       "title": "Right: propertyNames with constraints",
       "description": "Constraining property names via regex or other keywords is meaningful.",
-      "before": { "type": "object", "propertyNames": { "pattern": "^[a-z]+$" } },
-      "after": { "type": "object", "propertyNames": { "pattern": "^[a-z]+$" } }
+      "after": {
+        "type": "object",
+        "propertyNames": {
+          "pattern": "^[a-z]+$"
+        }
+      },
+      "before": {
+        "type": "object",
+        "propertyNames": {
+          "pattern": "^[a-z]+$"
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "propertyNames" ],
     "2020-12": [ "propertyNames" ],

@@ -22,22 +22,50 @@
       "doc": true
     }
   ],
+  "autofixable": false,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: maxContains less than minContains",
       "description": "Ensure maxContains ≥ minContains so constraints are satisfiable.",
-      "before": { "type": "array", "contains": {"type":"integer"}, "minContains": 3, "maxContains": 1 },
-      "after": { "type": "array", "contains": {"type":"integer"}, "minContains": 1, "maxContains": 3 }
+      "after": {
+        "type": "array",
+        "maxContains": 3,
+        "minContains": 1,
+        "contains": {
+          "type": "integer"
+        }
+      },
+      "before": {
+        "type": "array",
+        "maxContains": 1,
+        "minContains": 3,
+        "contains": {
+          "type": "integer"
+        }
+      }
     },
     {
       "title": "Right: Coherent contains bounds",
       "description": "Bounds that are consistent are valid.",
-      "before": { "type": "array", "contains": {"type":"integer"}, "minContains": 1, "maxContains": 3 },
-      "after": { "type": "array", "contains": {"type":"integer"}, "minContains": 1, "maxContains": 3 }
+      "after": {
+        "type": "array",
+        "maxContains": 3,
+        "minContains": 1,
+        "contains": {
+          "type": "integer"
+        }
+      },
+      "before": {
+        "type": "array",
+        "maxContains": 3,
+        "minContains": 1,
+        "contains": {
+          "type": "integer"
+        }
+      }
     }
   ],
-  "autofixable": false,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "minContains", "maxContains" ],
     "2020-12": [ "minContains", "maxContains" ]

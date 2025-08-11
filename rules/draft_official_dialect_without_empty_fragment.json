@@ -14,22 +14,34 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness", "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Missing # in draft-07 metaschema URI",
       "description": "Older drafts require the trailing # in the metaschema URI.",
-      "before": { "$schema": "http://json-schema.org/draft-07/schema", "type": "string" },
-      "after": { "$schema": "http://json-schema.org/draft-07/schema#", "type": "string" }
+      "after": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-07/schema",
+        "type": "string"
+      }
     },
     {
       "title": "Right: Correct draft-07 URI with #",
       "description": "Using the canonical URI avoids tooling ambiguity.",
-      "before": { "$schema": "http://json-schema.org/draft-07/schema#", "type": "object" },
-      "after": { "$schema": "http://json-schema.org/draft-07/schema#", "type": "object" }
+      "after": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object"
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object"
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness", "style" ],
   "dialects": {
     "draft4": [ "$schema" ],
     "draft6": [ "$schema" ],

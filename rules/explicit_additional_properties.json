@@ -41,92 +41,116 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "readability", "style", "opinionated" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Missing additionalProperties on a simple object",
       "description": "Objects should explicitly declare whether extra keys are allowed. Add additionalProperties:false to disallow unknown keys.",
-      "before": {
-        "type": "object",
-        "properties": {
-          "id": { "type": "integer" },
-          "name": { "type": "string" }
-        }
-      },
       "after": {
         "type": "object",
         "properties": {
-          "id": { "type": "integer" },
-          "name": { "type": "string" }
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
         },
         "additionalProperties": false
+      },
+      "before": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
       }
     },
     {
       "title": "Wrong: Pattern properties without an explicit policy for others",
       "description": "When using patternProperties, clarify treatment of non-matching keys via additionalProperties (false or a schema).",
-      "before": {
-        "type": "object",
-        "patternProperties": {
-          "^S_": { "type": "string" }
-        }
-      },
       "after": {
         "type": "object",
         "patternProperties": {
-          "^S_": { "type": "string" }
+          "^S_": {
+            "type": "string"
+          }
         },
         "additionalProperties": false
+      },
+      "before": {
+        "type": "object",
+        "patternProperties": {
+          "^S_": {
+            "type": "string"
+          }
+        }
       }
     },
     {
       "title": "Wrong: Nested object omits additionalProperties",
       "description": "Nested object schemas should also state additionalProperties to avoid accidental loose shapes.",
-      "before": {
-        "type": "object",
-        "properties": {
-          "user": {
-            "type": "object",
-            "properties": {
-              "id": { "type": "integer" }
-            }
-          }
-        }
-      },
       "after": {
         "type": "object",
         "properties": {
           "user": {
             "type": "object",
             "properties": {
-              "id": { "type": "integer" }
+              "id": {
+                "type": "integer"
+              }
             },
             "additionalProperties": false
           }
         },
         "additionalProperties": false
+      },
+      "before": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              }
+            }
+          }
+        }
       }
     },
     {
       "title": "Right: Explicitly allow structured extensions",
       "description": "It is also valid to allow unknown keys, but do it explicitly with a subschema.",
-      "before": {
-        "type": "object",
-        "properties": {
-          "kind": { "type": "string" }
-        },
-        "additionalProperties": { "type": "string" }
-      },
       "after": {
         "type": "object",
         "properties": {
-          "kind": { "type": "string" }
+          "kind": {
+            "type": "string"
+          }
         },
-        "additionalProperties": { "type": "string" }
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "before": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": {
+          "type": "string"
+        }
       }
     }
   ],
-  "autofixable": true,
-  "categories": [ "readability", "style", "opinionated" ],
   "dialects": {
     "2019-09": [ "additionalproperties" ],
     "2020-12": [ "additionalproperties" ],

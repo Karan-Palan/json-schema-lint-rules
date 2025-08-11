@@ -5,8 +5,8 @@
     {
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "x-fooBar": true
+        "x-fooBar": true,
+        "type": "object"
       },
       "before": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -22,22 +22,36 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Unknown keyword without prefix",
       "description": "Custom keywords must be vendor-prefixed (e.g., x-foo).",
-      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "fooBar": true },
-      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "x-fooBar": true }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "x-fooBar": true,
+        "type": "object"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "fooBar": true
+      }
     },
     {
       "title": "Right: Prefixed custom keyword",
       "description": "Using an x- prefix avoids conflicts with future spec keywords.",
-      "before": { "type": "string", "x-custom": 123 },
-      "after": { "type": "string", "x-custom": 123 }
+      "after": {
+        "x-custom": 123,
+        "type": "string"
+      },
+      "before": {
+        "x-custom": 123,
+        "type": "string"
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [],
     "2020-12": [],

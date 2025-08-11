@@ -21,22 +21,49 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "readability", "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Array type without items",
       "description": "Declare `items` or tuple constraints to describe elements.",
-      "before": { "type": "array" },
-      "after": { "type": "array", "items": { "type": "string" } }
+      "after": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "before": {
+        "type": "array"
+      }
     },
     {
       "title": "Right: Tuple validation",
       "description": "Specifying items as an array is valid when positions differ.",
-      "before": { "type": "array", "items": [ {"type":"string"}, {"type":"integer"} ] },
-      "after": { "type": "array", "items": [ {"type":"string"}, {"type":"integer"} ] }
+      "after": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          }
+        ]
+      },
+      "before": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          }
+        ]
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "readability", "correctness" ],
   "dialects": {
     "2019-09": [ "items" ],
     "2020-12": [ "items" ],

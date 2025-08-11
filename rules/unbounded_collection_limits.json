@@ -32,28 +32,58 @@
       }
     }
   ],
+  "autofixable": false,
+  "categories": [ "safety", "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Array with no maxItems",
       "description": "Unbounded collections may allow excessively large payloads.",
-      "before": { "type": "array", "items": { "type": "integer" } },
-      "after": { "type": "array", "items": { "type": "integer" }, "maxItems": 100 }
+      "after": {
+        "type": "array",
+        "maxItems": 100,
+        "items": {
+          "type": "integer"
+        }
+      },
+      "before": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
+      }
     },
     {
       "title": "Wrong: String with no maxLength",
       "description": "Consider adding a maxLength for large text fields.",
-      "before": { "type": "string", "pattern": "^[A-Z]+$" },
-      "after": { "type": "string", "pattern": "^[A-Z]+$", "maxLength": 255 }
+      "after": {
+        "type": "string",
+        "pattern": "^[A-Z]+$",
+        "maxLength": 255
+      },
+      "before": {
+        "type": "string",
+        "pattern": "^[A-Z]+$"
+      }
     },
     {
       "title": "Right: Bounded collections",
       "description": "Providing sensible upper bounds is recommended.",
-      "before": { "type": "array", "maxItems": 100, "items": { "type": "integer" } },
-      "after": { "type": "array", "maxItems": 100, "items": { "type": "integer" } }
+      "after": {
+        "type": "array",
+        "maxItems": 100,
+        "items": {
+          "type": "integer"
+        }
+      },
+      "before": {
+        "type": "array",
+        "maxItems": 100,
+        "items": {
+          "type": "integer"
+        }
+      }
     }
   ],
-  "autofixable": false,
-  "categories": [ "safety", "style" ],
   "dialects": {
     "2019-09": [ "maxItems", "maxLength", "type" ],
     "2020-12": [ "maxItems", "maxLength", "type" ],

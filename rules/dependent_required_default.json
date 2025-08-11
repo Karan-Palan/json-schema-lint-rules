@@ -15,22 +15,37 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: dependentRequired:{} is redundant",
       "description": "An empty object under dependentRequired has no effect.",
-      "before": { "type": "object", "dependentRequired": {} },
-      "after": { "type": "object" }
+      "after": {
+        "type": "object"
+      },
+      "before": {
+        "type": "object",
+        "dependentRequired": {}
+      }
     },
     {
       "title": "Right: Non-empty dependentRequired",
       "description": "Specifying required properties conditionally is valid.",
-      "before": { "type": "object", "dependentRequired": { "creditCard": ["billingAddress"] } },
-      "after": { "type": "object", "dependentRequired": { "creditCard": ["billingAddress"] } }
+      "after": {
+        "type": "object",
+        "dependentRequired": {
+          "creditCard": [ "billingAddress" ]
+        }
+      },
+      "before": {
+        "type": "object",
+        "dependentRequired": {
+          "creditCard": [ "billingAddress" ]
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "dependentRequired" ],
     "2020-12": [ "dependentRequired" ]

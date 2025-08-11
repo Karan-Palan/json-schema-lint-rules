@@ -15,22 +15,43 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: contentSchema:{} is redundant",
       "description": "An empty contentSchema adds no constraints.",
-      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "string", "contentSchema": {} },
-      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "string" }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "string",
+        "contentSchema": {}
+      }
     },
     {
       "title": "Right: Explicit content schema",
       "description": "Providing a non-empty contentSchema is valid when paired with a media type.",
-      "before": { "type": "string", "contentMediaType": "application/json", "contentSchema": { "$id": "https://example.com/sub", "type": "object" } },
-      "after": { "type": "string", "contentMediaType": "application/json", "contentSchema": { "$id": "https://example.com/sub", "type": "object" } }
+      "after": {
+        "type": "string",
+        "contentMediaType": "application/json",
+        "contentSchema": {
+          "$id": "https://example.com/sub",
+          "type": "object"
+        }
+      },
+      "before": {
+        "type": "string",
+        "contentMediaType": "application/json",
+        "contentSchema": {
+          "$id": "https://example.com/sub",
+          "type": "object"
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "contentSchema" ],
     "2020-12": [ "contentSchema" ],

@@ -15,22 +15,41 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: dependencies:{} is redundant",
       "description": "An empty dependencies object has no effect.",
-      "before": { "$schema": "http://json-schema.org/draft-07/schema#", "type": "object", "dependencies": {} },
-      "after": { "$schema": "http://json-schema.org/draft-07/schema#", "type": "object" }
+      "after": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object"
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "dependencies": {}
+      }
     },
     {
       "title": "Right: Non-empty dependencies is meaningful",
       "description": "Listing property dependencies changes validation and is valid.",
-      "before": { "$schema": "http://json-schema.org/draft-07/schema#", "type": "object", "dependencies": { "a": ["b"] } },
-      "after": { "$schema": "http://json-schema.org/draft-07/schema#", "type": "object", "dependencies": { "a": ["b"] } }
+      "after": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "dependencies": {
+          "a": [ "b" ]
+        }
+      },
+      "before": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "dependencies": {
+          "a": [ "b" ]
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "draft4": [ "dependencies" ],
     "draft6": [ "dependencies" ],

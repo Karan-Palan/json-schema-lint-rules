@@ -15,22 +15,38 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "readability", "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Action items in title/description",
       "description": "Move TODO/FIXME etc. to $comment; keep annotations user-facing.",
-      "before": { "title": "TODO: refine schema", "description": "FIXME: confirm", "$comment": "" },
-      "after": { "title": "User object", "description": "Represents a user", "$comment": "TODO: refine schema · FIXME: confirm" }
+      "after": {
+        "title": "User object",
+        "description": "Represents a user",
+        "$comment": "TODO: refine schema · FIXME: confirm"
+      },
+      "before": {
+        "title": "TODO: refine schema",
+        "description": "FIXME: confirm",
+        "$comment": ""
+      }
     },
     {
       "title": "Right: Clean annotations with $comment",
       "description": "User-facing annotations plus a technical $comment.",
-      "before": { "title": "Order", "description": "Purchase order", "$comment": "Internal: v2 soon" },
-      "after": { "title": "Order", "description": "Purchase order", "$comment": "Internal: v2 soon" }
+      "after": {
+        "title": "Order",
+        "description": "Purchase order",
+        "$comment": "Internal: v2 soon"
+      },
+      "before": {
+        "title": "Order",
+        "description": "Purchase order",
+        "$comment": "Internal: v2 soon"
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "readability", "style" ],
   "dialects": {
     "2019-09": [ "title", "description", "$comment" ],
     "2020-12": [ "title", "description", "$comment" ],

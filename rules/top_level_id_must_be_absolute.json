@@ -16,22 +16,38 @@
       "doc": true
     }
   ],
+  "autofixable": false,
+  "categories": [ "correctness", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Relative $id at the root",
       "description": "Top-level $id must be absolute to avoid ambiguous resolution.",
-      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "/user", "type": "object" },
-      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://example.com/user", "type": "object" }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://example.com/user",
+        "type": "object"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "/user",
+        "type": "object"
+      }
     },
     {
       "title": "Right: Absolute $id",
       "description": "Using an absolute URI for $id is correct.",
-      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://example.com/user", "type": "object" },
-      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://example.com/user", "type": "object" }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://example.com/user",
+        "type": "object"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://example.com/user",
+        "type": "object"
+      }
     }
   ],
-  "autofixable": false,
-  "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "$id" ],
     "2020-12": [ "$id" ],

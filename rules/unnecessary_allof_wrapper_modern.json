@@ -16,22 +16,36 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "readability", "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong (2019-09+): Single-$ref allOf wrapper",
       "description": "In modern drafts, a solitary $ref can be inlined without allOf.",
-      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "allOf": [ {"$ref": "#/$defs/User"} ] },
-      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$ref": "#/$defs/User" }
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$ref": "#/$defs/User"
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "allOf": [
+          {
+            "$ref": "#/$defs/User"
+          }
+        ]
+      }
     },
     {
       "title": "Right: Inline $ref",
       "description": "Using $ref directly is clearer.",
-      "before": { "$ref": "#/$defs/User" },
-      "after": { "$ref": "#/$defs/User" }
+      "after": {
+        "$ref": "#/$defs/User"
+      },
+      "before": {
+        "$ref": "#/$defs/User"
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "readability", "style" ],
   "dialects": {
     "2019-09": [ "allOf", "$ref" ],
     "2020-12": [ "allOf", "$ref" ]

@@ -34,35 +34,58 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Default does not satisfy integer type",
       "description": "Remove default when its value fails validation.",
-      "before": { "type": "integer", "default": "not-an-integer" },
-      "after": { "type": "integer" }
+      "after": {
+        "type": "integer"
+      },
+      "before": {
+        "default": "not-an-integer",
+        "type": "integer"
+      }
     },
     {
       "title": "Wrong: Default object violates property types",
       "description": "Default must be a valid instance of the schema.",
-      "before": {
-        "type": "object",
-        "properties": { "flag": { "type": "boolean" } },
-        "default": { "flag": "maybe" }
-      },
       "after": {
         "type": "object",
-        "properties": { "flag": { "type": "boolean" } }
+        "properties": {
+          "flag": {
+            "type": "boolean"
+          }
+        }
+      },
+      "before": {
+        "default": {
+          "flag": "maybe"
+        },
+        "type": "object",
+        "properties": {
+          "flag": {
+            "type": "boolean"
+          }
+        }
       }
     },
     {
       "title": "Right: Valid default is acceptable",
       "description": "A default that validates can remain.",
-      "before": { "type": "string", "minLength": 1, "default": "ok" },
-      "after": { "type": "string", "minLength": 1, "default": "ok" }
+      "after": {
+        "default": "ok",
+        "type": "string",
+        "minLength": 1
+      },
+      "before": {
+        "default": "ok",
+        "type": "string",
+        "minLength": 1
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "default" ],
     "2020-12": [ "default" ],

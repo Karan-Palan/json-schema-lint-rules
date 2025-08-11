@@ -33,28 +33,42 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Redundant scalar type with enum",
       "description": "Drop `type` when enum already constrains allowed types.",
-      "before": { "type": "integer", "enum": [1,2,3] },
-      "after": { "enum": [1,2,3] }
+      "after": {
+        "enum": [ 1, 2, 3 ]
+      },
+      "before": {
+        "type": "integer",
+        "enum": [ 1, 2, 3 ]
+      }
     },
     {
       "title": "Wrong: Union type with enum",
       "description": "Enum values already include null; union type is unnecessary.",
-      "before": { "type": ["string","null"], "enum": ["none","some", null] },
-      "after": { "enum": ["none","some", null] }
+      "after": {
+        "enum": [ "none", "some", null ]
+      },
+      "before": {
+        "type": [ "string", "null" ],
+        "enum": [ "none", "some", null ]
+      }
     },
     {
       "title": "Right: Enum alone",
       "description": "Enum without type is sufficient and clear.",
-      "before": { "enum": [true,false] },
-      "after": { "enum": [true,false] }
+      "after": {
+        "enum": [ true, false ]
+      },
+      "before": {
+        "enum": [ true, false ]
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "readability" ],
   "dialects": {
     "2019-09": [ "enum", "type" ],
     "2020-12": [ "enum", "type" ],

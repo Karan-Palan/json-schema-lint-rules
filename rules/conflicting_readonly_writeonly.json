@@ -38,22 +38,63 @@
       }
     }
   ],
+  "autofixable": false,
+  "categories": [ "correctness", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Same field marked readOnly and writeOnly",
       "description": "A property cannot be both input-only and output-only.",
-      "before": { "type": "object", "properties": { "password": { "type": "string", "readOnly": true, "writeOnly": true } } },
-      "after": { "type": "object", "properties": { "password": { "type": "string", "writeOnly": true } } }
+      "after": {
+        "type": "object",
+        "properties": {
+          "password": {
+            "writeOnly": true,
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "properties": {
+          "password": {
+            "readOnly": true,
+            "writeOnly": true,
+            "type": "string"
+          }
+        }
+      }
     },
     {
       "title": "Right: Distinct read/write fields",
       "description": "One property can be writeOnly while another is readOnly.",
-      "before": { "type": "object", "properties": { "password": { "type": "string", "writeOnly": true }, "id": { "type": "string", "readOnly": true } } },
-      "after": { "type": "object", "properties": { "password": { "type": "string", "writeOnly": true }, "id": { "type": "string", "readOnly": true } } }
+      "after": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "readOnly": true,
+            "type": "string"
+          },
+          "password": {
+            "writeOnly": true,
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "readOnly": true,
+            "type": "string"
+          },
+          "password": {
+            "writeOnly": true,
+            "type": "string"
+          }
+        }
+      }
     }
   ],
-  "autofixable": false,
-  "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "readOnly", "writeOnly" ],
     "2020-12": [ "readOnly", "writeOnly" ],

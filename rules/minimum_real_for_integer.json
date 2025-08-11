@@ -14,22 +14,34 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Non-integer minimum for integer type",
       "description": "Use ceiling for minimum on integer schemas.",
-      "before": { "type": "integer", "minimum": 3.2 },
-      "after": { "type": "integer", "minimum": 4 }
+      "after": {
+        "type": "integer",
+        "minimum": 4
+      },
+      "before": {
+        "type": "integer",
+        "minimum": 3.2
+      }
     },
     {
       "title": "Right: Integer minimum",
       "description": "An integer-typed schema with an integer minimum is correct.",
-      "before": { "type": "integer", "minimum": 0 },
-      "after": { "type": "integer", "minimum": 0 }
+      "after": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "before": {
+        "type": "integer",
+        "minimum": 0
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "minimum", "type" ],
     "2020-12": [ "minimum", "type" ],

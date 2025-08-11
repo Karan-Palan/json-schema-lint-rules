@@ -23,22 +23,59 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: else:false can be simplified",
       "description": "`if: S, else:false` is equivalent to just enforcing S.",
-      "before": { "if": { "properties": { "flag": { "const": true } } }, "else": false },
-      "after": { "properties": { "flag": { "const": true } } }
+      "after": {
+        "properties": {
+          "flag": {
+            "const": true
+          }
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "else": false
+      }
     },
     {
       "title": "Right: Use if/then instead of else:false",
       "description": "Prefer if/then or a positive schema when possible.",
-      "before": { "if": { "properties": { "flag": { "const": true } } }, "then": { "required": ["flag"] } },
-      "after": { "if": { "properties": { "flag": { "const": true } } }, "then": { "required": ["flag"] } }
+      "after": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "required": [ "flag" ]
+        }
+      },
+      "before": {
+        "if": {
+          "properties": {
+            "flag": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "required": [ "flag" ]
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "if", "then", "else" ],
     "2020-12": [ "if", "then", "else" ],

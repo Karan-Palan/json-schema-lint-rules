@@ -13,22 +13,41 @@
       "doc": true
     }
   ],
+  "autofixable": true,
+  "categories": [ "style" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Empty patternProperties",
       "description": "An empty object under patternProperties has no effect and should be dropped.",
-      "before": { "type": "object", "patternProperties": {} },
-      "after": { "type": "object" }
+      "after": {
+        "type": "object"
+      },
+      "before": {
+        "type": "object",
+        "patternProperties": {}
+      }
     },
     {
       "title": "Right: Meaningful regex-based constraints",
       "description": "Using regex keys to constrain property names is valid.",
-      "before": { "type": "object", "patternProperties": { "^S_": {"type":"string"} } },
-      "after": { "type": "object", "patternProperties": { "^S_": {"type":"string"} } }
+      "after": {
+        "type": "object",
+        "patternProperties": {
+          "^S_": {
+            "type": "string"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "patternProperties": {
+          "^S_": {
+            "type": "string"
+          }
+        }
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "style" ],
   "dialects": {
     "2019-09": [ "patternProperties" ],
     "2020-12": [ "patternProperties" ],

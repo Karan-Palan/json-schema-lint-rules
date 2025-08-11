@@ -66,49 +66,78 @@
       "doc": true
     }
   ],
+  "autofixable": false,
+  "categories": [ "correctness", "safety" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Missing $defs target",
       "description": "Relative JSON Pointer must resolve within the document.",
-      "before": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$ref": "#/$defs/uuid"
-      },
       "after": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$ref": "#/$defs/uuid",
-        "$defs": { "uuid": { "type": "string", "format": "uuid" } }
+        "$defs": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$ref": "#/$defs/uuid"
       }
     },
     {
       "title": "Wrong: Broken external link",
       "description": "Absolute URI must locate a JSON Schema resource.",
-      "before": { "$ref": "https://example.com/readme.txt" },
-      "after": { "$ref": "https://example.com/user-schema.json" }
+      "after": {
+        "$ref": "https://example.com/user-schema.json"
+      },
+      "before": {
+        "$ref": "https://example.com/readme.txt"
+      }
     },
     {
       "title": "Wrong: Points to non-schema JSON",
       "description": "The remote content must be a JSON Schema (object or boolean).",
-      "before": { "$ref": "https://example.com/data.json" },
-      "after": { "$ref": "https://example.com/user-schema.json" }
+      "after": {
+        "$ref": "https://example.com/user-schema.json"
+      },
+      "before": {
+        "$ref": "https://example.com/data.json"
+      }
     },
     {
       "title": "Right: Resolving to an inlined $defs",
       "description": "A correct in-document ref to a defined subschema.",
-      "before": {
-        "type": "object",
-        "properties": { "id": { "$ref": "#/$defs/id" } },
-        "$defs": { "id": { "type": "integer" } }
-      },
       "after": {
         "type": "object",
-        "properties": { "id": { "$ref": "#/$defs/id" } },
-        "$defs": { "id": { "type": "integer" } }
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "$defs": {
+          "id": {
+            "type": "integer"
+          }
+        }
+      },
+      "before": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "$defs": {
+          "id": {
+            "type": "integer"
+          }
+        }
       }
     }
   ],
-  "autofixable": false,
-  "categories": [ "correctness", "safety" ],
   "dialects": {
     "2019-09": [ "$ref" ],
     "2020-12": [ "$ref" ],

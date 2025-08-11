@@ -21,22 +21,30 @@
       }
     }
   ],
+  "autofixable": true,
+  "categories": [ "correctness", "readability" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Single-value enum",
       "description": "Replace enum with a single element by const for clarity.",
-      "before": { "enum": ["foo"] },
-      "after": { "const": "foo" }
+      "after": {
+        "const": "foo"
+      },
+      "before": {
+        "enum": [ "foo" ]
+      }
     },
     {
       "title": "Right: Multi-value enum remains enum",
       "description": "Enums with multiple values are correct and should remain enums.",
-      "before": { "enum": ["foo", "bar"] },
-      "after": { "enum": ["foo", "bar"] }
+      "after": {
+        "enum": [ "foo", "bar" ]
+      },
+      "before": {
+        "enum": [ "foo", "bar" ]
+      }
     }
   ],
-  "autofixable": true,
-  "categories": [ "correctness", "readability" ],
   "dialects": {
     "2019-09": [ "enum", "const" ],
     "2020-12": [ "enum", "const" ]

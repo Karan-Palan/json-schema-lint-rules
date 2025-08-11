@@ -14,22 +14,30 @@
       "doc": true
     }
   ],
+  "autofixable": false,
+  "categories": [ "correctness" ],
   "comprehensiveExamples": [
     {
       "title": "Wrong: Empty enum is not allowed",
       "description": "`enum` must contain at least one value; empty arrays always fail.",
-      "before": { "enum": [] },
-      "after": { "enum": ["option1"] }
+      "after": {
+        "enum": [ "option1" ]
+      },
+      "before": {
+        "enum": []
+      }
     },
     {
       "title": "Right: Non-empty enum",
       "description": "A populated enum is valid.",
-      "before": { "enum": [1,2] },
-      "after": { "enum": [1,2] }
+      "after": {
+        "enum": [ 1, 2 ]
+      },
+      "before": {
+        "enum": [ 1, 2 ]
+      }
     }
   ],
-  "autofixable": false,
-  "categories": [ "correctness" ],
   "dialects": {
     "2019-09": [ "enum" ],
     "2020-12": [ "enum" ],
