@@ -15,6 +15,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: then present without if",
+      "description": "`then` alone has no effect; remove it or add a matching `if`.",
+      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "then": { "required": ["foo"] } },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema" }
+    },
+    {
+      "title": "Right: Valid conditional with if/then",
+      "description": "A `then` branch is valid when paired with `if`.",
+      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "if": { "properties": { "role": {"const": "admin"} } }, "then": { "required": ["permissions"] } },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "if": { "properties": { "role": {"const": "admin"} } }, "then": { "required": ["permissions"] } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

@@ -13,6 +13,26 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: const with a broader enum",
+      "description": "`const` fixes one value; adding other enum values conflicts with it.",
+      "before": { "const": 5, "enum": [5, 6] },
+      "after": { "const": 5 }
+    },
+    {
+      "title": "Wrong: const value not included in enum",
+      "description": "Using const with an enum that omits the const value is contradictory.",
+      "before": { "const": "A", "enum": ["B", "C"] },
+      "after": { "enum": ["B", "C"] }
+    },
+    {
+      "title": "Right: Use only const or only enum",
+      "description": "Either express a single value via const, or multiple via enum.",
+      "before": { "enum": ["A", "B"] },
+      "after": { "enum": ["A", "B"] }
+    }
+  ],
   "autofixable": false,
   "categories": [ "correctness" ],
   "dialects": {

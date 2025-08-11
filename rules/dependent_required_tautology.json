@@ -12,6 +12,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Empty arrays in dependentRequired",
+      "description": "A dependentRequired list must not be empty; otherwise it's useless.",
+      "before": { "dependentRequired": { "meta": [] } },
+      "after": {}
+    },
+    {
+      "title": "Right: Non-empty dependentRequired",
+      "description": "Including at least one dependent key is meaningful.",
+      "before": { "dependentRequired": { "meta": ["version"] } },
+      "after": { "dependentRequired": { "meta": ["version"] } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style" ],
   "dialects": {

@@ -12,6 +12,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Enum contains duplicates",
+      "description": "Each value in `enum` must be unique.",
+      "before": { "enum": ["a","b","a"] },
+      "after": { "enum": ["a","b"] }
+    },
+    {
+      "title": "Right: Deduplicated enum",
+      "description": "A cleaned enum with unique values is valid.",
+      "before": { "enum": [1,2,3] },
+      "after": { "enum": [1,2,3] }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

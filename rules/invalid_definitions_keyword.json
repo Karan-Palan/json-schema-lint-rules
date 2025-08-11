@@ -36,6 +36,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong (modern drafts): Using legacy definitions",
+      "description": "Use $defs instead of definitions in 2019-09 and newer drafts.",
+      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "definitions": { "uuid": { "type": "string", "format": "uuid" } } },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$defs": { "uuid": { "type": "string", "format": "uuid" } } }
+    },
+    {
+      "title": "Right (draft-07): definitions is valid",
+      "description": "Older drafts still use definitions.",
+      "before": { "$schema": "http://json-schema.org/draft-07/schema#", "definitions": { "id": { "type": "integer" } } },
+      "after": { "$schema": "http://json-schema.org/draft-07/schema#", "definitions": { "id": { "type": "integer" } } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {

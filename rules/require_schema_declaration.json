@@ -33,6 +33,20 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Missing $schema at root",
+      "description": "Always declare the dialect via $schema to avoid ambiguity.",
+      "before": { "type": "object", "properties": { "name": { "type": "string" } } },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "properties": { "name": { "type": "string" } } }
+    },
+    {
+      "title": "Right: $schema declared",
+      "description": "Declaring the metaschema is correct and recommended.",
+      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object" },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object" }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

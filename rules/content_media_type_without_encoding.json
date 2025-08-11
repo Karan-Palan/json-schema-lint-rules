@@ -28,6 +28,20 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Binary media type without encoding",
+      "description": "When using binary media types, specify how the string is encoded.",
+      "before": { "type": "string", "contentMediaType": "image/png" },
+      "after": { "type": "string", "contentMediaType": "image/png", "contentEncoding": "base64" }
+    },
+    {
+      "title": "Right: contentMediaType with encoding",
+      "description": "Pairing both gives consumers enough information to decode payloads.",
+      "before": { "type": "string", "contentMediaType": "application/pdf", "contentEncoding": "base64" },
+      "after": { "type": "string", "contentMediaType": "application/pdf", "contentEncoding": "base64" }
+    }
+  ],
   "autofixable": true,
   "categories": [ "readability", "style" ],
   "dialects": {

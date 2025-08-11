@@ -15,6 +15,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: contentSchema:{} is redundant",
+      "description": "An empty contentSchema adds no constraints.",
+      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "string", "contentSchema": {} },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "string" }
+    },
+    {
+      "title": "Right: Explicit content schema",
+      "description": "Providing a non-empty contentSchema is valid when paired with a media type.",
+      "before": { "type": "string", "contentMediaType": "application/json", "contentSchema": { "$id": "https://example.com/sub", "type": "object" } },
+      "after": { "type": "string", "contentMediaType": "application/json", "contentSchema": { "$id": "https://example.com/sub", "type": "object" } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style" ],
   "dialects": {

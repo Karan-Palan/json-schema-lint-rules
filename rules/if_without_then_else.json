@@ -27,6 +27,31 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: if without then/else",
+      "description": "`if` alone does nothing. Add `then` and/or `else` to make it effective.",
+      "before": {
+        "if": { "properties": { "flag": { "const": true } } }
+      },
+      "after": {
+        "if": { "properties": { "flag": { "const": true } } },
+        "then": { "required": [ "flag" ] }
+      }
+    },
+    {
+      "title": "Right: if with else only",
+      "description": "Using `else` alone is also valid; triggers when `if` fails.",
+      "before": {
+        "if": { "properties": { "type": { "const": "A" } } },
+        "else": { "not": { "required": [ "deprecated" ] } }
+      },
+      "after": {
+        "if": { "properties": { "type": { "const": "A" } } },
+        "else": { "not": { "required": [ "deprecated" ] } }
+      }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

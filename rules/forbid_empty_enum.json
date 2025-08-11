@@ -14,6 +14,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Empty enum is not allowed",
+      "description": "`enum` must contain at least one value; empty arrays always fail.",
+      "before": { "enum": [] },
+      "after": { "enum": ["option1"] }
+    },
+    {
+      "title": "Right: Non-empty enum",
+      "description": "A populated enum is valid.",
+      "before": { "enum": [1,2] },
+      "after": { "enum": [1,2] }
+    }
+  ],
   "autofixable": false,
   "categories": [ "correctness" ],
   "dialects": {

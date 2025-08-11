@@ -21,6 +21,20 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Single-value enum",
+      "description": "Replace enum with a single element by const for clarity.",
+      "before": { "enum": ["foo"] },
+      "after": { "const": "foo" }
+    },
+    {
+      "title": "Right: Multi-value enum remains enum",
+      "description": "Enums with multiple values are correct and should remain enums.",
+      "before": { "enum": ["foo", "bar"] },
+      "after": { "enum": ["foo", "bar"] }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {

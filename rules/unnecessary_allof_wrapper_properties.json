@@ -74,6 +74,20 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Wrapping properties in allOf",
+      "description": "Move non-conflicting properties from allOf to parent level.",
+      "before": { "type": "object", "allOf": [ {"properties": {"age": {"type":"integer"}} } ], "properties": {"name": {"type":"string"}} },
+      "after": { "type": "object", "properties": {"age": {"type":"integer"}, "name": {"type":"string"}} }
+    },
+    {
+      "title": "Right: Properties at parent level",
+      "description": "Defining properties directly makes the schema clearer.",
+      "before": { "type": "object", "properties": {"id": {"type":"string"}, "metadata": {"type":"object"}, "value": {"type":"number"} } },
+      "after": { "type": "object", "properties": {"id": {"type":"string"}, "metadata": {"type":"object"}, "value": {"type":"number"} } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style", "readability" ],
   "dialects": {

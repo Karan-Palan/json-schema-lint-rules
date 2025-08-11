@@ -23,6 +23,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: else:false can be simplified",
+      "description": "`if: S, else:false` is equivalent to just enforcing S.",
+      "before": { "if": { "properties": { "flag": { "const": true } } }, "else": false },
+      "after": { "properties": { "flag": { "const": true } } }
+    },
+    {
+      "title": "Right: Use if/then instead of else:false",
+      "description": "Prefer if/then or a positive schema when possible.",
+      "before": { "if": { "properties": { "flag": { "const": true } } }, "then": { "required": ["flag"] } },
+      "after": { "if": { "properties": { "flag": { "const": true } } }, "then": { "required": ["flag"] } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style" ],
   "dialects": {

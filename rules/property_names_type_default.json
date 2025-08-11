@@ -28,6 +28,20 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Redundant type in propertyNames",
+      "description": "Keys are always strings; remove type:'string' from propertyNames.",
+      "before": { "type": "object", "propertyNames": { "type": "string", "pattern": "^S_" } },
+      "after": { "type": "object", "propertyNames": { "pattern": "^S_" } }
+    },
+    {
+      "title": "Right: propertyNames with just pattern",
+      "description": "Constraining key names without redundant type is correct.",
+      "before": { "type": "object", "propertyNames": { "pattern": "^S_" } },
+      "after": { "type": "object", "propertyNames": { "pattern": "^S_" } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style", "readability" ],
   "dialects": {

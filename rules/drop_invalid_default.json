@@ -34,6 +34,33 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Default does not satisfy integer type",
+      "description": "Remove default when its value fails validation.",
+      "before": { "type": "integer", "default": "not-an-integer" },
+      "after": { "type": "integer" }
+    },
+    {
+      "title": "Wrong: Default object violates property types",
+      "description": "Default must be a valid instance of the schema.",
+      "before": {
+        "type": "object",
+        "properties": { "flag": { "type": "boolean" } },
+        "default": { "flag": "maybe" }
+      },
+      "after": {
+        "type": "object",
+        "properties": { "flag": { "type": "boolean" } }
+      }
+    },
+    {
+      "title": "Right: Valid default is acceptable",
+      "description": "A default that validates can remain.",
+      "before": { "type": "string", "minLength": 1, "default": "ok" },
+      "after": { "type": "string", "minLength": 1, "default": "ok" }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {

@@ -13,6 +13,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: propertyNames:{} has no effect",
+      "description": "Remove empty propertyNames to reduce noise.",
+      "before": { "type": "object", "propertyNames": {} },
+      "after": { "type": "object" }
+    },
+    {
+      "title": "Right: propertyNames with constraints",
+      "description": "Constraining property names via regex or other keywords is meaningful.",
+      "before": { "type": "object", "propertyNames": { "pattern": "^[a-z]+$" } },
+      "after": { "type": "object", "propertyNames": { "pattern": "^[a-z]+$" } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

@@ -21,6 +21,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: contentSchema without media type",
+      "description": "Without a contentMediaType, consumers cannot parse contentSchema payloads.",
+      "before": { "type": "string", "contentSchema": { "type": "object" } },
+      "after": { "type": "string", "contentMediaType": "application/json", "contentSchema": { "type": "object" } }
+    },
+    {
+      "title": "Right: JSON media type with schema",
+      "description": "Pair contentMediaType with a schema for non-JSON string payloads.",
+      "before": { "type": "string", "contentMediaType": "application/json", "contentSchema": { "type": "object" } },
+      "after": { "type": "string", "contentMediaType": "application/json", "contentSchema": { "type": "object" } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "readability", "style" ],
   "dialects": {

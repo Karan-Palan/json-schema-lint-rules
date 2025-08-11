@@ -33,6 +33,26 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Redundant scalar type with const",
+      "description": "`const` determines the instance type; a separate `type` is unnecessary.",
+      "before": { "type": "string", "const": "ready" },
+      "after": { "const": "ready" }
+    },
+    {
+      "title": "Wrong: Union includes the const's type redundantly",
+      "description": "A union that includes the const's primitive is redundant.",
+      "before": { "type": ["number","integer"], "const": 3.14 },
+      "after": { "const": 3.14 }
+    },
+    {
+      "title": "Right: const alone is sufficient",
+      "description": "Using only const is clear and correct.",
+      "before": { "const": false },
+      "after": { "const": false }
+    }
+  ],
   "autofixable": true,
   "categories": [ "readability" ],
   "dialects": {

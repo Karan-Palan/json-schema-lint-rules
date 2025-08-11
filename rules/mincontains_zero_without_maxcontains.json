@@ -23,6 +23,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: minContains 0 with no maxContains",
+      "description": "Without an upper bound, minContains:0 places no restriction.",
+      "before": { "type": "array", "contains": {"type":"number"}, "minContains": 0 },
+      "after": { "type": "array", "contains": {"type":"number"}, "minContains": 0, "maxContains": 10 }
+    },
+    {
+      "title": "Right: minContains with explicit cap",
+      "description": "Adding maxContains makes the constraint meaningful.",
+      "before": { "type": "array", "contains": {"type":"number"}, "minContains": 0, "maxContains": 5 },
+      "after": { "type": "array", "contains": {"type":"number"}, "minContains": 0, "maxContains": 5 }
+    }
+  ],
   "autofixable": false,
   "categories": [ "style", "readability" ],
   "dialects": {

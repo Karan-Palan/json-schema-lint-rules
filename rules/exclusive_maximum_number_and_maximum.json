@@ -15,6 +15,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Keep only the stricter upper bound",
+      "description": "When both maximum and exclusiveMaximum exist, one is redundant. Retain the stricter constraint.",
+      "before": { "type": "number", "exclusiveMaximum": 5, "maximum": 6 },
+      "after": { "type": "number", "exclusiveMaximum": 5 }
+    },
+    {
+      "title": "Right: Single upper bound is clear",
+      "description": "Having only exclusiveMaximum is fine and unambiguous.",
+      "before": { "type": "number", "exclusiveMaximum": 10 },
+      "after": { "type": "number", "exclusiveMaximum": 10 }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

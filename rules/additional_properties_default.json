@@ -15,6 +15,36 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Explicit additionalProperties:true on a simple object",
+      "description": "True is the default; stating it adds noise without changing validation.",
+      "before": { "type": "object", "additionalProperties": true },
+      "after": { "type": "object" }
+    },
+    {
+      "title": "Wrong: Redundant true at nested level",
+      "description": "Avoid explicitly setting true on nested object shapes as well.",
+      "before": {
+        "type": "object",
+        "properties": {
+          "user": { "type": "object", "additionalProperties": true }
+        }
+      },
+      "after": {
+        "type": "object",
+        "properties": {
+          "user": { "type": "object" }
+        }
+      }
+    },
+    {
+      "title": "Right: Explicitly disallow extras",
+      "description": "Setting additionalProperties:false is a meaningful constraint, not redundant.",
+      "before": { "type": "object", "additionalProperties": false },
+      "after": { "type": "object", "additionalProperties": false }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style" ],
   "dialects": {

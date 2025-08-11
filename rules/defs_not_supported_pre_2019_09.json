@@ -26,6 +26,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong (draft-07): Using $defs before 2019-09",
+      "description": "$defs is not available in draft-07; use definitions instead.",
+      "before": { "$schema": "http://json-schema.org/draft-07/schema#", "$ref": "#/$defs/uuid", "$defs": { "uuid": { "type": "string", "format": "uuid" } } },
+      "after": { "$schema": "http://json-schema.org/draft-07/schema#", "$ref": "#/definitions/uuid", "definitions": { "uuid": { "type": "string", "format": "uuid" } } }
+    },
+    {
+      "title": "Right (draft-2020-12): Use $defs",
+      "description": "In modern drafts, $defs is the correct container for reusable subschemas.",
+      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$defs": { "id": { "type": "integer" } } },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "$defs": { "id": { "type": "integer" } } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {

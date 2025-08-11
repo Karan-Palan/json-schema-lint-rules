@@ -28,6 +28,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Missing title/description at root",
+      "description": "Provide human-readable annotations for the root schema.",
+      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object" },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "title": "User e-mail payload", "description": "Schema for validating an e-mail address submission.", "type": "object" }
+    },
+    {
+      "title": "Right: Title/description present",
+      "description": "Having both at the root is correct.",
+      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "title": "User", "description": "User resource", "type": "object" },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "title": "User", "description": "User resource", "type": "object" }
+    }
+  ],
   "autofixable": false,
   "categories": [ "readability", "style" ],
   "dialects": {

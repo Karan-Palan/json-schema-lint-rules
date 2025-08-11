@@ -15,6 +15,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: minContains without contains",
+      "description": "minContains has no effect without a contains schema.",
+      "before": { "type": "array", "minContains": 2 },
+      "after": { "type": "array" }
+    },
+    {
+      "title": "Right: contains with minContains",
+      "description": "Pair minContains with contains to constrain matching elements.",
+      "before": { "type": "array", "contains": {"type":"number"}, "minContains": 2 },
+      "after": { "type": "array", "contains": {"type":"number"}, "minContains": 2 }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

@@ -19,6 +19,35 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: additionalItems with schema-based items",
+      "description": "When `items` is a schema, `additionalItems` is ignored and should not be used.",
+      "before": {
+        "type": "array",
+        "items": { "type": "string" },
+        "additionalItems": false
+      },
+      "after": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    {
+      "title": "Right: additionalItems with tuple validation",
+      "description": "`additionalItems` is valid only when `items` is an array (tuple).",
+      "before": {
+        "type": "array",
+        "items": [ { "type": "string" } ],
+        "additionalItems": false
+      },
+      "after": {
+        "type": "array",
+        "items": [ { "type": "string" } ],
+        "additionalItems": false
+      }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

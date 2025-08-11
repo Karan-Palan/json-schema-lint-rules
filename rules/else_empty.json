@@ -25,6 +25,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: else is an empty schema",
+      "description": "Empty else adds no constraint; remove or add restrictions.",
+      "before": { "if": { "properties": { "flag": { "const": true } } }, "else": {} },
+      "after": { "if": { "properties": { "flag": { "const": true } } } }
+    },
+    {
+      "title": "Right: else with actual constraints",
+      "description": "Provide meaningful constraints under else.",
+      "before": { "if": { "properties": { "flag": { "const": true } } }, "else": { "required": ["flag"] } },
+      "after": { "if": { "properties": { "flag": { "const": true } } }, "else": { "required": ["flag"] } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

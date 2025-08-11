@@ -14,6 +14,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Relative metaschema URI",
+      "description": "$schema must be an absolute, recognised draft URI.",
+      "before": { "$schema": "./schema", "type": "string" },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "string" }
+    },
+    {
+      "title": "Right: Absolute metaschema URI",
+      "description": "Using an official absolute metaschema URI is correct.",
+      "before": { "$schema": "https://json-schema.org/draft/2019-09/schema", "type": "object" },
+      "after": { "$schema": "https://json-schema.org/draft/2019-09/schema", "type": "object" }
+    }
+  ],
   "autofixable": false,
   "categories": [ "correctness" ],
   "dialects": {

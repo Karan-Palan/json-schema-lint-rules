@@ -12,6 +12,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Tautological empty dependency list",
+      "description": "A dependency array with no properties is a no-op.",
+      "before": { "dependencies": { "foo": [] } },
+      "after": {}
+    },
+    {
+      "title": "Right: Non-empty dependency list",
+      "description": "Declaring actual dependent properties is valid.",
+      "before": { "dependencies": { "foo": ["bar"] } },
+      "after": { "dependencies": { "foo": ["bar"] } }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style" ],
   "dialects": {

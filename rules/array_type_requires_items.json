@@ -21,6 +21,20 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Array type without items",
+      "description": "Declare `items` or tuple constraints to describe elements.",
+      "before": { "type": "array" },
+      "after": { "type": "array", "items": { "type": "string" } }
+    },
+    {
+      "title": "Right: Tuple validation",
+      "description": "Specifying items as an array is valid when positions differ.",
+      "before": { "type": "array", "items": [ {"type":"string"}, {"type":"integer"} ] },
+      "after": { "type": "array", "items": [ {"type":"string"}, {"type":"integer"} ] }
+    }
+  ],
   "autofixable": true,
   "categories": [ "readability", "correctness" ],
   "dialects": {

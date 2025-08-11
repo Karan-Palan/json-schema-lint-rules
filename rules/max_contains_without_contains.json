@@ -15,6 +15,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: maxContains without contains",
+      "description": "maxContains is meaningless without contains.",
+      "before": { "type": "array", "maxContains": 1 },
+      "after": { "type": "array" }
+    },
+    {
+      "title": "Right: contains with maxContains",
+      "description": "Pair maxContains with contains to cap matching elements.",
+      "before": { "type": "array", "contains": {"type":"string"}, "maxContains": 3 },
+      "after": { "type": "array", "contains": {"type":"string"}, "maxContains": 3 }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

@@ -38,6 +38,20 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Same field marked readOnly and writeOnly",
+      "description": "A property cannot be both input-only and output-only.",
+      "before": { "type": "object", "properties": { "password": { "type": "string", "readOnly": true, "writeOnly": true } } },
+      "after": { "type": "object", "properties": { "password": { "type": "string", "writeOnly": true } } }
+    },
+    {
+      "title": "Right: Distinct read/write fields",
+      "description": "One property can be writeOnly while another is readOnly.",
+      "before": { "type": "object", "properties": { "password": { "type": "string", "writeOnly": true }, "id": { "type": "string", "readOnly": true } } },
+      "after": { "type": "object", "properties": { "password": { "type": "string", "writeOnly": true }, "id": { "type": "string", "readOnly": true } } }
+    }
+  ],
   "autofixable": false,
   "categories": [ "correctness", "readability" ],
   "dialects": {

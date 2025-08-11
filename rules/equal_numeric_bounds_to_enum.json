@@ -24,6 +24,20 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Equal bounds expressed via min/max",
+      "description": "Use a single-value enum to express the exact value.",
+      "before": { "type": "number", "minimum": 5, "maximum": 5 },
+      "after": { "enum": [5] }
+    },
+    {
+      "title": "Right: Single-element enum",
+      "description": "An enum with one numeric value is valid and explicit.",
+      "before": { "enum": [42] },
+      "after": { "enum": [42] }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style", "readability" ],
   "dialects": {

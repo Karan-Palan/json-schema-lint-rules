@@ -14,6 +14,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Non-integer maximum for integer type",
+      "description": "Use floor for maximum on integer schemas.",
+      "before": { "type": "integer", "maximum": 7.8 },
+      "after": { "type": "integer", "maximum": 7 }
+    },
+    {
+      "title": "Right: Integer maximum",
+      "description": "An integer-typed schema with an integer maximum is correct.",
+      "before": { "type": "integer", "maximum": 10 },
+      "after": { "type": "integer", "maximum": 10 }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style" ],
   "dialects": {

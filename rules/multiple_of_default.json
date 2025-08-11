@@ -13,6 +13,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: multipleOf 1 is redundant",
+      "description": "Dropping multipleOf:1 clarifies that any integer is accepted.",
+      "before": { "type": "integer", "multipleOf": 1 },
+      "after": { "type": "integer" }
+    },
+    {
+      "title": "Right: Non-trivial divisor is meaningful",
+      "description": "A divisor other than 1 constrains the value set.",
+      "before": { "type": "number", "multipleOf": 0.5 },
+      "after": { "type": "number", "multipleOf": 0.5 }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style", "readability" ],
   "dialects": {

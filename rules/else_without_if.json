@@ -15,6 +15,28 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: else present without if",
+      "description": "`else` has no meaning without a sibling `if`.",
+      "before": { "$schema": "https://json-schema.org/draft/2020-12/schema", "else": { "type": "string" } },
+      "after": { "$schema": "https://json-schema.org/draft/2020-12/schema" }
+    },
+    {
+      "title": "Right: Valid conditional with if/else",
+      "description": "An `else` branch is valid when paired with `if`.",
+      "before": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "if": { "properties": { "premium": { "const": true } } },
+        "else": { "not": { "required": ["discount"] } }
+      },
+      "after": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "if": { "properties": { "premium": { "const": true } } },
+        "else": { "not": { "required": ["discount"] } }
+      }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness" ],
   "dialects": {

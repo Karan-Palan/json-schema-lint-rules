@@ -29,6 +29,50 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Duplicate identical branches",
+      "description": "Having two identical string branches makes oneOf ambiguous.",
+      "before": {
+        "oneOf": [ { "type": "string" }, { "type": "string" } ]
+      },
+      "after": {
+        "oneOf": [ { "type": "string", "minLength": 1 }, { "type": "number" } ]
+      }
+    },
+    {
+      "title": "Wrong: Semantically equivalent branches",
+      "description": "Two branches that both accept the same set of instances (e.g., integer vs number with multipleOf:1) are duplicates.",
+      "before": {
+        "oneOf": [
+          { "type": "integer" },
+          { "type": "number", "multipleOf": 1 }
+        ]
+      },
+      "after": {
+        "oneOf": [
+          { "type": "integer" },
+          { "type": "number", "multipleOf": 0.5 }
+        ]
+      }
+    },
+    {
+      "title": "Right: Mutually exclusive by constraint",
+      "description": "Branches that cannot both match at once are valid usage of oneOf.",
+      "before": {
+        "oneOf": [
+          { "type": "string", "pattern": "^[A-Z]+$" },
+          { "type": "string", "pattern": "^[0-9]+$" }
+        ]
+      },
+      "after": {
+        "oneOf": [
+          { "type": "string", "pattern": "^[A-Z]+$" },
+          { "type": "string", "pattern": "^[0-9]+$" }
+        ]
+      }
+    }
+  ],
   "autofixable": false,
   "categories": [ "correctness", "readability" ],
   "dialects": {

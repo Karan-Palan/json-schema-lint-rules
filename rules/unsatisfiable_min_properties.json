@@ -15,6 +15,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: minProperties redundant with required",
+      "description": "If required has N items and minProperties ≤ N, minProperties adds nothing.",
+      "before": { "type": "object", "required": ["a","b"], "minProperties": 2 },
+      "after": { "type": "object", "required": ["a","b"] }
+    },
+    {
+      "title": "Right: minProperties higher than required",
+      "description": "Using a larger minProperties than required can add a constraint.",
+      "before": { "type": "object", "required": ["a","b"], "minProperties": 3 },
+      "after": { "type": "object", "required": ["a","b"], "minProperties": 3 }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style" ],
   "dialects": {

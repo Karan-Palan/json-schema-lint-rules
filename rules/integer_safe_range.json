@@ -18,6 +18,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Integer bounds outside IEEE-754 safe range",
+      "description": "Constrain to ±9007199254740991 to avoid precision loss in JavaScript environments.",
+      "before": { "type": "integer", "minimum": -90071992547409980, "maximum": 90071992547409980 },
+      "after": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 }
+    },
+    {
+      "title": "Right: Inside safe range",
+      "description": "Bounds within the safe range are fine.",
+      "before": { "type": "integer", "minimum": -10, "maximum": 10 },
+      "after": { "type": "integer", "minimum": -10, "maximum": 10 }
+    }
+  ],
   "autofixable": true,
   "categories": [ "safety", "readability" ],
   "dialects": {

@@ -23,6 +23,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: oneOf with a single branch",
+      "description": "A single-schema oneOf is pointless; use the schema directly or add another distinct alternative.",
+      "before": { "oneOf": [ { "type": "string" } ] },
+      "after": { "type": "string" }
+    },
+    {
+      "title": "Right: oneOf with at least two branches",
+      "description": "Using two or more distinct alternatives is valid.",
+      "before": { "oneOf": [ {"type":"string"}, {"type":"number"} ] },
+      "after": { "oneOf": [ {"type":"string"}, {"type":"number"} ] }
+    }
+  ],
   "autofixable": false,
   "categories": [ "correctness", "readability" ],
   "dialects": {

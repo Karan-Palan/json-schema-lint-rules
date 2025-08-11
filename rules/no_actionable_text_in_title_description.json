@@ -15,6 +15,20 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Action items in title/description",
+      "description": "Move TODO/FIXME etc. to $comment; keep annotations user-facing.",
+      "before": { "title": "TODO: refine schema", "description": "FIXME: confirm", "$comment": "" },
+      "after": { "title": "User object", "description": "Represents a user", "$comment": "TODO: refine schema · FIXME: confirm" }
+    },
+    {
+      "title": "Right: Clean annotations with $comment",
+      "description": "User-facing annotations plus a technical $comment.",
+      "before": { "title": "Order", "description": "Purchase order", "$comment": "Internal: v2 soon" },
+      "after": { "title": "Order", "description": "Purchase order", "$comment": "Internal: v2 soon" }
+    }
+  ],
   "autofixable": true,
   "categories": [ "readability", "style" ],
   "dialects": {

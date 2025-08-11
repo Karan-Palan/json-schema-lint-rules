@@ -23,6 +23,26 @@
       "doc": true
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Duplicate identical allOf branches",
+      "description": "Remove exact duplicates; they add no value.",
+      "before": { "allOf": [ {"type":"string"}, {"type":"string"} ] },
+      "after": { "allOf": [ {"type":"string"} ] }
+    },
+    {
+      "title": "Wrong: Semantically equivalent branches",
+      "description": "Branches that accept the same instances are duplicates.",
+      "before": { "allOf": [ {"type":"integer"}, {"type":"number", "multipleOf": 1} ] },
+      "after": { "allOf": [ {"type":"integer"} ] }
+    },
+    {
+      "title": "Right: Complementary constraints",
+      "description": "Distinct constraints that narrow the set together are valid.",
+      "before": { "allOf": [ {"type":"string"}, {"minLength": 5} ] },
+      "after": { "allOf": [ {"type":"string"}, {"minLength": 5} ] }
+    }
+  ],
   "autofixable": true,
   "categories": [ "readability", "style" ],
   "dialects": {

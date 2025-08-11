@@ -40,6 +40,26 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Wrong: Enum plus unrelated constraints",
+      "description": "When enum is present, additional validation keywords are redundant or contradictory.",
+      "before": { "enum": ["one","two"], "type": "string", "minLength": 3 },
+      "after": { "enum": ["one","two"] }
+    },
+    {
+      "title": "Wrong: Numeric constraints with enum",
+      "description": "Minimum/maximum do not add value when enum is present.",
+      "before": { "enum": [1,2,3], "minimum": 0 },
+      "after": { "enum": [1,2,3] }
+    },
+    {
+      "title": "Right: Pure enum",
+      "description": "Enum alone clearly communicates allowed values.",
+      "before": { "enum": [10,5] },
+      "after": { "enum": [10,5] }
+    }
+  ],
   "autofixable": true,
   "categories": [ "correctness", "readability" ],
   "dialects": {

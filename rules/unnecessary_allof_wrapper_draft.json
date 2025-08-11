@@ -62,6 +62,14 @@
       }
     }
   ],
+  "comprehensiveExamples": [
+    {
+      "title": "Right (draft-07): Keep $ref inside allOf",
+      "description": "Older drafts require the $ref inside allOf; do not unwrap.",
+      "before": { "$schema": "http://json-schema.org/draft-07/schema#", "allOf": [ {"$ref": "#/definitions/User"} ] },
+      "after": { "$schema": "http://json-schema.org/draft-07/schema#", "allOf": [ {"$ref": "#/definitions/User"} ] }
+    }
+  ],
   "autofixable": true,
   "categories": [ "style", "readability" ],
   "dialects": {
