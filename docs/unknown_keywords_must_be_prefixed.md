@@ -29,8 +29,8 @@ Any keyword not defined in the active dialect must be vendor-prefixed (e.g. `x-f
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
-  "x-fooBar": true
+  "x-fooBar": true,
+  "type": "object"
 }
 ```
 </details>
