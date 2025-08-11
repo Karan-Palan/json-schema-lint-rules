@@ -1,13 +1,14 @@
 {
   "type": "module",
   "devDependencies": {
-    "@sourcemeta/jsonschema": "^9.3.1"
+    "@sourcemeta/jsonschema": "11.1.0"
   },
   "license": "MIT",
   "name": "jsonschema-lint-rules",
   "scripts": {
     "build": "node generate.mjs",
+    "examples:populate-detailed": "node ./scripts/populate_examples_detailed.mjs",
     "validate:rules": "bash -c 'jsonschema validate rule.schema.json $(find rules -name \"*.json\")'",
-    "format:rules": "jsonschema fmt ./rules rule.schema.json" 
+    "format:rules": "jsonschema fmt ./rules rule.schema.json"
   }
 }
