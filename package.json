@@ -1,7 +1,7 @@
 {
   "type": "module",
   "devDependencies": {
-    "@sourcemeta/jsonschema": "^9.3.1"
+    "@sourcemeta/jsonschema": "^11.8.0"
   },
   "license": "MIT",
   "name": "jsonschema-lint-rules",
