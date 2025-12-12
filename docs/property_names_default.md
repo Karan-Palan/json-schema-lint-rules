@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`propertyNames: {}` does not impose any constraint on the instance object, so the keyword can be removed.
+Setting the `propertyNames` keyword to the empty object does not add any further constraint.
 
 > **Message shown to user:**
 > Remove empty `propertyNames`; it has no effect.

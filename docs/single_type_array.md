@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`type` may be an array to express a union, but if it contains exactly one element it should be written as a scalar for clarity and easier downstream processing.
+Setting `type` to an array of a single type is the same as directly declaring such type.
 
 > **Message shown to user:**
 > Replace the array with its single type value.

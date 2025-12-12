@@ -1,13 +1,13 @@
 ---
 title: Wrapping any keyword other than \`$ref\` in \`allOf\` is unnecessary
-code: unnecessary_allof_wrapper_draft
+code: unnecessary_allof_ref_wrapper_draft
 categories: style, readability
 dialects: draft4, draft6, draft7
 autofixable: true
 ---
 
 ## Description
-In Draft 4-7, keywords other than `$ref` can be moved out of `allOf` to the parent level when they don't conflict with existing keywords.
+Wrapping `$ref` in `allOf` is only necessary if there are other sibling keywords.
 
 > **Message shown to user:**
 > Move keywords from `allOf` to parent level when they don't conflict.

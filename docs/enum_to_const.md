@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Setting `type` alongside `enum` is considered an anti-pattern, as the enumeration already implies its types.
+An `enum` of a single value can be expressed as `const`.
 
 > **Message shown to user:**
 > Drop the redundant `type` keyword (or drop `enum`).

@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-The official dialect URI of Draft 7 and older versions must include the trailing `#` fragment (e.g. `…schema#`).
+The official dialect URI of Draft 7 and older versions must contain the empty fragment.
 
 > **Message shown to user:**
 > Append a trailing `#` to the metaschema URI.

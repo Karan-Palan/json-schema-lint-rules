@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-When both `maximum` and numeric `exclusiveMaximum` are present, one of them is redundant. Retain the stricter limit and drop the other.
+Setting both `exclusiveMinimum` and `minimum` at the same time is considered an anti-pattern. You should choose one.
 
 > **Message shown to user:**
 > Drop the looser upper-bound keyword; it’s redundant.

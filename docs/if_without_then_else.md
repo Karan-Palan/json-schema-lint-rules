@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-A lone `if` keyword has no impact on validation; at least one of `then` or `else` must accompany it.
+The `if` keyword is meaningless without the presence of the `then` or `else` keywords.
 
 > **Message shown to user:**
 > Add `then`, `else`, or remove `if`.

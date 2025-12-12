@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-While `unevaluatedProperties:true` (or `{}`) may appear redundant, removing it can change schema behavior in some contexts. Verify it's safe to remove before doing so.
+Setting the `unevaluatedProperties` keyword to the true schema does not add any further constraint
 
 > **Message shown to user:**
 > Verify if `unevaluatedProperties` can be safely removed.

@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-If the number of items in `required` ≥ `minProperties`, the `minProperties` keyword is redundant.
+Setting `minProperties` to a number less than `required` does not add any further constraint.
 
 > **Message shown to user:**
 > Remove `minProperties` – the `required` list already guarantees that many properties.

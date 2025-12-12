@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Using `dependencies` to declare that a property depends on itself (when it is already in `required`) is unnecessary and needlessly complex.
+Defining requirements for a property using `dependencies` that is already marked as required is an unnecessarily complex use of `dependencies`.
 
 > **Message shown to user:**
 > Remove tautological entries from `dependencies` (property is already required).

@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Setting the `contentSchema` keyword to the true schema (or `{}`) does not add any further constraint.
+Setting the `contentSchema` keyword to the true schema does not add any further constraint.
 
 > **Message shown to user:**
 > Remove `contentSchema` when it is `true` or empty.

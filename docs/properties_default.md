@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`properties:{}` does not impose any constraints. Drop it to reduce clutter.
+Setting the `properties` keyword to the empty object does not add any further constraint.
 
 > **Message shown to user:**
 > Delete the empty `properties` object.

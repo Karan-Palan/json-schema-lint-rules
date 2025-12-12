@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`propertyNames` always validates **object property keys**, which are strings by definition; adding `type:"string"` is unnecessary noise.
+Setting the `type` keyword to `string` inside `propertyNames` does not add any further constraint.
 
 > **Message shown to user:**
 > Remove the redundant `type:"string"` inside `propertyNames`.

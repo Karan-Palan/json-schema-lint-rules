@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-If an instance is guaranteed to be an integer, setting a real number upper bound is the same as flooring that bound.
+If an instance is guaranteed to be an integer, setting a real number upper bound is the same as a floor of that bound.
 
 > **Message shown to user:**
 > Floor the real `maximum` to an integer value.

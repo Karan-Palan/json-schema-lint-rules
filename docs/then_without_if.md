@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`then` has effect only when paired with `if`. Without `if` it can be removed.
+The `then` keyword is meaningless without the presence of the `if` keyword.
 
 > **Message shown to user:**
 > Remove `then` because there is no matching `if`.

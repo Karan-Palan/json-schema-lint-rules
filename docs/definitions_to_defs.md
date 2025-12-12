@@ -1,13 +1,13 @@
 ---
 title: Do not use $defs before draft-2019-09
-code: defs_not_supported_draft
+code: definitions_to_defs
 categories: correctness, readability
 dialects: draft4, draft6, draft7
 autofixable: true
 ---
 
 ## Description
-$defs was introduced in draft-2019-09. For draft-04/06/07 use the legacy `definitions` keyword instead.
+`definitions` was superseded by `$defs` in 2019-09 and later versions.
 
 > **Message shown to user:**
 > Replace `$defs` with `definitions`, and update any `$ref`s that target it.

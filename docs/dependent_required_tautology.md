@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Specifying dependents for a property that is itself in `required` adds no constraint and complicates the schema.
+Defining requirements for a property using `dependentRequired` that is already marked as required is an unnecessarily complex use of `dependentRequired`.
 
 > **Message shown to user:**
 > Remove tautological `dependentRequired` entries (property is already required).

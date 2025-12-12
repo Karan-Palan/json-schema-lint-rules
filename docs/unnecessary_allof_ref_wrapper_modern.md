@@ -1,13 +1,13 @@
 ---
 title: Remove single-\`$ref\` \`allOf\` wrapper (draft-2019-09, 2020-12 only)
-code: unnecessary_allof_wrapper_modern
+code: unnecessary_allof_ref_wrapper_modern
 categories: readability, style
 dialects: 2019-09, 2020-12
 autofixable: true
 ---
 
 ## Description
-In draft-04/06/07 the `$ref` MUST remain inside the `allOf`; starting in 2019-09 a solitary `$ref` does not require the wrapper.
+Wrapping `$ref` in `allOf` was only necessary in JSON Schema Draft 7 and older.
 
 > **Message shown to user:**
 > Inline the `$ref` and delete the redundant `allOf` wrapper.

@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Setting duplicate subschemas in `anyOf` is redundant and only adds unnecessary validation work.
+Setting duplicate subschemas in `anyOf` is redundant, as it produces unnecessary additional validation that is guaranteed to not affect the validation result.
 
 > **Message shown to user:**
 > Remove duplicate schemas; keep one representative branch.

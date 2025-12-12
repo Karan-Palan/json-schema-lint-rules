@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`then` set to the empty schema (`{}`) does not restrict validation and is most likely ineffective.
+`Setting the `then` keyword to the empty schema does not add any further constraint.
 
 > **Message shown to user:**
 > Remove empty `then` or add restrictions.

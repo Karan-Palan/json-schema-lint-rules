@@ -1,13 +1,13 @@
 ---
 title: Prefix unknown keywords with x-
-code: unknown_keywords_must_be_prefixed
+code: unknown_keywords_prefix
 categories: correctness, readability
 dialects: 2019-09, 2020-12, draft4, draft6, draft7
 autofixable: true
 ---
 
 ## Description
-Any keyword not defined in the active dialect must be vendor-prefixed (e.g. `x-foo`). This avoids accidental clashes with future spec keywords.
+Future versions of JSON Schema will refuse to evaluate unknown keywords or custom keywords from optional vocabularies that don't have an x- prefix.
 
 > **Message shown to user:**
 > Prefix unknown keyword(s) with "x-".
@@ -29,8 +29,8 @@ Any keyword not defined in the active dialect must be vendor-prefixed (e.g. `x-f
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
-  "x-fooBar": true
+  "x-fooBar": true,
+  "type": "object"
 }
 ```
 </details>

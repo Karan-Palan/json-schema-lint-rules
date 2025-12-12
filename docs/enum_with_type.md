@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`enum` already restricts the allowed primitive types. A separate `type` is redundant or can even contradict the enumeration.
+Setting `type` alongside `enum` is considered an anti-pattern, as the enumeration choices already imply their respective types.
 
 > **Message shown to user:**
 > Delete the redundant `type` keyword (or drop `enum`).

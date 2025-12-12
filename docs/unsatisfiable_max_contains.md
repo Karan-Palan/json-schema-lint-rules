@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-If `maxContains` is present it must be ≥ `minContains` (or ≥ 1 if `minContains` is omitted).
+Setting the `maxContains` keyword to a number greater than or equal to the array upper bound does not add any further constraint.
 
 > **Message shown to user:**
 > Increase `maxContains` or lower `minContains`.

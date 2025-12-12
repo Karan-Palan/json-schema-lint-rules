@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-The `contentSchema` keyword has no effect unless `contentMediaType` is also present.
+The `contentSchema` keyword is meaningless without the presence of the `contentMediaType` keyword.
 
 > **Message shown to user:**
 > Add `contentMediaType` or remove `contentSchema`.

@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Setting duplicate values in `enum` is an anti-pattern and adds no information.
+Setting duplicate values in `enum` is considered an anti-pattern.
 
 > **Message shown to user:**
 > Remove duplicate values from the `enum` array.

@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-If an instance is guaranteed to be an integer, setting a real number lower bound is the same as ceiling that bound.
+If an instance is guaranteed to be an integer, setting a real number lower bound is the same as a ceil of that lower bound.
 
 > **Message shown to user:**
 > Ceil the real `minimum` to an integer value.

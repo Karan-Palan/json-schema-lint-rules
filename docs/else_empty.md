@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Setting the else keyword to the empty schema does not add any further constraint.
+Setting the `else` keyword to the empty schema does not add any further constraint.
 
 > **Message shown to user:**
 > Remove the empty else schema or add restrictions.

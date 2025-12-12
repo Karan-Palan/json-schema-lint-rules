@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-If both `minimum` and numeric `exclusiveMinimum` coexist, remove the weaker bound.
+Setting both `exclusiveMaximum` and `maximum` at the same time is considered an anti-pattern. You should choose one.
 
 > **Message shown to user:**
 > Drop the weaker lower-bound keyword; it’s redundant.

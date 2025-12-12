@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-In Draft 7 and older dialects, keywords that are siblings of `$ref` are never evaluated.
+In Draft 7 and older dialects, keywords sibling to `$ref` are never evaluated.
 
 > **Message shown to user:**
 > Remove sibling keywords – in drafts ≤ 7 only `$ref` is evaluated.

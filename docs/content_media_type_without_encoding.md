@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-The `contentMediaType` keyword has no effect unless `contentEncoding` is also present.
+The `contentMediaType` keyword is meaningless without the presence of the `contentEncoding` keyword.
 
 > **Message shown to user:**
 > Add `contentEncoding` or remove `contentMediaType`.

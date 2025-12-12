@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-Setting duplicate subschemas in `allOf` is redundant and only adds unnecessary validation work.
+Setting duplicate subschemas in `allOf` is redundant, as it produces unnecessary additional validation that is guaranteed to not affect the validation result.
 
 > **Message shown to user:**
 > Remove duplicate branches; keep just one instance.

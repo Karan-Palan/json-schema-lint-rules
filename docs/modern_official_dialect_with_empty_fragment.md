@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-The official dialect URI of 2019-09 and newer versions must not contain the empty fragment (no trailing #).
+The official dialect URI of 2019-09 and newer versions must not contain the empty fragment.
 
 > **Message shown to user:**
 > Remove the trailing `#` from the metaschema URI.

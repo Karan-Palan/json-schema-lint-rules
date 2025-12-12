@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-The `additionalItems` keyword is ignored whenever `items` is a single schema object rather than an array.
+The `additionalItems` keyword is ignored when the `items` keyword is set to a schema.
 
 > **Message shown to user:**
 > Remove `additionalItems` (or convert `items` into an array).

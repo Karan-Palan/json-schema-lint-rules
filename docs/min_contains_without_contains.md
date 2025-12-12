@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`minContains` has no effect unless a `contains` schema is also provided.
+The `minContains` keyword is meaningless without the presence of the `contains` keyword.
 
 > **Message shown to user:**
 > Remove `minContains` or add a `contains` keyword.

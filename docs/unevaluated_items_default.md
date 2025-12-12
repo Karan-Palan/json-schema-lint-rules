@@ -7,7 +7,7 @@ autofixable: true
 ---
 
 ## Description
-`unevaluatedItems` set to `true` or `{}` does not change validation; drop it for brevity.
+Setting the `unevaluatedItems` keyword to the true schema does not add any further constraint.
 
 > **Message shown to user:**
 > Remove redundant `unevaluatedItems`.
