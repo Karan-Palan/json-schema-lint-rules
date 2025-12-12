@@ -1,6 +1,6 @@
 {
   "title": "`propertyNames` is an empty schema",
-  "description": "`propertyNames: {}` does not impose any constraint on the instance object, so the keyword can be removed.",
+  "description": "Setting the `propertyNames` keyword to the empty object does not add any further constraint.",
   "examples": [
     {
       "after": {

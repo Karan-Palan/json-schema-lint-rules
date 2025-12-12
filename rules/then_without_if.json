@@ -1,6 +1,6 @@
 {
   "title": "`then` without `if` is ignored",
-  "description": "`then` has effect only when paired with `if`. Without `if` it can be removed.",
+  "description": "The `then` keyword is meaningless without the presence of the `if` keyword.",
   "examples": [
     {
       "after": {

@@ -1,6 +1,6 @@
 {
   "title": "`minContains` without `contains` is meaningless",
-  "description": "`minContains` has no effect unless a `contains` schema is also provided.",
+  "description": "The `minContains` keyword is meaningless without the presence of the `contains` keyword.",
   "examples": [
     {
       "after": {

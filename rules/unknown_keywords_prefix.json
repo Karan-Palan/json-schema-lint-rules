@@ -1,6 +1,6 @@
 {
   "title": "Prefix unknown keywords with x-",
-  "description": "Any keyword not defined in the active dialect must be vendor-prefixed (e.g. `x-foo`). This avoids accidental clashes with future spec keywords.",
+  "description": "Future versions of JSON Schema will refuse to evaluate unknown keywords or custom keywords from optional vocabularies that don't have an x- prefix.",
   "examples": [
     {
       "after": {

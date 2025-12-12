@@ -1,6 +1,6 @@
 {
   "title": "Real `maximum` on integer schema",
-  "description": "If an instance is guaranteed to be an integer, setting a real number upper bound is the same as flooring that bound.",
+  "description": "If an instance is guaranteed to be an integer, setting a real number upper bound is the same as a floor of that bound.",
   "examples": [
     {
       "after": {

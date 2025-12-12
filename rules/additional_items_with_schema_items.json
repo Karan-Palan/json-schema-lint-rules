@@ -1,6 +1,6 @@
 {
   "title": "`additionalItems` ignored when `items` is a schema",
-  "description": "The `additionalItems` keyword is ignored whenever `items` is a single schema object rather than an array.",
+  "description": "The `additionalItems` keyword is ignored when the `items` keyword is set to a schema.",
   "examples": [
     {
       "after": {

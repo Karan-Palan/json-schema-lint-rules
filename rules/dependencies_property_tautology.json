@@ -1,6 +1,6 @@
 {
   "title": "Property already required – `dependencies` tautology",
-  "description": "Using `dependencies` to declare that a property depends on itself (when it is already in `required`) is unnecessary and needlessly complex.",
+  "description": "Defining requirements for a property using `dependencies` that is already marked as required is an unnecessarily complex use of `dependencies`.",
   "examples": [
     {
       "after": {

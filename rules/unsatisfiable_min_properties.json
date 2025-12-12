@@ -1,6 +1,6 @@
 {
   "title": "`minProperties` covered by `required`",
-  "description": "If the number of items in `required` ≥ `minProperties`, the `minProperties` keyword is redundant.",
+  "description": "Setting `minProperties` to a number less than `required` does not add any further constraint.",
   "examples": [
     {
       "after": {

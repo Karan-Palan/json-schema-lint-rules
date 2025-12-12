@@ -1,6 +1,6 @@
 {
   "title": "Collapse duplicate schemas in `allOf`",
-  "description": "Setting duplicate subschemas in `allOf` is redundant and only adds unnecessary validation work.",
+  "description": "Setting duplicate subschemas in `allOf` is redundant, as it produces unnecessary additional validation that is guaranteed to not affect the validation result.",
   "examples": [
     {
       "after": {

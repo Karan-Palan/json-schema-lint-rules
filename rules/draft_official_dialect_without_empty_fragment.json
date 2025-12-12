@@ -1,6 +1,6 @@
 {
   "title": "Metaschema URI must include trailing `#` (Draft 4-7)",
-  "description": "The official dialect URI of Draft 7 and older versions must include the trailing `#` fragment (e.g. `…schema#`).",
+  "description": "The official dialect URI of Draft 7 and older versions must contain the empty fragment.",
   "examples": [
     {
       "after": {
