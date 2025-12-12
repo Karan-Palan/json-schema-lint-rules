@@ -1,6 +1,6 @@
 {
   "title": "Remove siblings of $ref (draft-07 and older)",
-  "description": "In Draft 7 and older dialects, keywords that are siblings of `$ref` are never evaluated.",
+  "description": "In Draft 7 and older dialects, keywords sibling to `$ref` are never evaluated.",
   "examples": [
     {
       "after": {

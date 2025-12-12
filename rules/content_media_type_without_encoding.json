@@ -1,6 +1,6 @@
 {
   "title": "`contentMediaType` without `contentEncoding` is meaningless",
-  "description": "The `contentMediaType` keyword has no effect unless `contentEncoding` is also present.",
+  "description": "The `contentMediaType` keyword is meaningless without the presence of the `contentEncoding` keyword.",
   "examples": [
     {
       "after": {

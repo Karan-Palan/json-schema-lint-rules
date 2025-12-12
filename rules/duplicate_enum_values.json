@@ -1,6 +1,6 @@
 {
   "title": "Disallow duplicate values in enum",
-  "description": "Setting duplicate values in `enum` is an anti-pattern and adds no information.",
+  "description": "Setting duplicate values in `enum` is considered an anti-pattern.",
   "examples": [
     {
       "after": {

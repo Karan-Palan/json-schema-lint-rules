@@ -1,6 +1,6 @@
 {
   "title": "`if` without `then` or `else` is ineffective",
-  "description": "A lone `if` keyword has no impact on validation; at least one of `then` or `else` must accompany it.",
+  "description": "The `if` keyword is meaningless without the presence of the `then` or `else` keywords.",
   "examples": [
     {
       "after": {

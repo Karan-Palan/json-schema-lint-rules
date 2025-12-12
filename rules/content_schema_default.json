@@ -1,6 +1,6 @@
 {
   "title": "Omit `contentSchema:{}` (it’s the default)",
-  "description": "Setting the `contentSchema` keyword to the true schema (or `{}`) does not add any further constraint.",
+  "description": "Setting the `contentSchema` keyword to the true schema does not add any further constraint.",
   "examples": [
     {
       "after": {

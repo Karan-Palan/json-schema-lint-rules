@@ -1,6 +1,6 @@
 {
   "title": "Metaschema URI must not include trailing `#` (Draft 2019-09+)",
-  "description": "The official dialect URI of 2019-09 and newer versions must not contain the empty fragment (no trailing #).",
+  "description": "The official dialect URI of 2019-09 and newer versions must not contain the empty fragment.",
   "examples": [
     {
       "after": {

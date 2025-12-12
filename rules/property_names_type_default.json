@@ -1,6 +1,6 @@
 {
   "title": "Avoid redundant `type:\"string\"` inside `propertyNames`",
-  "description": "`propertyNames` always validates **object property keys**, which are strings by definition; adding `type:\"string\"` is unnecessary noise.",
+  "description": "Setting the `type` keyword to `string` inside `propertyNames` does not add any further constraint.",
   "examples": [
     {
       "after": {

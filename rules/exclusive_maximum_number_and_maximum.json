@@ -1,6 +1,6 @@
 {
   "title": "Keep only the tighter lower bound (`exclusiveMinimum` vs `minimum`)",
-  "description": "If both `minimum` and numeric `exclusiveMinimum` coexist, remove the weaker bound.",
+  "description": "Setting both `exclusiveMaximum` and `maximum` at the same time is considered an anti-pattern. You should choose one.",
   "examples": [
     {
       "after": {

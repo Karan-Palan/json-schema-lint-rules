@@ -1,6 +1,6 @@
 {
   "title": "`contentSchema` without `contentMediaType` is meaningless",
-  "description": "The `contentSchema` keyword has no effect unless `contentMediaType` is also present.",
+  "description": "The `contentSchema` keyword is meaningless without the presence of the `contentMediaType` keyword.",
   "examples": [
     {
       "after": {

@@ -1,6 +1,6 @@
 {
   "title": "`else` is an empty schema",
-  "description": "Setting the else keyword to the empty schema does not add any further constraint.",
+  "description": "Setting the `else` keyword to the empty schema does not add any further constraint.",
   "examples": [
     {
       "after": {

@@ -1,6 +1,6 @@
 {
   "title": "Remove single-`$ref` `allOf` wrapper (draft-2019-09, 2020-12 only)",
-  "description": "In draft-04/06/07 the `$ref` MUST remain inside the `allOf`; starting in 2019-09 a solitary `$ref` does not require the wrapper.",
+  "description": "Wrapping `$ref` in `allOf` was only necessary in JSON Schema Draft 7 and older.",
   "examples": [
     {
       "after": {

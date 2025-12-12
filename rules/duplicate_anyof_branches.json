@@ -1,6 +1,6 @@
 {
   "title": "Collapse duplicate schemas in `anyOf`",
-  "description": "Setting duplicate subschemas in `anyOf` is redundant and only adds unnecessary validation work.",
+  "description": "Setting duplicate subschemas in `anyOf` is redundant, as it produces unnecessary additional validation that is guaranteed to not affect the validation result.",
   "examples": [
     {
       "after": {

@@ -1,6 +1,6 @@
 {
   "title": "Remove empty `properties` object",
-  "description": "`properties:{}` does not impose any constraints. Drop it to reduce clutter.",
+  "description": "Setting the `properties` keyword to the empty object does not add any further constraint.",
   "examples": [
     {
       "after": {

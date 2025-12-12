@@ -1,6 +1,6 @@
 {
   "title": "`maxContains` less than `minContains` is unsatisfiable",
-  "description": "If `maxContains` is present it must be ≥ `minContains` (or ≥ 1 if `minContains` is omitted).",
+  "description": "Setting the `maxContains` keyword to a number greater than or equal to the array upper bound does not add any further constraint.",
   "examples": [
     {
       "after": {

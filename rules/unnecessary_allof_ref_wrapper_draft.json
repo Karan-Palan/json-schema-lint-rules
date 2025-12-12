@@ -1,6 +1,6 @@
 {
   "title": "Wrapping any keyword other than `$ref` in `allOf` is unnecessary",
-  "description": "In Draft 4-7, keywords other than `$ref` can be moved out of `allOf` to the parent level when they don't conflict with existing keywords.",
+  "description": "Wrapping `$ref` in `allOf` is only necessary if there are other sibling keywords.",
   "examples": [
     {
       "after": {
